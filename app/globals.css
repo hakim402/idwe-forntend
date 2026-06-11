@@ -1,0 +1,508 @@
+/* ==========================================================================
+   INFINITY SOLUTIONS - GLOBAL STYLES
+   --------------------------------------------------------------------------
+   Table of Contents
+   1. Imports
+   2. Tailwind Custom Variants
+   3. Theme Tokens (@theme inline)
+   4. Light Theme (:root)
+   5. Dark Theme (.dark)
+   6. Typography / Font Routing
+   7. Base Layer
+   8. Prose (Blog / Rich Text)
+   9. Brand Utility Classes
+   ========================================================================== */
+
+
+/* --- 1. IMPORTS ---------------------------------------------------------- */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+
+/* --- 2. TAILWIND CUSTOM VARIANTS ---------------------------------------- */
+
+@custom-variant dark (&:is(.dark *));
+
+
+/* --- 3. THEME TOKENS ----------------------------------------------------- */
+
+@theme inline {
+  /* Radius scale */
+  --radius-sm:  calc(var(--radius) - 4px);
+  --radius-md:  calc(var(--radius) - 2px);
+  --radius-lg:  var(--radius);
+  --radius-xl:  calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* Brand colors */
+  --color-brand:              var(--brand);
+  --color-brand-start:        var(--brand-start);
+  --color-brand-end:          var(--brand-end);
+  --color-brand-foreground:   var(--brand-foreground);
+
+  /* Semantic color aliases */
+  --color-background:                var(--background);
+  --color-foreground:                var(--foreground);
+  --color-card:                      var(--card);
+  --color-card-foreground:           var(--card-foreground);
+  --color-popover:                   var(--popover);
+  --color-popover-foreground:        var(--popover-foreground);
+  --color-primary:                   var(--primary);
+  --color-primary-foreground:        var(--primary-foreground);
+  --color-secondary:                 var(--secondary);
+  --color-secondary-foreground:      var(--secondary-foreground);
+  --color-muted:                     var(--muted);
+  --color-muted-foreground:          var(--muted-foreground);
+  --color-accent:                    var(--accent);
+  --color-accent-foreground:         var(--accent-foreground);
+  --color-destructive:               var(--destructive);
+  --color-border:                    var(--border);
+  --color-input:                     var(--input);
+  --color-ring:                      var(--ring);
+  --color-chart-1:                   var(--chart-1);
+  --color-chart-2:                   var(--chart-2);
+  --color-chart-3:                   var(--chart-3);
+  --color-chart-4:                   var(--chart-4);
+  --color-chart-5:                   var(--chart-5);
+  --color-sidebar:                   var(--sidebar);
+  --color-sidebar-foreground:        var(--sidebar-foreground);
+  --color-sidebar-primary:           var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent:            var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border:            var(--sidebar-border);
+  --color-sidebar-ring:              var(--sidebar-ring);
+}
+
+
+/* --- 4. LIGHT THEME (:root) --------------------------------------------- */
+
+:root {
+  /* Base */
+  --radius: 0.625rem;
+
+  /* Brand: requested 90-degree cyan-to-blue gradient */
+  --brand-start:      #0ab8fb;
+  --brand-end:        #324b9d;
+  --brand:            #245ea9;
+  --brand-foreground: #ffffff;
+  --brand-gradient:   linear-gradient(
+    90deg,
+    var(--brand-start) 0%,
+    var(--brand-end) 100%
+  );
+  --brand-gradient-soft: linear-gradient(
+    90deg,
+    rgb(10 184 251 / 14%) 0%,
+    rgb(50 75 157 / 14%) 100%
+  );
+  --brand-shadow: 0 12px 32px rgb(36 94 169 / 22%);
+
+  /* Surface: crisp white with a subtle cool-blue cast */
+  --background:         #f8fbff;
+  --foreground:         #0c1b33;
+
+  /* Card */
+  --card:               #ffffff;
+  --card-foreground:    #0c1b33;
+
+  /* Popover */
+  --popover:            #ffffff;
+  --popover-foreground: #0c1b33;
+
+  /*
+   * Primary remains a solid color so Shadcn and Radix states can use it
+   * safely. Use .bg-color or .bg-brand-gradient for the full gradient.
+   */
+  --primary:            #245ea9;
+  --primary-foreground: #ffffff;
+
+  /* Secondary: light blue surface */
+  --secondary:            #eaf4ff;
+  --secondary-foreground: #183c70;
+
+  /* Muted */
+  --muted:              #eef5fb;
+  --muted-foreground:   #56697f;
+
+  /* Accent: cyan-tinted interactive surface */
+  --accent:             #dff4ff;
+  --accent-foreground:  #164f83;
+
+  /* Destructive */
+  --destructive:        #dc2626;
+
+  /* Borders, inputs, and focus */
+  --border:             #d8e5f0;
+  --input:              #cbdce9;
+  --ring:               #0a9fdf;
+
+  /* Data visualization palette */
+  --chart-1:            #0ab8fb;
+  --chart-2:            #324b9d;
+  --chart-3:            #13a89e;
+  --chart-4:            #f59e0b;
+  --chart-5:            #7c3aed;
+
+  /* Sidebar */
+  --sidebar:                      #f1f7fd;
+  --sidebar-foreground:           #0c1b33;
+  --sidebar-primary:              #245ea9;
+  --sidebar-primary-foreground:   #ffffff;
+  --sidebar-accent:               #dff4ff;
+  --sidebar-accent-foreground:    #164f83;
+  --sidebar-border:               #d8e5f0;
+  --sidebar-ring:                 #0a9fdf;
+
+  /* Font routing (default = English) */
+  --font-sans: var(--font-en);
+}
+
+
+/* --- 5. DARK THEME (.dark) ---------------------------------------------- */
+
+.dark {
+  /* Brand endpoints remain consistent across themes */
+  --brand-start:      #0ab8fb;
+  --brand-end:        #324b9d;
+  --brand:            #38bdf8;
+  --brand-foreground: #06131f;
+  --brand-gradient:   linear-gradient(
+    90deg,
+    var(--brand-start) 0%,
+    var(--brand-end) 100%
+  );
+  --brand-gradient-soft: linear-gradient(
+    90deg,
+    rgb(10 184 251 / 18%) 0%,
+    rgb(50 75 157 / 22%) 100%
+  );
+  --brand-shadow: 0 14px 38px rgb(10 184 251 / 18%);
+
+  /* Surface: deep navy derived from the blue endpoint */
+  --background:         #07111f;
+  --foreground:         #eef7ff;
+
+  /* Card */
+  --card:               #0d1a2d;
+  --card-foreground:    #eef7ff;
+
+  /* Popover */
+  --popover:            #0d1a2d;
+  --popover-foreground: #eef7ff;
+
+  /* Primary: brighter cyan for strong dark-mode contrast */
+  --primary:            #38bdf8;
+  --primary-foreground: #06131f;
+
+  /* Secondary */
+  --secondary:            #142741;
+  --secondary-foreground: #e7f3ff;
+
+  /* Muted */
+  --muted:              #122238;
+  --muted-foreground:   #9eb0c4;
+
+  /* Accent: restrained blue-cyan interactive surface */
+  --accent:             #163b5a;
+  --accent-foreground:  #dff6ff;
+
+  /* Destructive */
+  --destructive:        #f87171;
+
+  /* Borders, inputs, and focus */
+  --border:             rgb(148 198 233 / 14%);
+  --input:              rgb(148 198 233 / 20%);
+  --ring:               #22b5f3;
+
+  /* Data visualization palette */
+  --chart-1:            #38bdf8;
+  --chart-2:            #6685dc;
+  --chart-3:            #2dd4bf;
+  --chart-4:            #fbbf24;
+  --chart-5:            #a78bfa;
+
+  /* Sidebar */
+  --sidebar:                      #0b1829;
+  --sidebar-foreground:           #eef7ff;
+  --sidebar-primary:              #38bdf8;
+  --sidebar-primary-foreground:   #06131f;
+  --sidebar-accent:               #163b5a;
+  --sidebar-accent-foreground:    #dff6ff;
+  --sidebar-border:               rgb(148 198 233 / 14%);
+  --sidebar-ring:                 #22b5f3;
+}
+
+
+/* --- 6. TYPOGRAPHY / FONT ROUTING --------------------------------------- */
+
+/* RTL locales use the Arabic typeface */
+html[dir="rtl"] {
+  --font-sans: var(--font-ar);
+}
+
+/* Per-locale overrides */
+html[lang="en"] body { font-family: var(--font-en),    sans-serif; }
+html[lang="ar"] body { font-family: var(--font-ar),    sans-serif; }
+html[lang="zh"] body { font-family: var(--font-zh),    sans-serif; }
+html[lang="fa"] body { font-family: var(--font-fa-ps), sans-serif; }
+html[lang="ps"] body { font-family: var(--font-fa-ps), sans-serif; }
+
+/* Default fallback */
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+
+/* --- 7. BASE LAYER ------------------------------------------------------- */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  ::selection {
+    color: var(--brand-foreground);
+    background: var(--brand);
+  }
+
+  /* Prevent layout shift while the theme loads */
+  :root {
+    color-scheme: light;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+
+/* --- 8. PROSE (BLOG / RICH TEXT) ---------------------------------------- */
+
+@layer components {
+  /* Container */
+  .prose {
+    @apply max-w-none text-foreground leading-relaxed;
+  }
+
+  /* Headings */
+  .prose h1 {
+    @apply mt-12 mb-6 text-4xl font-bold tracking-tight
+           text-foreground md:text-5xl;
+  }
+
+  .prose h2 {
+    @apply mt-10 mb-4 border-b border-border/30 pb-2
+           text-2xl font-bold tracking-tight text-foreground md:text-3xl;
+  }
+
+  .prose h3 {
+    @apply mt-8 mb-3 text-xl font-semibold text-foreground md:text-2xl;
+  }
+
+  .prose h4 {
+    @apply mt-6 mb-2 text-lg font-semibold text-foreground;
+  }
+
+  .prose h5,
+  .prose h6 {
+    @apply mt-5 mb-2 text-base font-semibold text-foreground;
+  }
+
+  /* Paragraphs */
+  .prose p {
+    @apply mb-5 text-base leading-relaxed md:text-lg;
+  }
+
+  /* Links */
+  .prose a {
+    @apply text-primary no-underline transition-colors duration-200
+           hover:underline;
+  }
+
+  /* Images */
+  .prose img {
+    @apply my-8 rounded-xl border border-border/20 shadow-md;
+  }
+
+  .prose figure {
+    @apply my-8;
+  }
+
+  .prose figcaption {
+    @apply mt-2 text-center text-sm italic text-muted-foreground;
+  }
+
+  /* Lists */
+  .prose ul {
+    @apply my-5 list-disc pl-6;
+  }
+
+  .prose ol {
+    @apply my-5 list-decimal pl-6;
+  }
+
+  .prose li {
+    @apply mb-1 leading-relaxed;
+  }
+
+  .prose li > ul,
+  .prose li > ol {
+    @apply my-2;
+  }
+
+  /* Blockquotes */
+  .prose blockquote {
+    @apply my-6 border-l-4 border-primary pl-5 italic text-muted-foreground;
+  }
+
+  .prose blockquote p:last-child {
+    @apply mb-0;
+  }
+
+  .prose blockquote cite {
+    @apply mt-2 block text-sm not-italic text-muted-foreground/70;
+  }
+
+  /* Code */
+  .prose code {
+    @apply rounded-md bg-muted px-1.5 py-0.5 font-mono text-sm;
+  }
+
+  .prose pre {
+    @apply my-6 overflow-x-auto rounded-xl bg-muted p-4 font-mono text-sm;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  /* Divider */
+  .prose hr {
+    @apply my-12 border-t border-border/50;
+  }
+
+  /* Tables */
+  .prose table {
+    @apply my-6 w-full border-collapse text-sm;
+  }
+
+  .prose thead {
+    @apply bg-muted/50;
+  }
+
+  .prose th {
+    @apply border border-border/60 px-4 py-2 text-left font-semibold;
+  }
+
+  .prose td {
+    @apply border border-border/60 px-4 py-2;
+  }
+
+  /* Footnotes */
+  .prose .footnote {
+    @apply align-super text-xs text-muted-foreground;
+  }
+
+  .prose .footnotes {
+    @apply mt-12 border-t border-border/30 pt-4 text-sm;
+  }
+
+  /* RTL prose overrides */
+  .prose-rtl {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .prose-rtl blockquote {
+    border-left: none;
+    border-right: 4px solid var(--primary);
+    padding-left: 0;
+    padding-right: 1.25rem;
+  }
+
+  .prose-rtl ul,
+  .prose-rtl ol {
+    padding-left: 0;
+    padding-right: 1.5rem;
+  }
+
+  .prose-rtl th {
+    @apply text-right;
+  }
+}
+
+
+/* --- 9. BRAND UTILITY CLASSES ------------------------------------------- */
+
+/* Gradient background for primary buttons, badges, and branded surfaces */
+.bg-color,
+.bg-brand-gradient {
+  color: var(--brand-foreground);
+  background-color: var(--brand);
+  background-image: var(--brand-gradient);
+}
+
+/* Soft gradient surface for cards and highlighted sections */
+.bg-brand-soft {
+  background-color: var(--accent);
+  background-image: var(--brand-gradient-soft);
+}
+
+/* Gradient text for headings and highlighted words */
+.text-color,
+.text-brand-gradient {
+  color: var(--brand);
+  background-image: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient border that keeps the element's normal background */
+.border-brand-gradient {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--background), var(--background)) padding-box,
+    var(--brand-gradient) border-box;
+}
+
+/* Reusable brand glow for calls to action and featured cards */
+.shadow-brand {
+  box-shadow: var(--brand-shadow);
+}
+
+/* Make gradient motion follow writing direction for RTL locales */
+html[dir="rtl"] {
+  --brand-gradient: linear-gradient(
+    270deg,
+    var(--brand-start) 0%,
+    var(--brand-end) 100%
+  );
+  --brand-gradient-soft: linear-gradient(
+    270deg,
+    rgb(10 184 251 / 14%) 0%,
+    rgb(50 75 157 / 14%) 100%
+  );
+}
+
+.dark[dir="rtl"],
+.dark [dir="rtl"] {
+  --brand-gradient-soft: linear-gradient(
+    270deg,
+    rgb(10 184 251 / 18%) 0%,
+    rgb(50 75 157 / 22%) 100%
+  );
+}

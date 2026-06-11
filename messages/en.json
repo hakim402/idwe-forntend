@@ -1,0 +1,191 @@
+{
+    "Header": {
+        "home": "Home",
+        "products": "Products",
+        "service": "Services",
+        "blogs": "Blogs",
+        "about": "About",
+        "contact": "Contact",
+        "profile": "Profile",
+        "login": "Login",
+        "signUp": "Sign Up"
+    },
+    
+    "HomeHero": {
+      "headlineLead": "Automate, Scale &",
+      "headlineAccent": "Grow with AI",
+      "headlineSuffix": "",
+      "description": "IDWE builds intelligent automation systems, custom software, and AI-powered tools that free your team from repetitive work so you can focus on what actually moves your business forward.",
+      "primaryAction": "Start Your Project",
+      "secondaryAction": "Explore Services",
+      "tickerItems": [
+        { "icon": "bot",      "text": "AI Agent deployed for CRM automation",        "badge": "Live",     "badgeVariant": "cyan"  },
+        { "icon": "zap",      "text": "Workflow automated 14 hrs/week saved",       "badge": "Done",     "badgeVariant": "teal"  },
+        { "icon": "sparkles", "text": "Custom GPT chatbot live on client website",    "badge": "Active",   "badgeVariant": "cyan"  },
+        { "icon": "bot",      "text": "ERP integration completed successfully",        "badge": "Complete", "badgeVariant": "blue"  },
+        { "icon": "zap",      "text": "Sales bot generated 38 qualified leads today", "badge": "Running",  "badgeVariant": "cyan"  },
+        { "icon": "sparkles", "text": "Mobile app shipped to App Store & Play Store", "badge": "Shipped",  "badgeVariant": "teal"  },
+        { "icon": "bot",      "text": "WhatsApp support bot handling 300 msgs/day",   "badge": "Live",     "badgeVariant": "cyan"  },
+        { "icon": "zap",      "text": "Payment gateway integrated in 48 hours",       "badge": "Done",     "badgeVariant": "blue"  }
+      ]
+    },
+
+    "AiShowcase": {
+      "prop1Title": "AI agents that work while you sleep",
+      "prop1Body": "We build and deploy AI bots for customer support, sales, lead generation, and internal operations across WhatsApp, Telegram, your website, and beyond.",
+      "prop2Title": "Automation that removes the busywork",
+      "prop2Body": "From CRM and ERP automation to workflow orchestration and reporting we map your processes and build systems that run them reliably, without manual effort.",
+      "prop3Title": "Software you own, built to last",
+      "prop3Body": "Every platform, dashboard, or mobile app we deliver is production-grade, documented, and fully yours. No vendor lock-in, no black boxes.",
+      "cta": "See All Services",
+      "trust1": "Production-ready delivery",
+      "trust2": "Fast turnaround",
+      "trust3": "Dedicated support"
+    },
+
+    "Auth": {
+      "common": {
+        "brand": "Infinity Enterprise Solutions",
+        "brandShort": "Infinity",
+        "welcome": "Secure access",
+        "backHome": "Back to home",
+        "secureNote": "Secure access for your business workspace",
+        "footer": "Protected by encrypted connections and modern security standards.",
+        "email": "Email address",
+        "emailPlaceholder": "name@company.com",
+        "password": "Password",
+        "passwordPlaceholder": "Enter your password",
+        "showPassword": "Show password",
+        "hidePassword": "Hide password",
+        "fullName": "Full name",
+        "fullNamePlaceholder": "Your full name",
+        "company": "Company name",
+        "companyPlaceholder": "Your company (optional)",
+        "confirmPassword": "Confirm password",
+        "confirmPasswordPlaceholder": "Enter the password again"
+      },
+      "showcase": {
+        "eyebrow": "Built for modern teams",
+        "title": "One secure place to manage your digital business.",
+        "description": "Access the tools, products, and automated systems Infinity builds for your organization.",
+        "points": [
+          {
+            "title": "AI-powered operations",
+            "description": "Keep automated workflows and intelligent assistants within reach."
+          },
+          {
+            "title": "Connected software",
+            "description": "Bring web platforms, mobile apps, payments, and business tools together."
+          },
+          {
+            "title": "Secure by design",
+            "description": "Protect account access with verification and modern authentication flows."
+          }
+        ]
+      },
+      "login": {
+        "title": "Welcome back",
+        "description": "Sign in to continue to your Infinity workspace.",
+        "remember": "Remember me",
+        "forgot": "Forgot password?",
+        "submit": "Sign in",
+        "noAccount": "New to Infinity?",
+        "signupLink": "Create an account"
+      },
+      "signup": {
+        "title": "Create your account",
+        "description": "Set up secure access for your business workspace.",
+        "submit": "Create account",
+        "passwordMismatch": "The passwords do not match.",
+        "termsPrefix": "I agree to the",
+        "terms": "Terms of Service",
+        "and": "and",
+        "privacy": "Privacy Policy",
+        "haveAccount": "Already have an account?",
+        "loginLink": "Sign in"
+      },
+      "forgotPassword": {
+        "title": "Reset your password",
+        "description": "Enter your email and we will send you a secure verification code.",
+        "submit": "Send verification code",
+        "backToLogin": "Back to sign in"
+      },
+      "verifyOtp": {
+        "title": "Verify your email",
+        "description": "Enter the six-digit code sent to your email address.",
+        "codeLabel": "Verification code",
+        "digitLabel": "Code digit",
+        "submit": "Verify code",
+        "resendText": "Did not receive the code?",
+        "resendAction": "Request a new one",
+        "backToLogin": "Back to sign in"
+      }
+    },
+
+    "footer": {
+          "tagline": "Enterprise grade AI, cybersecurity, software engineering, cloud infrastructure, and digital transformation all under one roof.",
+          "location": "Remote-first team operating globally across the world.",
+
+          "contact": {
+          "whatsapp": "Chat on WhatsApp",
+          "email": "Send an email"
+          },
+
+          "cta": {
+          "heading": "Ready to transform your business?",
+          "subheading": "Tell us about your project and we'll respond within 24 hours.",
+          "button": "Get started"
+          },
+
+          "columns": {
+          "services": {
+              "title": "Services",
+              "ai_solutions": "AI Solutions",
+              "ai_bots": "AI Bots & Automation",
+              "software_dev": "Software Development",
+              "web_dev": "Web Development",
+              "mobile_dev": "Mobile App Development",
+              "cybersecurity": "Cybersecurity Services"
+          },
+          "technology": {
+              "title": "Technology",
+              "claude_ai": "Claude AI Integration",
+              "api_integration": "API Integration",
+              "database": "Database Architecture",
+              "cloud": "Cloud Infrastructure",
+              "security_compliance": "Security Compliance",
+              "digital_transform": "Digital Transformation"
+          },
+          "company": {
+              "title": "Company",
+              "about": "About Us",
+              "services": "Our Services",
+              "blogs": "Blog & Insights",
+              "contact": "Contact Us",
+              "privacy": "Privacy Policy",
+              "terms": "Terms of Service"
+          }
+          },
+
+          "bottom": {
+          "copyright": "© {year} Infinity Solutions. All rights reserved.",
+          "privacy": "Privacy",
+          "terms": "Terms",
+          "sitemap": "Sitemap"
+          },
+
+          "social": {
+          "facebook": "Facebook",
+          "instagram": "Instagram",
+          "twitter": "X (Twitter)",
+          "linkedin": "LinkedIn"
+          },
+
+          "badges": {
+          "popular": "Popular",
+          "new": "New",
+          "enterprise": "Enterprise"
+          }
+    }
+
+}
