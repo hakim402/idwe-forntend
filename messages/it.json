@@ -1,0 +1,220 @@
+{
+  "Header": {
+    "home": "Home",
+    "products": "Prodotti",
+    "service": "Servizi",
+    "blogs": "Blog",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "profile": "Profilo",
+    "login": "Accedi",
+    "signUp": "Registrati"
+  },
+  "HomeHero": {
+    "headlineLead": "Automatizza, scala e",
+    "headlineAccent": "cresci con l'IA",
+    "headlineSuffix": "",
+    "description": "IDWE costruisce sistemi di automazione intelligente, software personalizzati e strumenti basati sull'IA che liberano il tuo team dal lavoro ripetitivo, così puoi concentrarti su ciò che fa davvero avanzare la tua azienda.",
+    "primaryAction": "Avvia il tuo progetto",
+    "secondaryAction": "Esplora i servizi",
+    "tickerItems": [
+      {
+        "icon": "bot",
+        "text": "Agente IA implementato per l'automazione CRM",
+        "badge": "Live",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "zap",
+        "text": "Flusso di lavoro automatizzato – 14 ore/settimana risparmiate",
+        "badge": "Completato",
+        "badgeVariant": "teal"
+      },
+      {
+        "icon": "sparkles",
+        "text": "Chatbot GPT personalizzato attivo sul sito del cliente",
+        "badge": "Attivo",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "bot",
+        "text": "Integrazione ERP completata con successo",
+        "badge": "Completo",
+        "badgeVariant": "blue"
+      },
+      {
+        "icon": "zap",
+        "text": "Bot vendite ha generato 38 lead qualificati oggi",
+        "badge": "In esecuzione",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "sparkles",
+        "text": "App mobile pubblicata su App Store e Play Store",
+        "badge": "Pubblicata",
+        "badgeVariant": "teal"
+      },
+      {
+        "icon": "bot",
+        "text": "Bot di supporto WhatsApp gestisce 300 messaggi/giorno",
+        "badge": "Live",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "zap",
+        "text": "Gateway di pagamento integrato in 48 ore",
+        "badge": "Completato",
+        "badgeVariant": "blue"
+      }
+    ]
+  },
+  "AiShowcase": {
+    "prop1Title": "Agenti IA che lavorano mentre dormi",
+    "prop1Body": "Realizziamo e implementiamo bot IA per supporto clienti, vendite, generazione di lead e operazioni interne su WhatsApp, Telegram, il tuo sito web e oltre.",
+    "prop2Title": "Automazione che elimina il lavoro noioso",
+    "prop2Body": "Dall'automazione di CRM ed ERP all'orchestrazione dei flussi di lavoro e ai report: mappiamo i tuoi processi e costruiamo sistemi che li eseguono in modo affidabile, senza sforzo manuale.",
+    "prop3Title": "Software di tua proprietà, costruito per durare",
+    "prop3Body": "Ogni piattaforma, dashboard o app mobile che consegniamo è di livello produttivo, documentata e completamente tua. Nessun vendor lock‑in, nessuna scatola nera.",
+    "cta": "Vedi tutti i servizi",
+    "trust1": "Consegna pronta per la produzione",
+    "trust2": "Tempi rapidi",
+    "trust3": "Supporto dedicato"
+  },
+  "Auth": {
+    "common": {
+      "brand": "IDWE",
+      "brandShort": "IDWE",
+      "welcome": "Accesso sicuro",
+      "backHome": "Torna alla home",
+      "secureNote": "Accesso sicuro per il tuo spazio di lavoro aziendale",
+      "footer": "Protetto da connessioni crittografate e standard di sicurezza moderni.",
+      "email": "Indirizzo email",
+      "emailPlaceholder": "nome@azienda.com",
+      "password": "Password",
+      "passwordPlaceholder": "Inserisci la tua password",
+      "showPassword": "Mostra password",
+      "hidePassword": "Nascondi password",
+      "fullName": "Nome completo",
+      "fullNamePlaceholder": "Il tuo nome completo",
+      "company": "Nome azienda",
+      "companyPlaceholder": "La tua azienda (opzionale)",
+      "confirmPassword": "Conferma password",
+      "confirmPasswordPlaceholder": "Inserisci di nuovo la password"
+    },
+    "showcase": {
+      "eyebrow": "Progettato per team moderni",
+      "title": "Un posto sicuro per gestire la tua attività digitale.",
+      "description": "Accedi agli strumenti, prodotti e sistemi automatizzati che IDWE costruisce per la tua organizzazione.",
+      "points": [
+        {
+          "title": "Operazioni basate sull'IA",
+          "description": "Tieni i flussi di lavoro automatizzati e gli assistenti intelligenti a portata di mano."
+        },
+        {
+          "title": "Software connesso",
+          "description": "Unisci piattaforme web, app mobili, pagamenti e strumenti aziendali."
+        },
+        {
+          "title": "Sicuro per progettazione",
+          "description": "Proteggi l'accesso all'account con verifica e flussi di autenticazione moderni."
+        }
+      ]
+    },
+    "login": {
+      "title": "Bentornato",
+      "description": "Accedi per continuare nel tuo spazio di lavoro IDWE.",
+      "remember": "Ricordami",
+      "forgot": "Password dimenticata?",
+      "submit": "Accedi",
+      "noAccount": "Nuovo su IDWE?",
+      "signupLink": "Crea un account"
+    },
+    "signup": {
+      "title": "Crea il tuo account",
+      "description": "Configura l'accesso sicuro per il tuo spazio di lavoro aziendale.",
+      "submit": "Crea account",
+      "passwordMismatch": "Le password non corrispondono.",
+      "termsPrefix": "Accetto i",
+      "terms": "Termini di servizio",
+      "and": "e la",
+      "privacy": "Informativa sulla privacy",
+      "haveAccount": "Hai già un account?",
+      "loginLink": "Accedi"
+    },
+    "forgotPassword": {
+      "title": "Reimposta la tua password",
+      "description": "Inserisci la tua email, ti invieremo un codice di verifica sicuro.",
+      "submit": "Invia codice di verifica",
+      "backToLogin": "Torna all'accesso"
+    },
+    "verifyOtp": {
+      "title": "Verifica la tua email",
+      "description": "Inserisci il codice a sei cifre inviato al tuo indirizzo email.",
+      "codeLabel": "Codice di verifica",
+      "digitLabel": "Cifra del codice",
+      "submit": "Verifica codice",
+      "resendText": "Non hai ricevuto il codice?",
+      "resendAction": "Richiedine uno nuovo",
+      "backToLogin": "Torna all'accesso"
+    }
+  },
+  "footer": {
+    "tagline": "IA di livello enterprise, cybersecurity, ingegneria del software, infrastruttura cloud e trasformazione digitale sotto lo stesso tetto.",
+    "location": "Team remote‑first che opera globalmente.",
+    "contact": {
+      "whatsapp": "Chatta su WhatsApp",
+      "email": "Invia un'email"
+    },
+    "cta": {
+      "heading": "Pronto a trasformare la tua attività?",
+      "subheading": "Parlaci del tuo progetto – ti risponderemo entro 24 ore.",
+      "button": "Inizia"
+    },
+    "columns": {
+      "services": {
+        "title": "Servizi",
+        "ai_solutions": "Soluzioni IA",
+        "ai_bots": "Bot IA e Automazione",
+        "software_dev": "Sviluppo software",
+        "web_dev": "Sviluppo web",
+        "mobile_dev": "Sviluppo app mobili",
+        "cybersecurity": "Servizi di cybersecurity"
+      },
+      "technology": {
+        "title": "Tecnologia",
+        "claude_ai": "Integrazione Claude AI",
+        "api_integration": "Integrazione API",
+        "database": "Architettura di database",
+        "cloud": "Infrastruttura cloud",
+        "security_compliance": "Conformità di sicurezza",
+        "digital_transform": "Trasformazione digitale"
+      },
+      "company": {
+        "title": "Azienda",
+        "about": "Chi siamo",
+        "services": "I nostri servizi",
+        "blogs": "Blog e approfondimenti",
+        "contact": "Contattaci",
+        "privacy": "Informativa sulla privacy",
+        "terms": "Termini di servizio"
+      }
+    },
+    "bottom": {
+      "copyright": "© {year} IDWE. Tutti i diritti riservati.",
+      "privacy": "Privacy",
+      "terms": "Termini",
+      "sitemap": "Mappa del sito"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn"
+    },
+    "badges": {
+      "popular": "Popolare",
+      "new": "Nuovo",
+      "enterprise": "Enterprise"
+    }
+  }
+}

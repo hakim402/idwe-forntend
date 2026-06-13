@@ -49,18 +49,18 @@ const notoNaskhArabic = Noto_Naskh_Arabic({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://infinity-solutions.pro"),
+  metadataBase: new URL("https://idwe.tech"), 
 
   title: {
-    template: "%s | Infinity Solutions",
-    default: "Infinity Solutions - Enterprise AI & Technology Services",
+    template: "%s | IDWE",
+    default: "IDWE - Enterprise AI & Technology Services",
   },
 
   description:
-    "Infinity Solutions delivers enterprise-grade AI solutions, AI bots, business development, software development, web development, mobile app development, Claude AI integrations, API integrations, database architecture, cybersecurity services, security compliance, and scalable digital transformation solutions.",
+    "IDWE delivers enterprise-grade AI solutions, AI bots, business development, software development, web development, mobile app development, Claude AI integrations, API integrations, database architecture, cybersecurity services, security compliance, and scalable digital transformation solutions.",
 
   keywords: [
-    "Infinity Solutions",
+    "IDWE",
     "AI Solutions",
     "AI Bots",
     "Software Development",
@@ -74,23 +74,23 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "Infinity Solutions - Enterprise AI & Technology Services",
+    title: "IDWE - Enterprise AI & Technology Services",
 
     description:
       "Enterprise-grade AI, cybersecurity, software engineering, cloud infrastructure, and digital transformation services.",
 
-    url: "https://infinity-solutions.pro",
+    url: "https://idwe.tech", // Update if domain changes
 
-    siteName: "Infinity Solutions",
+    siteName: "IDWE",
 
     type: "website",
 
     images: [
       {
-        url: "/logo/jahez.jpg",
+        url: "/logo/idwe.png",
         width: 1200,
         height: 630,
-        alt: "Infinity Solutions",
+        alt: "IDWE",
       },
     ],
   },
@@ -98,12 +98,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Infinity Solutions - Enterprise AI & Technology Services",
+    title: "IDWE - Enterprise AI & Technology Services",
 
     description:
       "AI solutions, enterprise software, cybersecurity, API integrations, and cloud infrastructure services.",
 
-    images: ["/logo/jahez.jpg"],
+    images: ["/logo/idwe.png"],
   },
 
   robots: {
@@ -122,14 +122,14 @@ export default function RootLayout({
 
     "@type": "Organization",
 
-    name: "Infinity Solutions",
+    name: "IDWE",
 
-    url: "https://infinity-solutions.pro",
+    url: "https://idwe.tech",
 
-    logo: "https://infinity-solutions.pro/logo/infinity.jpg",
+    logo: "https://idwe.tech/logo/idwe.png",
 
     description:
-      "Infinity Solutions is an enterprise technology company delivering AI solutions, software engineering, cybersecurity, cloud infrastructure, business automation, and digital transformation services.",
+      "IDWE is an enterprise technology company delivering AI solutions, software engineering, cybersecurity, cloud infrastructure, business automation, and digital transformation services.",
 
     services: [
       "Artificial Intelligence Solutions",

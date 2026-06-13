@@ -5,49 +5,89 @@
     "service": "服务",
     "blogs": "博客",
     "about": "关于我们",
-    "contact": "联系我们",
+    "contact": "联系方式",
     "profile": "个人资料",
     "login": "登录",
     "signUp": "注册"
   },
   "HomeHero": {
-    "headlineLead": "自动化、扩展并",
-    "headlineAccent": "借助人工智能实现增长",
+    "headlineLead": "自动化、扩展",
+    "headlineAccent": "与AI共同成长",
     "headlineSuffix": "",
-    "description": "Infinity 构建智能自动化系统、定制软件和人工智能驱动的工具，让您的团队从重复性工作中解脱出来，从而专注于真正推动业务发展的事务。",
-    "primaryAction": "启动您的项目",
+    "description": "IDWE 构建智能自动化系统、定制软件和基于AI的工具，让您的团队从重复性工作中解放出来，专注于真正推动业务向前发展的事情。",
+    "primaryAction": "开始您的项目",
     "secondaryAction": "探索服务",
     "tickerItems": [
-      { "icon": "bot", "text": "用于CRM自动化的人工智能代理已部署", "badge": "运行中", "badgeVariant": "cyan" },
-      { "icon": "zap", "text": "工作流程自动化，每周节省14小时", "badge": "已完成", "badgeVariant": "teal" },
-      { "icon": "sparkles", "text": "定制GPT聊天机器人在客户网站上线", "badge": "活跃", "badgeVariant": "cyan" },
-      { "icon": "bot", "text": "ERP集成已成功完成", "badge": "已完成", "badgeVariant": "blue" },
-      { "icon": "zap", "text": "销售机器人今天产生了38个合格线索", "badge": "运行中", "badgeVariant": "cyan" },
-      { "icon": "sparkles", "text": "移动应用已发布到App Store和Play Store", "badge": "已发布", "badgeVariant": "teal" },
-      { "icon": "bot", "text": "WhatsApp客服机器人每天处理300条消息", "badge": "运行中", "badgeVariant": "cyan" },
-      { "icon": "zap", "text": "支付网关在48小时内完成集成", "badge": "已完成", "badgeVariant": "blue" }
+      {
+        "icon": "bot",
+        "text": "AI代理已部署用于CRM自动化",
+        "badge": "上线",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "zap",
+        "text": "工作流自动化，每周节省14小时",
+        "badge": "已完成",
+        "badgeVariant": "teal"
+      },
+      {
+        "icon": "sparkles",
+        "text": "定制GPT聊天机器人在客户网站上活跃",
+        "badge": "活跃",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "bot",
+        "text": "ERP集成成功完成",
+        "badge": "完成",
+        "badgeVariant": "blue"
+      },
+      {
+        "icon": "zap",
+        "text": "销售机器人今日生成38个合格线索",
+        "badge": "运行中",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "sparkles",
+        "text": "移动应用已发布至App Store和Play Store",
+        "badge": "已发布",
+        "badgeVariant": "teal"
+      },
+      {
+        "icon": "bot",
+        "text": "WhatsApp支持机器人每天处理300条消息",
+        "badge": "上线",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "zap",
+        "text": "支付网关48小时内集成完成",
+        "badge": "已完成",
+        "badgeVariant": "blue"
+      }
     ]
   },
   "AiShowcase": {
-    "prop1Title": "在您休息时工作的AI代理",
-    "prop1Body": "我们构建并部署AI机器人，用于客户支持、销售、线索生成和内部运营，覆盖WhatsApp、Telegram、您的网站及其他平台。",
-    "prop2Title": "消除繁琐工作的自动化",
-    "prop2Body": "从CRM和ERP自动化到工作流程编排和报告，我们梳理您的流程并构建能够可靠运行它们的系统，无需人工干预。",
-    "prop3Title": "您拥有的软件，经久耐用",
-    "prop3Body": "我们交付的每个平台、仪表板或移动应用都是生产级、有文档且完全属于您。没有供应商锁定，没有黑箱。",
+    "prop1Title": "AI代理在您睡眠时工作",
+    "prop1Body": "我们构建并部署用于客户支持、销售、线索生成和内部运营的AI机器人，覆盖WhatsApp、Telegram、您的网站及更多渠道。",
+    "prop2Title": "消除繁忙工作的自动化",
+    "prop2Body": "从CRM和ERP自动化到工作流编排和报告，我们绘制您的流程并构建可靠运行这些流程的系统，无需手动操作。",
+    "prop3Title": "您拥有的软件，持久耐用",
+    "prop3Body": "我们交付的每个平台、仪表板或移动应用都是生产级、文档齐全且完全归您所有。无供应商锁定，无黑箱操作。",
     "cta": "查看所有服务",
     "trust1": "生产就绪交付",
-    "trust2": "快速周转",
+    "trust2": "快速响应",
     "trust3": "专属支持"
   },
   "Auth": {
     "common": {
-      "brand": "Infinity Enterprise Solutions",
-      "brandShort": "Infinity",
+      "brand": "IDWE",
+      "brandShort": "IDWE",
       "welcome": "安全访问",
       "backHome": "返回首页",
-      "secureNote": "为您的工作空间提供安全访问",
-      "footer": "通过加密连接和现代安全标准保护。",
+      "secureNote": "为您的企业工作空间提供安全访问",
+      "footer": "受加密连接和现代安全标准保护。",
       "email": "电子邮件地址",
       "emailPlaceholder": "name@company.com",
       "password": "密码",
@@ -63,35 +103,35 @@
     },
     "showcase": {
       "eyebrow": "为现代团队打造",
-      "title": "一个管理您数字业务的安全场所。",
-      "description": "访问Infinity为您的组织构建的工具、产品和自动化系统。",
+      "title": "管理您数字业务的安全之地。",
+      "description": "访问IDWE为您的组织构建的工具、产品和自动化系统。",
       "points": [
         {
-          "title": "AI驱动运营",
-          "description": "让自动化工作流和智能助手触手可及。"
+          "title": "AI驱动的运营",
+          "description": "将自动化工作流和智能助手保持在触手可及的范围内。"
         },
         {
           "title": "互联软件",
-          "description": "将网页平台、移动应用、支付和商业工具整合在一起。"
+          "description": "将Web平台、移动应用、支付和业务工具整合在一起。"
         },
         {
-          "title": "设计即安全",
-          "description": "通过验证和现代身份认证流程保护账户访问。"
+          "title": "设计上的安全",
+          "description": "通过验证和现代身份验证流程保护账户访问。"
         }
       ]
     },
     "login": {
       "title": "欢迎回来",
-      "description": "登录以继续访问您的Infinity工作空间。",
+      "description": "登录以继续使用您的IDWE工作空间。",
       "remember": "记住我",
       "forgot": "忘记密码？",
       "submit": "登录",
-      "noAccount": "刚接触Infinity？",
+      "noAccount": "IDWE新手？",
       "signupLink": "创建账户"
     },
     "signup": {
       "title": "创建您的账户",
-      "description": "为您的工作空间设置安全访问。",
+      "description": "为您的企业工作空间设置安全访问。",
       "submit": "创建账户",
       "passwordMismatch": "密码不匹配。",
       "termsPrefix": "我同意",
@@ -103,40 +143,40 @@
     },
     "forgotPassword": {
       "title": "重置您的密码",
-      "description": "输入您的邮箱，我们将向您发送安全验证码。",
+      "description": "输入您的电子邮件，我们将向您发送安全验证码。",
       "submit": "发送验证码",
       "backToLogin": "返回登录"
     },
     "verifyOtp": {
-      "title": "验证您的邮箱",
-      "description": "输入发送到您邮箱的六位数验证码。",
+      "title": "验证您的电子邮件",
+      "description": "输入发送到您电子邮件地址的六位验证码。",
       "codeLabel": "验证码",
       "digitLabel": "验证码数字",
-      "submit": "验证",
+      "submit": "验证码",
       "resendText": "没有收到验证码？",
       "resendAction": "请求新的验证码",
       "backToLogin": "返回登录"
     }
   },
   "footer": {
-    "tagline": "企业级人工智能、网络安全、软件工程、云基础设施和数字化转型，全部汇集一处。",
+    "tagline": "企业级AI、网络安全、软件工程、云基础设施和数字化转型，一站式提供。",
     "location": "远程优先团队，全球运营。",
     "contact": {
-      "whatsapp": "在WhatsApp上聊天",
+      "whatsapp": "通过WhatsApp聊天",
       "email": "发送邮件"
     },
     "cta": {
-      "heading": "准备好转变您的业务了吗？",
+      "heading": "准备转型您的业务？",
       "subheading": "告诉我们您的项目，我们将在24小时内回复。",
-      "button": "立即开始"
+      "button": "开始"
     },
     "columns": {
       "services": {
         "title": "服务",
         "ai_solutions": "AI解决方案",
-        "ai_bots": "AI机器人与自动化",
+        "ai_bots": "AI机器人及自动化",
         "software_dev": "软件开发",
-        "web_dev": "网站开发",
+        "web_dev": "Web开发",
         "mobile_dev": "移动应用开发",
         "cybersecurity": "网络安全服务"
       },
@@ -153,14 +193,14 @@
         "title": "公司",
         "about": "关于我们",
         "services": "我们的服务",
-        "blogs": "博客与见解",
+        "blogs": "博客与洞察",
         "contact": "联系我们",
         "privacy": "隐私政策",
         "terms": "服务条款"
       }
     },
     "bottom": {
-      "copyright": "© {year} Infinity Solutions. 保留所有权利。",
+      "copyright": "© {year} IDWE。版权所有。",
       "privacy": "隐私",
       "terms": "条款",
       "sitemap": "网站地图"

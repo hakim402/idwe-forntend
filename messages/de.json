@@ -1,0 +1,220 @@
+{
+  "Header": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "service": "Dienstleistungen",
+    "blogs": "Blog",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "profile": "Profil",
+    "login": "Anmelden",
+    "signUp": "Registrieren"
+  },
+  "HomeHero": {
+    "headlineLead": "Automatisieren, skalieren &",
+    "headlineAccent": "wachsen mit KI",
+    "headlineSuffix": "",
+    "description": "IDWE entwickelt intelligente Automatisierungssysteme, individuelle Software und KI‑gestützte Tools, die Ihr Team von repetitiver Arbeit befreien – damit Sie sich auf das Wesentliche konzentrieren können.",
+    "primaryAction": "Projekt starten",
+    "secondaryAction": "Dienstleistungen entdecken",
+    "tickerItems": [
+      {
+        "icon": "bot",
+        "text": "KI-Agent für CRM-Automatisierung implementiert",
+        "badge": "Live",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "zap",
+        "text": "Workflow automatisiert – 14 Std./Woche gespart",
+        "badge": "Erledigt",
+        "badgeVariant": "teal"
+      },
+      {
+        "icon": "sparkles",
+        "text": "Individueller GPT-Chatbot live auf Kundenwebsite",
+        "badge": "Aktiv",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "bot",
+        "text": "ERP-Integration erfolgreich abgeschlossen",
+        "badge": "Abgeschlossen",
+        "badgeVariant": "blue"
+      },
+      {
+        "icon": "zap",
+        "text": "Verkaufsbot generierte heute 38 qualifizierte Leads",
+        "badge": "Läuft",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "sparkles",
+        "text": "Mobile App im App Store und Play Store veröffentlicht",
+        "badge": "Veröffentlicht",
+        "badgeVariant": "teal"
+      },
+      {
+        "icon": "bot",
+        "text": "WhatsApp-Support-Bot bearbeitet 300 Nachrichten/Tag",
+        "badge": "Live",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "zap",
+        "text": "Zahlungsgateway in 48 Stunden integriert",
+        "badge": "Erledigt",
+        "badgeVariant": "blue"
+      }
+    ]
+  },
+  "AiShowcase": {
+    "prop1Title": "KI-Agenten, die arbeiten, während Sie schlafen",
+    "prop1Body": "Wir bauen und implementieren KI-Bots für Kundenservice, Vertrieb, Lead‑Generierung und interne Abläufe – auf WhatsApp, Telegram, Ihrer Website und darüber hinaus.",
+    "prop2Title": "Automatisierung, die lästige Arbeit eliminiert",
+    "prop2Body": "Von CRM‑ und ERP‑Automatisierung bis hin zu Workflow‑Orchestrierung und Reporting: Wir analysieren Ihre Prozesse und bauen zuverlässige Systeme – ohne manuellen Aufwand.",
+    "prop3Title": "Software, die Ihnen gehört, gebaut für die Zukunft",
+    "prop3Body": "Jede Plattform, jedes Dashboard oder jede Mobile App, die wir ausliefern, ist produktionsreif, dokumentiert und vollständig Ihr Eigentum. Keine Anbieterbindung, keine Black Boxes.",
+    "cta": "Alle Dienstleistungen ansehen",
+    "trust1": "Produktionsreife Lieferung",
+    "trust2": "Schnelle Bearbeitung",
+    "trust3": "Dedizierter Support"
+  },
+  "Auth": {
+    "common": {
+      "brand": "IDWE",
+      "brandShort": "IDWE",
+      "welcome": "Sicherer Zugang",
+      "backHome": "Zurück zur Startseite",
+      "secureNote": "Sicherer Zugang für Ihren Geschäftsarbeitsbereich",
+      "footer": "Geschützt durch verschlüsselte Verbindungen und moderne Sicherheitsstandards.",
+      "email": "E‑Mail-Adresse",
+      "emailPlaceholder": "name@firma.de",
+      "password": "Passwort",
+      "passwordPlaceholder": "Passwort eingeben",
+      "showPassword": "Passwort anzeigen",
+      "hidePassword": "Passwort ausblenden",
+      "fullName": "Vollständiger Name",
+      "fullNamePlaceholder": "Ihr vollständiger Name",
+      "company": "Firmenname",
+      "companyPlaceholder": "Ihre Firma (optional)",
+      "confirmPassword": "Passwort bestätigen",
+      "confirmPasswordPlaceholder": "Passwort erneut eingeben"
+    },
+    "showcase": {
+      "eyebrow": "Entwickelt für moderne Teams",
+      "title": "Ein sicherer Ort zur Verwaltung Ihres digitalen Geschäfts.",
+      "description": "Greifen Sie auf die Tools, Produkte und automatisierten Systeme zu, die IDWE für Ihre Organisation entwickelt.",
+      "points": [
+        {
+          "title": "KI‑gestützte Abläufe",
+          "description": "Behalten Sie automatisierte Workflows und intelligente Assistenten stets im Griff."
+        },
+        {
+          "title": "Vernetzte Software",
+          "description": "Bringen Sie Webplattformen, Mobile Apps, Zahlungen und Geschäftstools zusammen."
+        },
+        {
+          "title": "Sicherheit von Grund auf",
+          "description": "Schützen Sie den Kontozugriff mit Verifizierung und modernen Authentifizierungsabläufen."
+        }
+      ]
+    },
+    "login": {
+      "title": "Willkommen zurück",
+      "description": "Melden Sie sich an, um in Ihrer IDWE‑Arbeitsumgebung fortzufahren.",
+      "remember": "Angemeldet bleiben",
+      "forgot": "Passwort vergessen?",
+      "submit": "Anmelden",
+      "noAccount": "Neu bei IDWE?",
+      "signupLink": "Konto erstellen"
+    },
+    "signup": {
+      "title": "Konto erstellen",
+      "description": "Richten Sie den sicheren Zugang für Ihren Geschäftsarbeitsbereich ein.",
+      "submit": "Konto erstellen",
+      "passwordMismatch": "Die Passwörter stimmen nicht überein.",
+      "termsPrefix": "Ich stimme den",
+      "terms": "Nutzungsbedingungen",
+      "and": "und der",
+      "privacy": "Datenschutzrichtlinie",
+      "haveAccount": "Bereits ein Konto?",
+      "loginLink": "Anmelden"
+    },
+    "forgotPassword": {
+      "title": "Passwort zurücksetzen",
+      "description": "Geben Sie Ihre E‑Mail ein – wir senden Ihnen einen sicheren Verifizierungscode.",
+      "submit": "Verifizierungscode senden",
+      "backToLogin": "Zurück zur Anmeldung"
+    },
+    "verifyOtp": {
+      "title": "E‑Mail bestätigen",
+      "description": "Geben Sie den sechsstelligen Code ein, der an Ihre E‑Mail‑Adresse gesendet wurde.",
+      "codeLabel": "Verifizierungscode",
+      "digitLabel": "Codeziffer",
+      "submit": "Code verifizieren",
+      "resendText": "Keinen Code erhalten?",
+      "resendAction": "Neuen anfordern",
+      "backToLogin": "Zurück zur Anmeldung"
+    }
+  },
+  "footer": {
+    "tagline": "Enterprise‑KI, Cybersicherheit, Softwareentwicklung, Cloud‑Infrastruktur und digitale Transformation unter einem Dach.",
+    "location": "Remote‑First Team, weltweit tätig.",
+    "contact": {
+      "whatsapp": "Auf WhatsApp chatten",
+      "email": "E‑Mail senden"
+    },
+    "cta": {
+      "heading": "Bereit, Ihr Geschäft zu transformieren?",
+      "subheading": "Erzählen Sie uns von Ihrem Projekt – wir antworten innerhalb von 24 Stunden.",
+      "button": "Loslegen"
+    },
+    "columns": {
+      "services": {
+        "title": "Dienstleistungen",
+        "ai_solutions": "KI‑Lösungen",
+        "ai_bots": "KI‑Bots & Automatisierung",
+        "software_dev": "Softwareentwicklung",
+        "web_dev": "Webentwicklung",
+        "mobile_dev": "Mobile App Entwicklung",
+        "cybersecurity": "Cybersicherheitsdienste"
+      },
+      "technology": {
+        "title": "Technologie",
+        "claude_ai": "Claude AI Integration",
+        "api_integration": "API‑Integration",
+        "database": "Datenbankarchitektur",
+        "cloud": "Cloud‑Infrastruktur",
+        "security_compliance": "Sicherheitskonformität",
+        "digital_transform": "Digitale Transformation"
+      },
+      "company": {
+        "title": "Unternehmen",
+        "about": "Über uns",
+        "services": "Unsere Dienstleistungen",
+        "blogs": "Blog & Einblicke",
+        "contact": "Kontakt",
+        "privacy": "Datenschutzerklärung",
+        "terms": "Nutzungsbedingungen"
+      }
+    },
+    "bottom": {
+      "copyright": "© {year} IDWE. Alle Rechte vorbehalten.",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "sitemap": "Sitemap"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn"
+    },
+    "badges": {
+      "popular": "Beliebt",
+      "new": "Neu",
+      "enterprise": "Enterprise"
+    }
+  }
+}

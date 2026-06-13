@@ -45,8 +45,8 @@
 
     "Auth": {
       "common": {
-        "brand": "Infinity Enterprise Solutions",
-        "brandShort": "Infinity",
+        "brand": "IDWE",
+        "brandShort": "IDWE",
         "welcome": "Secure access",
         "backHome": "Back to home",
         "secureNote": "Secure access for your business workspace",
@@ -67,7 +67,7 @@
       "showcase": {
         "eyebrow": "Built for modern teams",
         "title": "One secure place to manage your digital business.",
-        "description": "Access the tools, products, and automated systems Infinity builds for your organization.",
+        "description": "Access the tools, products, and automated systems IDWE builds for your organization.",
         "points": [
           {
             "title": "AI-powered operations",
@@ -85,11 +85,11 @@
       },
       "login": {
         "title": "Welcome back",
-        "description": "Sign in to continue to your Infinity workspace.",
+        "description": "Sign in to continue to your IDWE workspace.",
         "remember": "Remember me",
         "forgot": "Forgot password?",
         "submit": "Sign in",
-        "noAccount": "New to Infinity?",
+        "noAccount": "New to IDWE?",
         "signupLink": "Create an account"
       },
       "signup": {
@@ -168,7 +168,7 @@
           },
 
           "bottom": {
-          "copyright": "© {year} Infinity Solutions. All rights reserved.",
+          "copyright": "© {year} IDWE. All rights reserved.",
           "privacy": "Privacy",
           "terms": "Terms",
           "sitemap": "Sitemap"
@@ -187,5 +187,4 @@
           "enterprise": "Enterprise"
           }
     }
-
 }

@@ -1,0 +1,220 @@
+{
+  "Header": {
+    "home": "Home",
+    "products": "Producten",
+    "service": "Diensten",
+    "blogs": "Blog",
+    "about": "Over ons",
+    "contact": "Contact",
+    "profile": "Profiel",
+    "login": "Inloggen",
+    "signUp": "Registreren"
+  },
+  "HomeHero": {
+    "headlineLead": "Automatiseer, schaal en",
+    "headlineAccent": "groei met AI",
+    "headlineSuffix": "",
+    "description": "IDWE bouwt intelligente automatiseringssystemen, maatwerksoftware en AI‑gestuurde tools die uw team bevrijden van repetitief werk, zodat u zich kunt concentreren op wat uw bedrijf echt vooruit helpt.",
+    "primaryAction": "Start uw project",
+    "secondaryAction": "Ontdek diensten",
+    "tickerItems": [
+      {
+        "icon": "bot",
+        "text": "AI‑agent geïmplementeerd voor CRM‑automatisering",
+        "badge": "Live",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "zap",
+        "text": "Workflow geautomatiseerd – 14 uur/week bespaard",
+        "badge": "Gereed",
+        "badgeVariant": "teal"
+      },
+      {
+        "icon": "sparkles",
+        "text": "Aangepaste GPT‑chatbot actief op klantwebsite",
+        "badge": "Actief",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "bot",
+        "text": "ERP‑integratie succesvol voltooid",
+        "badge": "Voltooid",
+        "badgeVariant": "blue"
+      },
+      {
+        "icon": "zap",
+        "text": "Verkoopbot genereerde vandaag 38 gekwalificeerde leads",
+        "badge": "Actief",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "sparkles",
+        "text": "Mobiele app gepubliceerd in App Store en Play Store",
+        "badge": "Gepubliceerd",
+        "badgeVariant": "teal"
+      },
+      {
+        "icon": "bot",
+        "text": "WhatsApp‑ondersteuningsbot verwerkt 300 berichten/dag",
+        "badge": "Live",
+        "badgeVariant": "cyan"
+      },
+      {
+        "icon": "zap",
+        "text": "Betalingsgateway geïntegreerd in 48 uur",
+        "badge": "Gereed",
+        "badgeVariant": "blue"
+      }
+    ]
+  },
+  "AiShowcase": {
+    "prop1Title": "AI‑agenten die werken terwijl u slaapt",
+    "prop1Body": "Wij bouwen en implementeren AI‑bots voor klantenservice, verkoop, leadgeneratie en interne operaties via WhatsApp, Telegram, uw website en verder.",
+    "prop2Title": "Automatisering die het saaie werk wegneemt",
+    "prop2Body": "Van CRM‑ en ERP‑automatisering tot workflow‑orchestratie en rapportage: we brengen uw processen in kaart en bouwen systemen die ze betrouwbaar uitvoeren, zonder handmatige inspanning.",
+    "prop3Title": "Software die van u is, gebouwd om lang mee te gaan",
+    "prop3Body": "Elk platform, dashboard of mobiele app die we opleveren is productieklaar, gedocumenteerd en volledig van u. Geen leverancierslock‑in, geen black boxes.",
+    "cta": "Bekijk alle diensten",
+    "trust1": "Productieklaar opgeleverd",
+    "trust2": "Snelle doorlooptijd",
+    "trust3": "Toegewijde ondersteuning"
+  },
+  "Auth": {
+    "common": {
+      "brand": "IDWE",
+      "brandShort": "IDWE",
+      "welcome": "Veilige toegang",
+      "backHome": "Terug naar home",
+      "secureNote": "Veilige toegang voor uw zakelijke werkruimte",
+      "footer": "Beschermd door versleutelde verbindingen en moderne beveiligingsnormen.",
+      "email": "E‑mailadres",
+      "emailPlaceholder": "naam@bedrijf.com",
+      "password": "Wachtwoord",
+      "passwordPlaceholder": "Voer uw wachtwoord in",
+      "showPassword": "Toon wachtwoord",
+      "hidePassword": "Verberg wachtwoord",
+      "fullName": "Volledige naam",
+      "fullNamePlaceholder": "Uw volledige naam",
+      "company": "Bedrijfsnaam",
+      "companyPlaceholder": "Uw bedrijf (optioneel)",
+      "confirmPassword": "Bevestig wachtwoord",
+      "confirmPasswordPlaceholder": "Voer het wachtwoord opnieuw in"
+    },
+    "showcase": {
+      "eyebrow": "Ontworpen voor moderne teams",
+      "title": "Eén veilige plek om uw digitale bedrijf te beheren.",
+      "description": "Toegang tot de tools, producten en geautomatiseerde systemen die IDWE voor uw organisatie bouwt.",
+      "points": [
+        {
+          "title": "AI‑gestuurde operaties",
+          "description": "Houd geautomatiseerde workflows en intelligente assistenten binnen handbereik."
+        },
+        {
+          "title": "Verbonden software",
+          "description": "Breng webplatforms, mobiele apps, betalingen en zakelijke tools samen."
+        },
+        {
+          "title": "Standaard veilig",
+          "description": "Bescherm accounttoegang met verificatie en moderne authenticatiestromen."
+        }
+      ]
+    },
+    "login": {
+      "title": "Welkom terug",
+      "description": "Log in om verder te gaan in uw IDWE‑werkruimte.",
+      "remember": "Onthoud mij",
+      "forgot": "Wachtwoord vergeten?",
+      "submit": "Inloggen",
+      "noAccount": "Nieuw bij IDWE?",
+      "signupLink": "Account aanmaken"
+    },
+    "signup": {
+      "title": "Account aanmaken",
+      "description": "Stel veilige toegang in voor uw zakelijke werkruimte.",
+      "submit": "Account aanmaken",
+      "passwordMismatch": "De wachtwoorden komen niet overeen.",
+      "termsPrefix": "Ik ga akkoord met de",
+      "terms": "Servicevoorwaarden",
+      "and": "en het",
+      "privacy": "Privacybeleid",
+      "haveAccount": "Al een account?",
+      "loginLink": "Inloggen"
+    },
+    "forgotPassword": {
+      "title": "Wachtwoord opnieuw instellen",
+      "description": "Voer uw e‑mailadres in – wij sturen u een veilige verificatiecode.",
+      "submit": "Verificatiecode verzenden",
+      "backToLogin": "Terug naar inloggen"
+    },
+    "verifyOtp": {
+      "title": "Verifieer uw e‑mail",
+      "description": "Voer de zescijferige code in die naar uw e‑mailadres is verzonden.",
+      "codeLabel": "Verificatiecode",
+      "digitLabel": "Codecijfer",
+      "submit": "Code verifiëren",
+      "resendText": "Geen code ontvangen?",
+      "resendAction": "Vraag een nieuwe aan",
+      "backToLogin": "Terug naar inloggen"
+    }
+  },
+  "footer": {
+    "tagline": "Enterprise‑grade AI, cybersecurity, software‑engineering, cloudinfrastructuur en digitale transformatie onder één dak.",
+    "location": "Remote‑first team dat wereldwijd opereert.",
+    "contact": {
+      "whatsapp": "Chat op WhatsApp",
+      "email": "Stuur een e‑mail"
+    },
+    "cta": {
+      "heading": "Klaar om uw bedrijf te transformeren?",
+      "subheading": "Vertel ons over uw project – we reageren binnen 24 uur.",
+      "button": "Begin"
+    },
+    "columns": {
+      "services": {
+        "title": "Diensten",
+        "ai_solutions": "AI‑oplossingen",
+        "ai_bots": "AI‑bots & Automatisering",
+        "software_dev": "Softwareontwikkeling",
+        "web_dev": "Webontwikkeling",
+        "mobile_dev": "Mobiele app‑ontwikkeling",
+        "cybersecurity": "Cybersecuritydiensten"
+      },
+      "technology": {
+        "title": "Technologie",
+        "claude_ai": "Claude AI‑integratie",
+        "api_integration": "API‑integratie",
+        "database": "Databasearchitectuur",
+        "cloud": "Cloudinfrastructuur",
+        "security_compliance": "Beveiligingsnaleving",
+        "digital_transform": "Digitale transformatie"
+      },
+      "company": {
+        "title": "Bedrijf",
+        "about": "Over ons",
+        "services": "Onze diensten",
+        "blogs": "Blog & inzichten",
+        "contact": "Contact",
+        "privacy": "Privacybeleid",
+        "terms": "Servicevoorwaarden"
+      }
+    },
+    "bottom": {
+      "copyright": "© {year} IDWE. Alle rechten voorbehouden.",
+      "privacy": "Privacy",
+      "terms": "Voorwaarden",
+      "sitemap": "Sitemap"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn"
+    },
+    "badges": {
+      "popular": "Populair",
+      "new": "Nieuw",
+      "enterprise": "Enterprise"
+    }
+  }
+}

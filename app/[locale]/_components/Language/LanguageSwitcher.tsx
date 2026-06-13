@@ -1,5 +1,3 @@
-// app/[locale]/_components/Language/LanguageSwitcher.tsx
-
 "use client";
 
 import { useLocale } from "next-intl";
@@ -11,13 +9,19 @@ import { ChevronDown, Check } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
+// Existing flags
 import US from "country-flag-icons/react/3x2/US";
 import SA from "country-flag-icons/react/3x2/SA";
 import IR from "country-flag-icons/react/3x2/IR";
 import AF from "country-flag-icons/react/3x2/AF";
 import CN from "country-flag-icons/react/3x2/CN";
 
-// ─────────────────────────────────────────────────────────────────────────────
+// New flags for European languages
+import ES from "country-flag-icons/react/3x2/ES"; // Spain
+import DE from "country-flag-icons/react/3x2/DE"; // Germany
+import FR from "country-flag-icons/react/3x2/FR"; // France
+import IT from "country-flag-icons/react/3x2/IT"; // Italy
+import NL from "country-flag-icons/react/3x2/NL"; // Netherlands
 
 const LOCALES = [
   {
@@ -27,16 +31,46 @@ const LOCALES = [
     short: "EN",
   },
   {
+    value: "es",
+    label: "Español",
+    flag: ES,
+    short: "ES",
+  },
+  {
+    value: "de",
+    label: "Deutsch",
+    flag: DE,
+    short: "DE",
+  },
+  {
+    value: "fr",
+    label: "Français",
+    flag: FR,
+    short: "FR",
+  },
+  {
+    value: "it",
+    label: "Italiano",
+    flag: IT,
+    short: "IT",
+  },
+  {
+    value: "nl",
+    label: "Nederlands",
+    flag: NL,
+    short: "NL",
+  },
+  {
+    value: "zh",
+    label: "中文",
+    flag: CN,
+    short: "ZH",
+  },
+  {
     value: "ar",
     label: "العربية",
     flag: SA,
     short: "AR",
-  },
-  {
-    value: "fa",
-    label: "فارسی",
-    flag: IR,
-    short: "FA",
   },
   {
     value: "ps",
@@ -45,57 +79,41 @@ const LOCALES = [
     short: "PS",
   },
   {
-    value: "zh",
-    label: "中文",
-    flag: CN,
-    short: "ZH",
+    value: "fa",
+    label: "فارسی",
+    flag: IR,
+    short: "FA",
   },
 ] as const;
 
-// ─────────────────────────────────────────────────────────────────────────────
-
 export function LanguageSwitcher() {
   const locale = useLocale();
-
   const router = useRouter();
-
   const pathname = usePathname();
-
   const [open, setOpen] = useState(false);
-
   const ref = useRef<HTMLDivElement>(null);
 
-  const active =
-    LOCALES.find((l) => l.value === locale) ?? LOCALES[0];
-
+  const active = LOCALES.find((l) => l.value === locale) ?? LOCALES[0];
   const FlagComponent = active.flag;
 
   const handleChange = (newLocale: string) => {
     router.push(pathname, { locale: newLocale });
-
     setOpen(false);
   };
 
   // Close on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (
-        ref.current &&
-        !ref.current.contains(e.target as Node)
-      ) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
         setOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handler);
-
-    return () =>
-      document.removeEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
   }, []);
 
   return (
     <div ref={ref} className="relative">
-      {/* Trigger */}
       <button
         onClick={() => setOpen((v) => !v)}
         className={cn(
@@ -103,16 +121,11 @@ export function LanguageSwitcher() {
           "text-muted-foreground hover:text-foreground",
           "border border-transparent hover:border-border/15",
           "hover:bg-muted/20 transition-all duration-150",
-          open &&
-            "bg-muted/20 border-border/15 text-foreground",
+          open && "bg-muted/20 border-border/15 text-foreground",
         )}
       >
         <FlagComponent className="w-4 h-4 shrink-0 rounded-[2px]" />
-
-        <span className="hidden sm:block tracking-wide">
-          {active.short}
-        </span>
-
+        <span className="hidden sm:block tracking-wide">{active.short}</span>
         <ChevronDown
           size={12}
           className={cn(
@@ -122,33 +135,18 @@ export function LanguageSwitcher() {
         />
       </button>
 
-      {/* Dropdown */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{
-              opacity: 0,
-              y: -4,
-              scale: 0.97,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            exit={{
-              opacity: 0,
-              y: -4,
-              scale: 0.97,
-            }}
+            initial={{ opacity: 0, y: -4, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -4, scale: 0.97 }}
             transition={{ duration: 0.13 }}
             className="absolute right-0 top-full mt-2 w-40 rounded-xl border border-border/15 bg-card/95 backdrop-blur-xl shadow-2xl p-1 z-50"
           >
             {LOCALES.map((l) => {
               const isActive = l.value === locale;
-
               const ItemFlag = l.flag;
-
               return (
                 <button
                   key={l.value}
@@ -161,16 +159,9 @@ export function LanguageSwitcher() {
                   )}
                 >
                   <ItemFlag className="w-4 h-4 shrink-0 rounded-[2px]" />
-
-                  <span className="flex-1">
-                    {l.label}
-                  </span>
-
+                  <span className="flex-1">{l.label}</span>
                   {isActive && (
-                    <Check
-                      size={11}
-                      className="text-color shrink-0"
-                    />
+                    <Check size={11} className="text-color shrink-0" />
                   )}
                 </button>
               );
