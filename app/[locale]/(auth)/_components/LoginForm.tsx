@@ -1,18 +1,16 @@
 "use client";
 
+// app/[locale]/(auth)/_components/LoginForm.tsx
+
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { LockKeyhole, Mail } from "lucide-react";
 import { AuthInput, PasswordInput } from "./AuthFields";
-import {
-  AUTH_ENDPOINTS,
-  getSupportedLocale,
-  localePath,
-} from "./auth-config";
+import { AUTH_ENDPOINTS, getSupportedLocale, localePath } from "./auth-config";
 
 export default function LoginForm() {
   const locale = getSupportedLocale(useLocale());
-  const t = useTranslations("Auth");
+  const t      = useTranslations("Auth");
 
   return (
     <form
@@ -45,36 +43,39 @@ export default function LoginForm() {
         required
       />
 
+      {/* Remember + forgot */}
       <div className="flex items-center justify-between gap-4 text-sm">
-        <label className="inline-flex cursor-pointer items-center gap-2 text-muted-foreground">
+        <label className="inline-flex cursor-pointer items-center gap-2 text-muted-foreground select-none">
           <input
             type="checkbox"
             name="remember"
             className="size-4 rounded border-input accent-primary"
           />
-          <span>{t("login.remember")}</span>
+          {t("login.remember")}
         </label>
 
         <Link
           href={localePath(locale, "/forgot-password")}
-          className="font-medium text-primary transition hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="text-sm font-medium text-primary transition hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
         >
           {t("login.forgot")}
         </Link>
       </div>
 
+      {/* Submit */}
       <button
         type="submit"
-        className="mt-1 inline-flex h-12 items-center justify-center rounded-xl bg-color px-5 text-sm font-semibold text-white! shadow-xl shadow-primary/20 transition hover:-translate-y-0.5 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        className="mt-1 inline-flex h-12 w-full items-center justify-center rounded-xl bg-color text-sm font-semibold text-white shadow-brand transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         {t("login.submit")}
       </button>
 
+      {/* Switch to sign-up */}
       <p className="text-center text-sm text-muted-foreground">
         {t("login.noAccount")}{" "}
         <Link
-          href={localePath(locale, "/signup")}
-          className="font-semibold text-primary transition hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          href={localePath(locale, "/sign-up")}
+          className="font-semibold text-primary transition hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
         >
           {t("login.signupLink")}
         </Link>

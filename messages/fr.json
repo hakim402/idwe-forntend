@@ -84,77 +84,80 @@
     "common": {
       "brand": "IDWE",
       "brandShort": "IDWE",
-      "welcome": "Accès sécurisé",
+      "welcome": "Bienvenue sur IDWE",
       "backHome": "Retour à l'accueil",
-      "secureNote": "Accès sécurisé pour votre espace de travail professionnel",
-      "footer": "Protégé par des connexions chiffrées et des normes de sécurité modernes.",
-      "email": "Adresse e‑mail",
-      "emailPlaceholder": "nom@entreprise.com",
+      "secureNote": "Chiffrement 256 bits · Conforme SOC 2 · Données jamais revendues",
+      "footer": "© 2025 IDWE. Tous droits réservés. IA d'entreprise & Transformation digitale.",
+      "email": "Adresse e-mail",
+      "emailPlaceholder": "vous@entreprise.com",
       "password": "Mot de passe",
       "passwordPlaceholder": "Entrez votre mot de passe",
-      "showPassword": "Afficher le mot de passe",
-      "hidePassword": "Masquer le mot de passe",
-      "fullName": "Nom complet",
-      "fullNamePlaceholder": "Votre nom complet",
-      "company": "Nom de l'entreprise",
-      "companyPlaceholder": "Votre entreprise (optionnel)",
       "confirmPassword": "Confirmer le mot de passe",
-      "confirmPasswordPlaceholder": "Entrez à nouveau le mot de passe"
+      "confirmPasswordPlaceholder": "Entrez à nouveau le mot de passe",
+      "fullName": "Nom complet",
+      "fullNamePlaceholder": "Jean Dupont",
+      "company": "Entreprise (facultatif)",
+      "companyPlaceholder": "Acme Corp",
+      "showPassword": "Afficher le mot de passe",
+      "hidePassword": "Masquer le mot de passe"
     },
     "showcase": {
-      "eyebrow": "Conçu pour les équipes modernes",
-      "title": "Un endroit sécurisé pour gérer votre entreprise numérique.",
-      "description": "Accédez aux outils, produits et systèmes automatisés qu'IDWE construit pour votre organisation.",
+      "eyebrow": "Plateforme d'entreprise",
+      "title": "Outils alimentés par l'IA conçus pour les équipes sérieuses",
+      "description": "IDWE vous aide à automatiser vos flux de travail, livrer plus rapidement et faire évoluer vos opérations, le tout sur une plateforme sécurisée de niveau entreprise.",
       "points": [
         {
-          "title": "Opérations basées sur l'IA",
-          "description": "Gardez les workflows automatisés et les assistants intelligents à portée de main."
+          "title": "Agents IA intelligents",
+          "description": "Déployez des agents IA pour l'automatisation CRM, le support, la génération de leads et plus sur tous les canaux utilisés par votre entreprise."
         },
         {
-          "title": "Logiciels connectés",
-          "description": "Rassemblez plateformes web, applications mobiles, paiements et outils métier."
+          "title": "Logiciel sur mesure rapide",
+          "description": "Applications web, mobiles, tableaux de bord SaaS et intégrations API prêts pour la production, entièrement à vous."
         },
         {
-          "title": "Sécurisé par conception",
-          "description": "Protégez l'accès à votre compte avec vérification et flux d'authentification modernes."
+          "title": "Sécurité de niveau entreprise",
+          "description": "Infrastructure conforme SOC 2, chiffrement de bout en bout et pistes d'audit complètes sur chaque action."
         }
       ]
     },
     "login": {
-      "title": "Bon retour",
-      "description": "Connectez-vous pour continuer dans votre espace de travail IDWE.",
-      "remember": "Se souvenir de moi",
+      "title": "Connectez-vous à votre compte",
+      "description": "Entrez vos identifiants pour accéder à votre espace de travail IDWE.",
+      "remember": "Rester connecté",
       "forgot": "Mot de passe oublié ?",
       "submit": "Se connecter",
-      "noAccount": "Nouveau chez IDWE ?",
-      "signupLink": "Créer un compte"
+      "noAccount": "Pas encore de compte ?",
+      "signupLink": "Créez-en un gratuitement"
     },
     "signup": {
-      "title": "Créer votre compte",
-      "description": "Configurez un accès sécurisé pour votre espace de travail professionnel.",
-      "submit": "Créer le compte",
+      "title": "Créez votre compte",
+      "description": "Démarrez avec IDWE. Aucune carte de crédit requise.",
+      "passwordHint": "Doit comporter au moins 8 caractères.",
       "passwordMismatch": "Les mots de passe ne correspondent pas.",
       "termsPrefix": "J'accepte les",
       "terms": "Conditions d'utilisation",
-      "and": "et la",
+      "and": "et",
       "privacy": "Politique de confidentialité",
+      "submit": "Créer un compte",
       "haveAccount": "Vous avez déjà un compte ?",
       "loginLink": "Se connecter"
     },
     "forgotPassword": {
-      "title": "Réinitialiser votre mot de passe",
-      "description": "Entrez votre e‑mail, nous vous enverrons un code de vérification sécurisé.",
-      "submit": "Envoyer le code de vérification",
+      "title": "Réinitialisez votre mot de passe",
+      "description": "Nous vous enverrons un code de réinitialisation sécurisé à votre adresse e-mail.",
+      "emailHint": "Utilisez l'adresse e-mail liée à votre compte IDWE.",
+      "submit": "Envoyer le code de réinitialisation",
       "backToLogin": "Retour à la connexion"
     },
     "verifyOtp": {
-      "title": "Vérifiez votre e‑mail",
-      "description": "Entrez le code à six chiffres envoyé à votre adresse e‑mail.",
+      "title": "Vérifiez votre boîte de réception",
+      "description": "Nous avons envoyé un code à 6 chiffres à votre adresse e-mail. Entrez-le ci-dessous pour continuer.",
       "codeLabel": "Code de vérification",
-      "digitLabel": "Chiffre du code",
-      "submit": "Vérifier le code",
-      "resendText": "Vous n'avez pas reçu le code ?",
-      "resendAction": "En demander un nouveau",
+      "digitLabel": "Chiffre",
+      "hint": "Le code expire dans 10 minutes. Vérifiez vos spams si vous ne le voyez pas.",
+      "submit": "Vérifier et continuer",
+      "resendText": "Vous n'avez pas reçu de code ?",
+      "resendAction": "Renvoyer",
       "backToLogin": "Retour à la connexion"
     }
   },

@@ -1,13 +1,15 @@
+// app/[locale]/(auth)/sign-up/page.tsx
+
 import type { Metadata } from "next";
 import AuthShell from "../_components/AuthShell";
 import SignupForm from "../_components/SignupForm";
 
 export const metadata: Metadata = {
-  title: "Create Account | Infinity Enterprise Solutions",
-  description: "Create your Infinity account and start building smarter systems.",
+  title:       "Create Account | IDWE",
+  description: "Create your IDWE account and start building smarter systems.",
 };
 
-export default function SignupPage() {
+export default function SignUpPage() {
   return (
     <AuthShell mode="signup">
       <SignupForm />

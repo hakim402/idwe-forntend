@@ -84,77 +84,80 @@
     "common": {
       "brand": "IDWE",
       "brandShort": "IDWE",
-      "welcome": "Veilige toegang",
+      "welcome": "Welkom bij IDWE",
       "backHome": "Terug naar home",
-      "secureNote": "Veilige toegang voor uw zakelijke werkruimte",
-      "footer": "Beschermd door versleutelde verbindingen en moderne beveiligingsnormen.",
-      "email": "E‑mailadres",
-      "emailPlaceholder": "naam@bedrijf.com",
+      "secureNote": "256-bit versleuteld · SOC 2-compliant · Data wordt nooit verkocht",
+      "footer": "© 2025 IDWE. Alle rechten voorbehouden. Enterprise AI & Digitale Transformatie.",
+      "email": "E-mailadres",
+      "emailPlaceholder": "jij@bedrijf.com",
       "password": "Wachtwoord",
-      "passwordPlaceholder": "Voer uw wachtwoord in",
-      "showPassword": "Toon wachtwoord",
-      "hidePassword": "Verberg wachtwoord",
-      "fullName": "Volledige naam",
-      "fullNamePlaceholder": "Uw volledige naam",
-      "company": "Bedrijfsnaam",
-      "companyPlaceholder": "Uw bedrijf (optioneel)",
+      "passwordPlaceholder": "Voer je wachtwoord in",
       "confirmPassword": "Bevestig wachtwoord",
-      "confirmPasswordPlaceholder": "Voer het wachtwoord opnieuw in"
+      "confirmPasswordPlaceholder": "Voer het wachtwoord opnieuw in",
+      "fullName": "Volledige naam",
+      "fullNamePlaceholder": "Jan Jansen",
+      "company": "Bedrijf (optioneel)",
+      "companyPlaceholder": "Acme Corp",
+      "showPassword": "Toon wachtwoord",
+      "hidePassword": "Verberg wachtwoord"
     },
     "showcase": {
-      "eyebrow": "Ontworpen voor moderne teams",
-      "title": "Eén veilige plek om uw digitale bedrijf te beheren.",
-      "description": "Toegang tot de tools, producten en geautomatiseerde systemen die IDWE voor uw organisatie bouwt.",
+      "eyebrow": "Enterprise Platform",
+      "title": "AI-aangedreven tools gebouwd voor serieuze teams",
+      "description": "IDWE helpt je workflows te automatiseren, sneller te leveren en operaties op te schalen, allemaal op één veilig, enterprise-grade platform.",
       "points": [
         {
-          "title": "AI‑gestuurde operaties",
-          "description": "Houd geautomatiseerde workflows en intelligente assistenten binnen handbereik."
+          "title": "Intelligente AI Agents",
+          "description": "Zet AI-agents in voor CRM-automatisering, support, leadgeneratie en meer via elk kanaal dat jouw bedrijf gebruikt."
         },
         {
-          "title": "Verbonden software",
-          "description": "Breng webplatforms, mobiele apps, betalingen en zakelijke tools samen."
+          "title": "Maatwerk software op snelheid",
+          "description": "Webapps, mobiele apps, SaaS-dashboards en API-integraties, productie-klaar en volledig van jou."
         },
         {
-          "title": "Standaard veilig",
-          "description": "Bescherm accounttoegang met verificatie en moderne authenticatiestromen."
+          "title": "Enterprise-grade beveiliging",
+          "description": "SOC 2-compliant infrastructuur, end-to-end encryptie en volledige audit trails bij elke actie."
         }
       ]
     },
     "login": {
-      "title": "Welkom terug",
-      "description": "Log in om verder te gaan in uw IDWE‑werkruimte.",
-      "remember": "Onthoud mij",
+      "title": "Log in op je account",
+      "description": "Voer je inloggegevens in om toegang te krijgen tot je IDWE-werkruimte.",
+      "remember": "Ingelogd blijven",
       "forgot": "Wachtwoord vergeten?",
       "submit": "Inloggen",
-      "noAccount": "Nieuw bij IDWE?",
-      "signupLink": "Account aanmaken"
+      "noAccount": "Nog geen account?",
+      "signupLink": "Maak er gratis een aan"
     },
     "signup": {
-      "title": "Account aanmaken",
-      "description": "Stel veilige toegang in voor uw zakelijke werkruimte.",
-      "submit": "Account aanmaken",
-      "passwordMismatch": "De wachtwoorden komen niet overeen.",
+      "title": "Maak je account aan",
+      "description": "Ga aan de slag met IDWE. Geen creditcard nodig.",
+      "passwordHint": "Moet minimaal 8 tekens bevatten.",
+      "passwordMismatch": "Wachtwoorden komen niet overeen.",
       "termsPrefix": "Ik ga akkoord met de",
       "terms": "Servicevoorwaarden",
-      "and": "en het",
+      "and": "en",
       "privacy": "Privacybeleid",
-      "haveAccount": "Al een account?",
+      "submit": "Account aanmaken",
+      "haveAccount": "Heb je al een account?",
       "loginLink": "Inloggen"
     },
     "forgotPassword": {
       "title": "Wachtwoord opnieuw instellen",
-      "description": "Voer uw e‑mailadres in – wij sturen u een veilige verificatiecode.",
-      "submit": "Verificatiecode verzenden",
+      "description": "We sturen een beveiligde resetcode naar je e-mailadres.",
+      "emailHint": "Gebruik het e-mailadres dat aan je IDWE-account is gekoppeld.",
+      "submit": "Verstuur resetcode",
       "backToLogin": "Terug naar inloggen"
     },
     "verifyOtp": {
-      "title": "Verifieer uw e‑mail",
-      "description": "Voer de zescijferige code in die naar uw e‑mailadres is verzonden.",
+      "title": "Controleer je inbox",
+      "description": "We hebben een 6-cijferige code naar je e-mail gestuurd. Voer deze hieronder in om door te gaan.",
       "codeLabel": "Verificatiecode",
-      "digitLabel": "Codecijfer",
-      "submit": "Code verifiëren",
+      "digitLabel": "Cijfer",
+      "hint": "De code verloopt over 10 minuten. Controleer je spamfolder als je niets ziet.",
+      "submit": "Verifiëren en doorgaan",
       "resendText": "Geen code ontvangen?",
-      "resendAction": "Vraag een nieuwe aan",
+      "resendAction": "Opnieuw verzenden",
       "backToLogin": "Terug naar inloggen"
     }
   },

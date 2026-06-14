@@ -1,13 +1,15 @@
+// app/[locale]/(auth)/sign-in/page.tsx
+
 import type { Metadata } from "next";
 import AuthShell from "../_components/AuthShell";
 import LoginForm from "../_components/LoginForm";
 
 export const metadata: Metadata = {
-  title: "Login | Infinity Enterprise Solutions",
-  description: "Sign in securely to your Infinity account.",
+  title:       "Sign In | IDWE",
+  description: "Sign in securely to your IDWE enterprise account.",
 };
 
-export default function LoginPage() {
+export default function SignInPage() {
   return (
     <AuthShell mode="login">
       <LoginForm />

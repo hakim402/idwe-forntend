@@ -84,77 +84,80 @@
     "common": {
       "brand": "IDWE",
       "brandShort": "IDWE",
-      "welcome": "Sicherer Zugang",
+      "welcome": "Willkommen bei IDWE",
       "backHome": "Zurück zur Startseite",
-      "secureNote": "Sicherer Zugang für Ihren Geschäftsarbeitsbereich",
-      "footer": "Geschützt durch verschlüsselte Verbindungen und moderne Sicherheitsstandards.",
-      "email": "E‑Mail-Adresse",
-      "emailPlaceholder": "name@firma.de",
+      "secureNote": "256-Bit-Verschlüsselung · SOC 2-konform · Daten werden niemals verkauft",
+      "footer": "© 2025 IDWE. Alle Rechte vorbehalten. Enterprise-KI & Digitale Transformation.",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "ich@unternehmen.de",
       "password": "Passwort",
       "passwordPlaceholder": "Passwort eingeben",
-      "showPassword": "Passwort anzeigen",
-      "hidePassword": "Passwort ausblenden",
-      "fullName": "Vollständiger Name",
-      "fullNamePlaceholder": "Ihr vollständiger Name",
-      "company": "Firmenname",
-      "companyPlaceholder": "Ihre Firma (optional)",
       "confirmPassword": "Passwort bestätigen",
-      "confirmPasswordPlaceholder": "Passwort erneut eingeben"
+      "confirmPasswordPlaceholder": "Passwort erneut eingeben",
+      "fullName": "Vollständiger Name",
+      "fullNamePlaceholder": "Max Mustermann",
+      "company": "Unternehmen (optional)",
+      "companyPlaceholder": "Acme GmbH",
+      "showPassword": "Passwort anzeigen",
+      "hidePassword": "Passwort ausblenden"
     },
     "showcase": {
-      "eyebrow": "Entwickelt für moderne Teams",
-      "title": "Ein sicherer Ort zur Verwaltung Ihres digitalen Geschäfts.",
-      "description": "Greifen Sie auf die Tools, Produkte und automatisierten Systeme zu, die IDWE für Ihre Organisation entwickelt.",
+      "eyebrow": "Enterprise-Plattform",
+      "title": "KI-gestützte Tools für ambitionierte Teams",
+      "description": "IDWE hilft Ihnen, Arbeitsabläufe zu automatisieren, schneller auszuliefern und Betriebsabläufe zu skalieren – alles auf einer sicheren Enterprise-Plattform.",
       "points": [
         {
-          "title": "KI‑gestützte Abläufe",
-          "description": "Behalten Sie automatisierte Workflows und intelligente Assistenten stets im Griff."
+          "title": "Intelligente KI-Agenten",
+          "description": "Setzen Sie KI-Agenten für CRM-Automatisierung, Support, Lead-Generierung und mehr über alle Kanäle ein, die Ihr Unternehmen nutzt."
         },
         {
-          "title": "Vernetzte Software",
-          "description": "Bringen Sie Webplattformen, Mobile Apps, Zahlungen und Geschäftstools zusammen."
+          "title": "Maßgeschneiderte Software in Rekordzeit",
+          "description": "Web-Apps, mobile Apps, SaaS-Dashboards und API-Integrationen – produktionsreif und komplett in Ihrem Besitz."
         },
         {
-          "title": "Sicherheit von Grund auf",
-          "description": "Schützen Sie den Kontozugriff mit Verifizierung und modernen Authentifizierungsabläufen."
+          "title": "Enterprise-Sicherheit",
+          "description": "SOC 2-konforme Infrastruktur, Ende-zu-Ende-Verschlüsselung und vollständige Audit-Trails für jede Aktion."
         }
       ]
     },
     "login": {
-      "title": "Willkommen zurück",
-      "description": "Melden Sie sich an, um in Ihrer IDWE‑Arbeitsumgebung fortzufahren.",
+      "title": "Melden Sie sich bei Ihrem Konto an",
+      "description": "Geben Sie Ihre Anmeldedaten ein, um auf Ihren IDWE-Arbeitsbereich zuzugreifen.",
       "remember": "Angemeldet bleiben",
       "forgot": "Passwort vergessen?",
       "submit": "Anmelden",
-      "noAccount": "Neu bei IDWE?",
-      "signupLink": "Konto erstellen"
+      "noAccount": "Noch kein Konto?",
+      "signupLink": "Kostenlos registrieren"
     },
     "signup": {
       "title": "Konto erstellen",
-      "description": "Richten Sie den sicheren Zugang für Ihren Geschäftsarbeitsbereich ein.",
-      "submit": "Konto erstellen",
-      "passwordMismatch": "Die Passwörter stimmen nicht überein.",
+      "description": "Legen Sie mit IDWE los. Keine Kreditkarte erforderlich.",
+      "passwordHint": "Muss mindestens 8 Zeichen lang sein.",
+      "passwordMismatch": "Passwörter stimmen nicht überein.",
       "termsPrefix": "Ich stimme den",
       "terms": "Nutzungsbedingungen",
-      "and": "und der",
-      "privacy": "Datenschutzrichtlinie",
-      "haveAccount": "Bereits ein Konto?",
+      "and": "und",
+      "privacy": "Datenschutzerklärung",
+      "submit": "Konto erstellen",
+      "haveAccount": "Sie haben bereits ein Konto?",
       "loginLink": "Anmelden"
     },
     "forgotPassword": {
       "title": "Passwort zurücksetzen",
-      "description": "Geben Sie Ihre E‑Mail ein – wir senden Ihnen einen sicheren Verifizierungscode.",
-      "submit": "Verifizierungscode senden",
+      "description": "Wir senden Ihnen einen sicheren Reset-Code an Ihre E-Mail-Adresse.",
+      "emailHint": "Verwenden Sie die E-Mail-Adresse, die mit Ihrem IDWE-Konto verknüpft ist.",
+      "submit": "Reset-Code senden",
       "backToLogin": "Zurück zur Anmeldung"
     },
     "verifyOtp": {
-      "title": "E‑Mail bestätigen",
-      "description": "Geben Sie den sechsstelligen Code ein, der an Ihre E‑Mail‑Adresse gesendet wurde.",
-      "codeLabel": "Verifizierungscode",
-      "digitLabel": "Codeziffer",
-      "submit": "Code verifizieren",
+      "title": "Überprüfen Sie Ihren Posteingang",
+      "description": "Wir haben einen 6-stelligen Code an Ihre E-Mail gesendet. Geben Sie ihn unten ein, um fortzufahren.",
+      "codeLabel": "Bestätigungscode",
+      "digitLabel": "Ziffer",
+      "hint": "Der Code läuft in 10 Minuten ab. Bitte prüfen Sie ggf. Ihren Spam-Ordner.",
+      "submit": "Bestätigen und fortfahren",
       "resendText": "Keinen Code erhalten?",
-      "resendAction": "Neuen anfordern",
+      "resendAction": "Erneut senden",
       "backToLogin": "Zurück zur Anmeldung"
     }
   },

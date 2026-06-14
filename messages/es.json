@@ -84,78 +84,81 @@
     "common": {
       "brand": "IDWE",
       "brandShort": "IDWE",
-      "welcome": "Acceso seguro",
+      "welcome": "Bienvenido a IDWE",
       "backHome": "Volver al inicio",
-      "secureNote": "Acceso seguro para el espacio de trabajo de tu empresa",
-      "footer": "Protegido por conexiones cifradas y estándares de seguridad modernos.",
+      "secureNote": "Cifrado de 256 bits · Compatible con SOC 2 · Datos nunca vendidos",
+      "footer": "© 2025 IDWE. Todos los derechos reservados. IA empresarial y transformación digital.",
       "email": "Correo electrónico",
-      "emailPlaceholder": "nombre@empresa.com",
+      "emailPlaceholder": "tu@empresa.com",
       "password": "Contraseña",
       "passwordPlaceholder": "Ingresa tu contraseña",
-      "showPassword": "Mostrar contraseña",
-      "hidePassword": "Ocultar contraseña",
-      "fullName": "Nombre completo",
-      "fullNamePlaceholder": "Tu nombre completo",
-      "company": "Nombre de la empresa",
-      "companyPlaceholder": "Tu empresa (opcional)",
       "confirmPassword": "Confirmar contraseña",
-      "confirmPasswordPlaceholder": "Ingresa la contraseña nuevamente"
+      "confirmPasswordPlaceholder": "Vuelve a ingresar la contraseña",
+      "fullName": "Nombre completo",
+      "fullNamePlaceholder": "María García",
+      "company": "Empresa (opcional)",
+      "companyPlaceholder": "Acme Corp",
+      "showPassword": "Mostrar contraseña",
+      "hidePassword": "Ocultar contraseña"
     },
     "showcase": {
-      "eyebrow": "Diseñado para equipos modernos",
-      "title": "Un lugar seguro para gestionar tu negocio digital.",
-      "description": "Accede a las herramientas, productos y sistemas automatizados que IDWE construye para tu organización.",
+      "eyebrow": "Plataforma empresarial",
+      "title": "Herramientas impulsadas por IA para equipos serios",
+      "description": "IDWE te ayuda a automatizar flujos de trabajo, entregar más rápido y escalar operaciones, todo en una plataforma segura de nivel empresarial.",
       "points": [
         {
-          "title": "Operaciones potenciadas por IA",
-          "description": "Ten siempre a mano flujos automatizados y asistentes inteligentes."
+          "title": "Agentes de IA inteligentes",
+          "description": "Despliega agentes de IA para automatización de CRM, soporte, generación de leads y más en todos los canales que usa tu empresa."
         },
         {
-          "title": "Software conectado",
-          "description": "Integra plataformas web, apps móviles, pagos y herramientas empresariales."
+          "title": "Software a medida a gran velocidad",
+          "description": "Aplicaciones web, móviles, paneles SaaS e integraciones API listas para producción y completamente tuyas."
         },
         {
-          "title": "Seguro por diseño",
-          "description": "Protege el acceso a tu cuenta con verificación y flujos modernos de autenticación."
+          "title": "Seguridad de nivel empresarial",
+          "description": "Infraestructura compatible con SOC 2, cifrado de extremo a extremo y auditoría completa de cada acción."
         }
       ]
     },
     "login": {
-      "title": "Bienvenido de nuevo",
-      "description": "Inicia sesión para continuar en tu espacio de trabajo IDWE.",
-      "remember": "Recordarme",
+      "title": "Inicia sesión en tu cuenta",
+      "description": "Ingresa tus credenciales para acceder a tu espacio de trabajo IDWE.",
+      "remember": "Mantenerme conectado",
       "forgot": "¿Olvidaste tu contraseña?",
       "submit": "Iniciar sesión",
-      "noAccount": "¿Nuevo en IDWE?",
-      "signupLink": "Crear una cuenta"
+      "noAccount": "¿No tienes una cuenta?",
+      "signupLink": "Crea una gratis"
     },
     "signup": {
       "title": "Crea tu cuenta",
-      "description": "Configura el acceso seguro para el espacio de trabajo de tu empresa.",
-      "submit": "Crear cuenta",
+      "description": "Empieza con IDWE. No se requiere tarjeta de crédito.",
+      "passwordHint": "Debe tener al menos 8 caracteres.",
       "passwordMismatch": "Las contraseñas no coinciden.",
       "termsPrefix": "Acepto los",
-      "terms": "Términos de Servicio",
-      "and": "y la",
-      "privacy": "Política de Privacidad",
+      "terms": "Términos de servicio",
+      "and": "y",
+      "privacy": "Política de privacidad",
+      "submit": "Crear cuenta",
       "haveAccount": "¿Ya tienes una cuenta?",
       "loginLink": "Iniciar sesión"
     },
     "forgotPassword": {
-      "title": "Restablecer tu contraseña",
-      "description": "Ingresa tu correo y te enviaremos un código de verificación seguro.",
-      "submit": "Enviar código de verificación",
-      "backToLogin": "Volver a iniciar sesión"
+      "title": "Restablece tu contraseña",
+      "description": "Te enviaremos un código de restablecimiento seguro a tu correo electrónico.",
+      "emailHint": "Usa la dirección de correo vinculada a tu cuenta IDWE.",
+      "submit": "Enviar código de restablecimiento",
+      "backToLogin": "Volver al inicio de sesión"
     },
     "verifyOtp": {
-      "title": "Verifica tu correo",
-      "description": "Ingresa el código de seis dígitos enviado a tu dirección de correo.",
+      "title": "Revisa tu bandeja de entrada",
+      "description": "Enviamos un código de 6 dígitos a tu correo electrónico. Ingresalo abajo para continuar.",
       "codeLabel": "Código de verificación",
-      "digitLabel": "Dígito del código",
-      "submit": "Verificar código",
-      "resendText": "¿No recibiste el código?",
-      "resendAction": "Solicitar uno nuevo",
-      "backToLogin": "Volver a iniciar sesión"
+      "digitLabel": "Dígito",
+      "hint": "El código caduca en 10 minutos. Revisa tu carpeta de spam si no lo ves.",
+      "submit": "Verificar y continuar",
+      "resendText": "¿No recibiste un código?",
+      "resendAction": "Reenviar",
+      "backToLogin": "Volver al inicio de sesión"
     }
   },
   "footer": {

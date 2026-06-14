@@ -84,78 +84,81 @@
     "common": {
       "brand": "IDWE",
       "brandShort": "IDWE",
-      "welcome": "Accesso sicuro",
+      "welcome": "Benvenuto su IDWE",
       "backHome": "Torna alla home",
-      "secureNote": "Accesso sicuro per il tuo spazio di lavoro aziendale",
-      "footer": "Protetto da connessioni crittografate e standard di sicurezza moderni.",
+      "secureNote": "Crittografia a 256 bit · Conforme SOC 2 · Dati mai venduti",
+      "footer": "© 2025 IDWE. Tutti i diritti riservati. AI Enterprise & Trasformazione Digitale.",
       "email": "Indirizzo email",
-      "emailPlaceholder": "nome@azienda.com",
+      "emailPlaceholder": "tu@azienda.it",
       "password": "Password",
-      "passwordPlaceholder": "Inserisci la tua password",
-      "showPassword": "Mostra password",
-      "hidePassword": "Nascondi password",
-      "fullName": "Nome completo",
-      "fullNamePlaceholder": "Il tuo nome completo",
-      "company": "Nome azienda",
-      "companyPlaceholder": "La tua azienda (opzionale)",
+      "passwordPlaceholder": "Inserisci la password",
       "confirmPassword": "Conferma password",
-      "confirmPasswordPlaceholder": "Inserisci di nuovo la password"
+      "confirmPasswordPlaceholder": "Reinserisci la password",
+      "fullName": "Nome completo",
+      "fullNamePlaceholder": "Mario Rossi",
+      "company": "Azienda (facoltativo)",
+      "companyPlaceholder": "Acme Corp",
+      "showPassword": "Mostra password",
+      "hidePassword": "Nascondi password"
     },
     "showcase": {
-      "eyebrow": "Progettato per team moderni",
-      "title": "Un posto sicuro per gestire la tua attività digitale.",
-      "description": "Accedi agli strumenti, prodotti e sistemi automatizzati che IDWE costruisce per la tua organizzazione.",
+      "eyebrow": "Piattaforma Enterprise",
+      "title": "Strumenti basati su IA per team ambiziosi",
+      "description": "IDWE ti aiuta ad automatizzare i flussi di lavoro, consegnare più velocemente e scalare le operazioni, tutto su una piattaforma sicura di livello enterprise.",
       "points": [
         {
-          "title": "Operazioni basate sull'IA",
-          "description": "Tieni i flussi di lavoro automatizzati e gli assistenti intelligenti a portata di mano."
+          "title": "Agenti IA intelligenti",
+          "description": "Distribuisci agenti IA per l'automazione del CRM, supporto, generazione di lead e altro su tutti i canali usati dalla tua azienda."
         },
         {
-          "title": "Software connesso",
-          "description": "Unisci piattaforme web, app mobili, pagamenti e strumenti aziendali."
+          "title": "Software personalizzato ad alta velocità",
+          "description": "App web, app mobile, dashboard SaaS e integrazioni API pronte per la produzione e completamente tue."
         },
         {
-          "title": "Sicuro per progettazione",
-          "description": "Proteggi l'accesso all'account con verifica e flussi di autenticazione moderni."
+          "title": "Sicurezza di livello enterprise",
+          "description": "Infrastruttura conforme SOC 2, crittografia end-to-end e audit trail completi per ogni azione."
         }
       ]
     },
     "login": {
-      "title": "Bentornato",
-      "description": "Accedi per continuare nel tuo spazio di lavoro IDWE.",
-      "remember": "Ricordami",
+      "title": "Accedi al tuo account",
+      "description": "Inserisci le tue credenziali per accedere all'area di lavoro IDWE.",
+      "remember": "Resta connesso",
       "forgot": "Password dimenticata?",
       "submit": "Accedi",
-      "noAccount": "Nuovo su IDWE?",
-      "signupLink": "Crea un account"
+      "noAccount": "Non hai un account?",
+      "signupLink": "Creane uno gratis"
     },
     "signup": {
       "title": "Crea il tuo account",
-      "description": "Configura l'accesso sicuro per il tuo spazio di lavoro aziendale.",
-      "submit": "Crea account",
+      "description": "Inizia con IDWE. Nessuna carta di credito richiesta.",
+      "passwordHint": "Deve contenere almeno 8 caratteri.",
       "passwordMismatch": "Le password non corrispondono.",
       "termsPrefix": "Accetto i",
       "terms": "Termini di servizio",
-      "and": "e la",
+      "and": "e",
       "privacy": "Informativa sulla privacy",
+      "submit": "Crea account",
       "haveAccount": "Hai già un account?",
       "loginLink": "Accedi"
     },
     "forgotPassword": {
       "title": "Reimposta la tua password",
-      "description": "Inserisci la tua email, ti invieremo un codice di verifica sicuro.",
-      "submit": "Invia codice di verifica",
-      "backToLogin": "Torna all'accesso"
+      "description": "Ti invieremo un codice di reset sicuro al tuo indirizzo email.",
+      "emailHint": "Usa l'indirizzo email collegato al tuo account IDWE.",
+      "submit": "Invia codice di reset",
+      "backToLogin": "Torna al login"
     },
     "verifyOtp": {
-      "title": "Verifica la tua email",
-      "description": "Inserisci il codice a sei cifre inviato al tuo indirizzo email.",
+      "title": "Controlla la tua casella di posta",
+      "description": "Abbiamo inviato un codice a 6 cifre alla tua email. Inseriscilo qui sotto per continuare.",
       "codeLabel": "Codice di verifica",
-      "digitLabel": "Cifra del codice",
-      "submit": "Verifica codice",
-      "resendText": "Non hai ricevuto il codice?",
-      "resendAction": "Richiedine uno nuovo",
-      "backToLogin": "Torna all'accesso"
+      "digitLabel": "Cifra",
+      "hint": "Il codice scade tra 10 minuti. Controlla la cartella spam se non lo vedi.",
+      "submit": "Verifica e continua",
+      "resendText": "Non hai ricevuto un codice?",
+      "resendAction": "Invia di nuovo",
+      "backToLogin": "Torna al login"
     }
   },
   "footer": {
