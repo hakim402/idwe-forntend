@@ -1,8 +1,17 @@
-// app/layout.tsx
+/**
+ * app/layout.tsx — Root layout (Server Component)
+ *
+ * What changed from your original:
+ *   • Added <Providers> around ThemeProvider so Google OAuth + AuthContext
+ *     are available everywhere beneath this layout.
+ *   • Added validateEnv() call — crashes loudly at startup if env vars missing.
+ *   • ThemeProvider stays inside Providers (order: GoogleOAuth → Auth → Theme).
+ *   • Everything else (fonts, metadata, JSON-LD, WhatsApp) is unchanged.
+ */
 
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/Providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { validateEnv } from "@/lib/env";
 
 import {
   Cairo,
@@ -15,8 +24,15 @@ import Script from "next/script";
 import "./globals.css";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { GoogleOauthProvider } from "@/providers/GoogleOauthProvider";
 
-// English Font
+// ─── Validate env at startup (server-side) ────────────────────────────────────
+// Throws immediately if NEXT_PUBLIC_API_BASE_URL or NEXT_PUBLIC_GOOGLE_CLIENT_ID
+// are missing — no silent undefined bugs in production.
+validateEnv();
+
+// ─── Fonts ────────────────────────────────────────────────────────────────────
+
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-en",
@@ -24,7 +40,6 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-// Arabic Font
 const cairo = Cairo({
   subsets: ["arabic"],
   variable: "--font-ar",
@@ -32,7 +47,6 @@ const cairo = Cairo({
   display: "swap",
 });
 
-// Chinese Font
 const notoSansSC = Noto_Sans_SC({
   subsets: ["latin"],
   variable: "--font-zh",
@@ -40,7 +54,6 @@ const notoSansSC = Noto_Sans_SC({
   display: "swap",
 });
 
-// Persian + Pashto Font
 const notoNaskhArabic = Noto_Naskh_Arabic({
   subsets: ["arabic"],
   variable: "--font-fa-ps",
@@ -48,8 +61,10 @@ const notoNaskhArabic = Noto_Naskh_Arabic({
   display: "swap",
 });
 
+// ─── Metadata ─────────────────────────────────────────────────────────────────
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://idwe.tech"), 
+  metadataBase: new URL("https://idwe.tech"),
 
   title: {
     template: "%s | IDWE",
@@ -75,16 +90,11 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "IDWE - Enterprise AI & Technology Services",
-
     description:
       "Enterprise-grade AI, cybersecurity, software engineering, cloud infrastructure, and digital transformation services.",
-
-    url: "https://idwe.tech", // Update if domain changes
-
+    url: "https://idwe.tech",
     siteName: "IDWE",
-
     type: "website",
-
     images: [
       {
         url: "/logo/idwe.png",
@@ -97,12 +107,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-
     title: "IDWE - Enterprise AI & Technology Services",
-
     description:
       "AI solutions, enterprise software, cybersecurity, API integrations, and cloud infrastructure services.",
-
     images: ["/logo/idwe.png"],
   },
 
@@ -112,6 +119,8 @@ export const metadata: Metadata = {
   },
 };
 
+// ─── Root layout ──────────────────────────────────────────────────────────────
+
 export default function RootLayout({
   children,
 }: {
@@ -119,18 +128,12 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
-
     "@type": "Organization",
-
     name: "IDWE",
-
     url: "https://idwe.tech",
-
     logo: "https://idwe.tech/logo/idwe.png",
-
     description:
       "IDWE is an enterprise technology company delivering AI solutions, software engineering, cybersecurity, cloud infrastructure, business automation, and digital transformation services.",
-
     services: [
       "Artificial Intelligence Solutions",
       "AI Bots & Automation",
@@ -165,13 +168,20 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        <ThemeProvider>
-          {children}
-
-          <Toaster />
-
-          <WhatsAppButton />
-        </ThemeProvider>
+        {/*
+          Providers wraps ThemeProvider so that:
+            GoogleOAuthProvider  (outermost client boundary)
+              AuthProvider       (auth state)
+                ThemeProvider    (theme state — unchanged from before)
+                  {children}
+                    Toaster
+                    WhatsAppButton
+        */}
+        <GoogleOauthProvider>
+            {children}
+            <Toaster />
+            <WhatsAppButton />
+        </GoogleOauthProvider>
       </body>
     </html>
   );

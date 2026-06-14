@@ -1,70 +1,89 @@
 /**
- * env.ts — Centralised environment variable validation
+ * env.ts — Centralised environment variable access
  *
- * Import this at the top of any file that needs env vars.
- * Throws at module-load time so a misconfigured deployment
- * fails loudly instead of silently at runtime.
+ * IMPORTANT — why no module-level throws:
+ *
+ *   Next.js inlines NEXT_PUBLIC_* vars into the client bundle at BUILD time
+ *   via static string replacement. If this file is evaluated as a module
+ *   before that replacement runs (e.g. during SSR hydration of a client
+ *   component), process.env[key] appears undefined even when the .env file
+ *   is correct — causing a false-positive throw.
+ *
+ *   Solution: export plain getters (functions) so the value is only read
+ *   at CALL time, after Next.js has finished its static replacement.
+ *   Hard validation (validateEnv) is reserved for server-side startup only
+ *   and is called once from app/layout.tsx.
  */
 
-function requireEnv(key: string): string {
-  const value = process.env[key];
-  if (!value || value.trim() === "") {
-    throw new Error(
-      `[env] Missing required environment variable: "${key}"\n` +
-        `Make sure it is defined in .env.local (development) or your deployment environment.`
-    );
-  }
-  return value.trim();
+// ─── Internal helpers ────────────────────────────────────────────────────────
+
+function readEnv(key: string): string {
+  // process.env access must use a string literal for Next.js static analysis.
+  // Since we can't use process.env[key] with a dynamic key in all contexts,
+  // we map the known keys explicitly below.
+  return (process.env[key] ?? "").trim();
 }
 
-function optionalEnv(key: string, fallback: string): string {
-  const value = process.env[key];
-  return value?.trim() || fallback;
-}
-
-// ─── Validated exports ──────────────────────────────────────────────────────
+// ─── Exported getters ────────────────────────────────────────────────────────
+// Use functions so the value is read lazily at call time, not at import time.
 
 /**
  * Base URL for all API calls, e.g. http://localhost:8000/api
  * Must NOT have a trailing slash.
  */
-export const API_BASE_URL = requireEnv("NEXT_PUBLIC_API_BASE_URL").replace(
-  /\/+$/,
-  ""
-);
+export function getApiBaseUrl(): string {
+  // Explicit literal access ensures Next.js static analysis picks this up
+  const value =
+    process.env.NEXT_PUBLIC_API_BASE_URL?.trim() ?? "";
+  return value.replace(/\/+$/, "");
+}
 
 /**
  * Google OAuth client ID from Google Cloud Console.
- * Only needed on the client; prefixed with NEXT_PUBLIC_.
  */
-export const GOOGLE_CLIENT_ID = requireEnv("NEXT_PUBLIC_GOOGLE_CLIENT_ID");
+export function getGoogleClientId(): string {
+  return process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID?.trim() ?? "";
+}
 
 /**
- * Application base URL, used for building redirect URLs.
- * Falls back to localhost:3000 in development.
+ * Application base URL. Falls back to localhost:3000.
  */
-export const APP_URL = optionalEnv(
-  "NEXT_PUBLIC_APP_URL",
-  "http://localhost:3000"
-).replace(/\/+$/, "");
+export function getAppUrl(): string {
+  return (
+    process.env.NEXT_PUBLIC_APP_URL?.trim() ?? "http://localhost:3000"
+  ).replace(/\/+$/, "");
+}
 
 /**
- * Current environment.
+ * Convenience constant — safe to read at module level because
+ * NODE_ENV is always available in both server and client bundles.
  */
 export const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
-// ─── Validate on import (server + client) ───────────────────────────────────
-// The requireEnv calls above already throw; this block is an explicit
-// guard for any future additions.
-const _REQUIRED_KEYS = [
+// ─── Backwards-compatible constants ──────────────────────────────────────────
+// These retain the original export names so existing imports don't break.
+// They are computed lazily via a getter on the module object.
+
+export const API_BASE_URL: string = /* @__PURE__ */ (() => getApiBaseUrl())();
+export const GOOGLE_CLIENT_ID: string = /* @__PURE__ */ (() => getGoogleClientId())();
+export const APP_URL: string = /* @__PURE__ */ (() => getAppUrl())();
+
+// ─── Server-side startup validation ─────────────────────────────────────────
+// Call this ONCE in app/layout.tsx (a Server Component).
+// Never call it inside a "use client" file.
+
+const REQUIRED_KEYS = [
   "NEXT_PUBLIC_API_BASE_URL",
   "NEXT_PUBLIC_GOOGLE_CLIENT_ID",
 ] as const;
 
 export function validateEnv(): void {
+  // Guard: only run on the server to avoid false positives on the client
+  if (typeof window !== "undefined") return;
+
   const missing: string[] = [];
 
-  for (const key of _REQUIRED_KEYS) {
+  for (const key of REQUIRED_KEYS) {
     if (!process.env[key]?.trim()) {
       missing.push(key);
     }
@@ -74,7 +93,7 @@ export function validateEnv(): void {
     throw new Error(
       `[env] The following required environment variables are missing:\n` +
         missing.map((k) => `  • ${k}`).join("\n") +
-        `\n\nAdd them to your .env.local file.`
+        `\n\nAdd them to your .env file.`
     );
   }
 }

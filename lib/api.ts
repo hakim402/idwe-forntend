@@ -9,7 +9,7 @@
  * Next.js Server Components, Route Handlers, and the browser equally.
  */
 
-import { API_BASE_URL } from "./env";
+import { getApiBaseUrl } from "./env";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -150,7 +150,7 @@ async function coreFetch<T = unknown>(
     fetchOptions.body = JSON.stringify(body);
   }
 
-  const url = `${API_BASE_URL}${path}`;
+  const url = `${getApiBaseUrl()}${path}`;
   const response = await fetch(url, fetchOptions);
 
   // 204 No Content — return empty object

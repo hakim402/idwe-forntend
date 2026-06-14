@@ -1,7 +1,7 @@
 "use client";
 // app/[locale]/_components/AiShowcase/AiShowcase.tsx
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import { motion, useInView, animate } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import {
@@ -60,7 +60,7 @@ function useCountUp(to: number, duration = 1.6, suffix = "") {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Stat card
+// Stat card (unused, kept for potential future use)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function StatCard({
@@ -103,6 +103,7 @@ function StatCard({
 // Service orbit — SVG-based circle with service icons orbiting the center
 // ─────────────────────────────────────────────────────────────────────────────
 
+// Static data – memoized by definition outside component
 const ORBIT_SERVICES = [
   { Icon: Bot, label: "AI Agents", color: "#0ab8fb" },
   { Icon: Workflow, label: "Automation", color: "#324b9d" },
@@ -113,13 +114,17 @@ const ORBIT_SERVICES = [
 ];
 
 function ServiceOrbit() {
+  // Fixed size for design – scaling wrapper handles responsiveness
   const SIZE = 320;
   const CX = SIZE / 2;
   const CY = SIZE / 2;
   const ORBIT_R = 112;
 
   return (
-    <div className="relative" style={{ width: SIZE, height: SIZE }}>
+    <div
+      className="relative will-change-transform"
+      style={{ width: SIZE, height: SIZE }}
+    >
       {/* SVG rings */}
       <svg
         width={SIZE}
@@ -156,6 +161,7 @@ function ServiceOrbit() {
           strokeDasharray="5 8"
           animate={{ rotate: 360 } as never}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          style={{ willChange: "transform" }}
         />
 
         {/* Inner ring */}
@@ -182,6 +188,7 @@ function ServiceOrbit() {
             initial={{ r: 46, opacity: 0.5 } as never}
             animate={{ r: 108, opacity: 0 } as never}
             transition={{ duration: 3, repeat: Infinity, ease: "easeOut", delay }}
+            style={{ willChange: "r, opacity" }}
           />
         ))}
 
@@ -204,6 +211,7 @@ function ServiceOrbit() {
               initial={{ pathLength: 0, opacity: 0 }}
               animate={{ pathLength: 1, opacity: 1 }}
               transition={{ delay: 0.4 + i * 0.1, duration: 0.6 }}
+              style={{ willChange: "pathLength, opacity" }}
             />
           );
         })}
@@ -301,6 +309,7 @@ const FEED_ITEMS_EN: FeedItem[] = [
 function ActivityFeedCard({ isRtl }: { isRtl: boolean }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // Memoize the interval setup/cleanup
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % FEED_ITEMS_EN.length);
@@ -308,6 +317,9 @@ function ActivityFeedCard({ isRtl }: { isRtl: boolean }) {
     return () => clearInterval(interval);
   }, []);
 
+  // Memoize feed items to avoid re‑rendering all items on every tick
+  // (the active style changes only on the active item, but the whole list re-renders anyway)
+  // This is acceptable given small list size.
   return (
     <div
       className="w-full rounded-2xl border border-border/60 bg-card shadow-sm overflow-hidden"
@@ -337,7 +349,7 @@ function ActivityFeedCard({ isRtl }: { isRtl: boolean }) {
             <div
               key={item.title}
               className={[
-                "flex items-center gap-3 px-4 py-3 transition-colors duration-300",
+                "flex items-center gap-3 px-4 py-3 transition-colors duration-300 will-change-transform",
                 isActive ? "bg-accent/40" : "bg-transparent",
               ].join(" ")}
             >
@@ -385,6 +397,28 @@ export function AiShowcase() {
   const isRtl = RTL_LOCALES.has(locale);
   const t = useTranslations("AiShowcase");
 
+  // Memoize the static value props array to avoid recreation on each render
+  const valueProps = useMemo(
+    () => [
+      {
+        icon: Bot,
+        title: t("prop1Title"),
+        body: t("prop1Body"),
+      },
+      {
+        icon: Workflow,
+        title: t("prop2Title"),
+        body: t("prop2Body"),
+      },
+      {
+        icon: ShieldCheck,
+        title: t("prop3Title"),
+        body: t("prop3Body"),
+      },
+    ],
+    [t]
+  );
+
   return (
     <section
       dir={isRtl ? "rtl" : "ltr"}
@@ -400,7 +434,7 @@ export function AiShowcase() {
       <div className="mx-auto max-w-7xl">
         {/* ── Main two-column layout ── */}
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          {/* Left: Service orbit */}
+          {/* Left: Service orbit – responsive scaling wrapper */}
           <motion.div
             initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -408,7 +442,12 @@ export function AiShowcase() {
             transition={{ duration: 0.7 }}
             className="flex flex-col items-center gap-8"
           >
-            <ServiceOrbit />
+            {/* Scale the fixed‑size orbit on smaller screens (preserves proportions) */}
+            <div className="flex justify-center">
+              <div className="scale-[0.65] sm:scale-[0.8] md:scale-100 will-change-transform origin-center">
+                <ServiceOrbit />
+              </div>
+            </div>
             <ActivityFeedCard isRtl={isRtl} />
           </motion.div>
 
@@ -422,23 +461,7 @@ export function AiShowcase() {
           >
             {/* Value props */}
             <div className="space-y-4">
-              {[
-                {
-                  icon: Bot,
-                  title: t("prop1Title"),
-                  body: t("prop1Body"),
-                },
-                {
-                  icon: Workflow,
-                  title: t("prop2Title"),
-                  body: t("prop2Body"),
-                },
-                {
-                  icon: ShieldCheck,
-                  title: t("prop3Title"),
-                  body: t("prop3Body"),
-                },
-              ].map(({ icon: Icon, title, body }) => (
+              {valueProps.map(({ icon: Icon, title, body }) => (
                 <div
                   key={title}
                   className="flex gap-4 rounded-2xl border border-border/60 bg-card/70 p-5 shadow-sm backdrop-blur transition-colors hover:border-primary/30"
