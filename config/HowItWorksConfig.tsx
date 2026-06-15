@@ -1,6 +1,6 @@
 "use client";
 
-// app/config/HowItWorksConfig.tsx
+// app/[locale]/_components/HowItWorksConfig.tsx
 //
 // Pre-configured HowItWorks data for the Home page.
 // Import this file and pass the result as props to <HowItWorks />.
