@@ -1,12 +1,8 @@
 {
   "Header": {
     "home": "首页",
-    "products": "产品",
-    "service": "服务",
-    "blogs": "博客",
     "about": "关于我们",
     "contact": "联系方式",
-    "profile": "个人资料",
     "login": "登录",
     "signUp": "注册"
   },
@@ -218,6 +214,213 @@
       "popular": "热门",
       "new": "新品",
       "enterprise": "企业版"
+    }
+  },
+  
+  "Contact": {
+    "meta": {
+      "title": "联系 IDWE AI 自动化与企业软件",
+      "description": "联系 IDWE 团队，讨论 AI 代理、工作流自动化、定制软件以及企业的数字化转型。我们 24 小时内回复。",
+      "keywords": "联系 IDWE, AI 自动化, 企业软件, 数字化转型, 定制软件开发, AI 代理, 业务自动化",
+      "ogTitle": "联系 IDWE – 让我们共同创造不凡",
+      "ogDescription": "与我们的团队探讨 AI 驱动的自动化、定制软件和企业数字化转型。快速响应，实在的解决方案。",
+      "ogImageAlt": "IDWE 联系页面 – AI 与企业软件"
+    },
+    "hero": {
+      "eyebrow": "联系我们",
+      "headlineLead": "让我们共同创造",
+      "headlineAccent": "非凡成果",
+      "description": "无论您是在自动化工作流、发布产品还是全面转型运营，IDWE 团队都准备好为您提供帮助。请告诉我们您的需求。",
+      "stats": [
+        { "value": "< 24小时", "label": "响应时间" },
+        { "value": "50+", "label": "服务客户" },
+        { "value": "98%", "label": "满意率" }
+      ],
+      "ctaWhatsapp": "WhatsApp 聊天",
+      "ctaEmail": "发送邮件"
+    },
+    "info": {
+      "eyebrow": "联系方式",
+      "title": "以您偏好的方式联系我们",
+      "description": "我们跨时区、多渠道运营，选择最适合您的方式，我们争取在一个工作日内回复。",
+      "emailLabel": "电子邮件",
+      "email": "info@idwe.tech",
+      "phoneLabel": "电话 (阿富汗)",
+      "phoneAf": "+93 776 320 765",
+      "phoneAfLabel": "电话 (阿富汗)",
+      "phoneUsLabel": "电话 (美国)",
+      "phoneUs": "+1 (206) 470-9284",
+      "websiteLabel": "网站",
+      "website": "idwe.tech",
+      "whatsappTitle": "WhatsApp 聊天",
+      "whatsappSubtitle": "快速提问？直接发消息给我们。",
+      "whatsappMessage": "你好 IDWE 团队，我想讨论一个项目。",
+      "responseTimeLabel": "响应时间",
+      "responseTime": "24 小时内",
+      "responseNote": "工作日，所有时区",
+      "availabilityLabel": "可用性",
+      "availability": "全球",
+      "availabilityNote": "覆盖 AF · US · EU 时区",
+      "locationAf": "🇦🇫 阿富汗喀布尔",
+      "locationUs": "🇺🇸 西雅图，华盛顿州",
+      "locationNote": "远程优先团队。我们从阿富汗和美国与全球客户合作。"
+    },
+    "form": {
+      "heading": "给我们发送消息",
+      "subheading": "填写以下详细信息，我们会在一个工作日内回复您。",
+      "nameLabel": "全名",
+      "namePlaceholder": "Hakim Safi",
+      "companyLabel": "公司（选填）",
+      "companyPlaceholder": "Acme 公司",
+      "emailLabel": "电子邮箱",
+      "emailPlaceholder": "info@company.com",
+      "subjectLabel": "我们能帮您什么？",
+      "subjectPlaceholder": "选择主题",
+      "messageLabel": "您的留言",
+      "messagePlaceholder": "告诉我们您的项目、挑战或问题...",
+      "subjects": [
+        "AI 自动化与代理",
+        "定制软件开发",
+        "网页或移动应用",
+        "API 与第三方集成",
+        "数字化转型",
+        "价格与套餐",
+        "合作或协作",
+        "其他"
+      ],
+      "submit": "发送消息",
+      "submitting": "发送中…",
+      "successTitle": "消息已收到！",
+      "successBody": "感谢您的联系。IDWE 团队成员会在一个工作日内通过邮件回复您。",
+      "successReset": "发送另一条消息",
+      "errorMessage": "发送消息时出错。请重试，或直接发邮件至 info@idwe.tech。",
+      "privacyNote": "提交此表单即表示您同意我们的隐私政策。我们绝不会与第三方共享您的数据。"
+    },
+    "map": {
+      "title": "我们的全球足迹",
+      "description": "远程优先团队，以两个核心枢纽运营，服务全球客户。",
+      "remoteBadge": "远程优先 · 全天候覆盖",
+      "offices": [
+        { "city": "喀布尔", "country": "阿富汗", "flag": "🇦🇫", "tz": "UTC+4:30" },
+        { "city": "西雅图", "country": "美国", "flag": "🇺🇸", "tz": "UTC-8 (PST)" }
+      ]
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "关于 IDWE – AI 自动化与企业软件",
+      "description": "IDWE 是一家总部位于西雅图的企业 AI 与软件公司。我们构建智能自动化系统、定制软件和 AI 驱动产品，帮助全球企业更快发展。",
+      "keywords": "关于 IDWE, AI 自动化公司, 企业软件 西雅图, AI 代理, 数字化转型, 定制软件团队",
+      "ogTitle": "关于 IDWE – 为自动化工作的未来而生",
+      "ogDescription": "从西雅图到世界：IDWE 设计并提供 AI 驱动的自动化、定制软件和企业产品，深受 12 个国家/地区 50+ 客户的信赖。"
+    },
+    "hero": {
+      "eyebrow": "我们的故事",
+      "headlineLead": "为自动化",
+      "headlineAccent": "工作的未来而生",
+      "headlineLine1": "为自动化",
+      "headlineLine2": "工作的未来而生",
+      "headlineSuffix": "",
+      "description": "IDWE 是一家企业 AI 与软件公司，总部位于华盛顿州西雅图。我们设计并交付智能自动化系统、定制软件和 AI 驱动产品，让您的团队从重复性工作中解放出来。",
+      "locationUs": "美国华盛顿州西雅图",
+      "locationAf": "阿富汗喀布尔",
+      "founded": "成立于 2020 年",
+      "ctaStory": "我们的故事"
+    },
+    "story": {
+      "eyebrow": "我们的历程",
+      "title": "始于西雅图，为世界而建。",
+      "pullQuote": "我们创办 IDWE 是因为出色的 AI 和自动化工具不应该只是财富 500 强的特权。",
+      "body1": "2020 年，我们从西雅图起步，怀着一种信念：每一家企业——不仅仅是最大的那些——都应该获得企业级的自动化和 AI。我们从为中小企业解决真实运营问题开始，很快发现需求远不止太平洋西北地区。",
+      "body2": "如今，IDWE 在两个大洲运营，服务 12 个国家的客户。我们的团队跨越西雅图和喀布尔，将硅谷水准的工程能力与深知利害关系的团队的饥饿感和工作热情结合起来。",
+      "chip": "客户遍布全球",
+      "badge1": "从第一天起就远程优先",
+      "badge2": "两个大洲，一个团队",
+      "badge3": "无海外交接"
+    },
+    "mission": {
+      "eyebrow": "使命",
+      "missionTitle": "我们的使命",
+      "missionBody": "让每一个企业——从快速增长的初创公司到成熟企业——都能获得企业级的 AI 自动化，使他们的团队能够完全专注于真正重要的工作和推动业务发展的决策。",
+      "visionTitle": "我们的愿景",
+      "visionBody": "一个重复、手动的业务流程完全自动化的世界。人们把时间花在思考、创造和领导上，而不是复制粘贴、格式化或点击仪表板。我们正在建设使那个世界成为可能的基础设施。"
+    },
+    "stats": {
+      "eyebrow": "数据说话",
+      "title": "深受全球团队信赖",
+      "clients": "服务客户",
+      "years": "运营年限",
+      "satisfaction": "满意度",
+      "countries": "覆盖国家"
+    },
+    "values": {
+      "eyebrow": "我们的立场",
+      "title": "驱动每一项决策的原则",
+      "description": "这些不是墙上的海报。它们是我们在做产品决策、选择客户以及构建那些需要在五年后依然正常运行的系统时所使用的过滤器。",
+      "v1Title": "创新为先",
+      "v1Body": "我们寻求最好的可用工具——AI、自动化或定制代码——而不是最熟悉的。每个项目都是提升标准的机会。",
+      "v2Title": "诚信贯穿始终",
+      "v2Body": "我们说到做到。没有黑箱，没有隐藏范围，没有账单上的意外。",
+      "v3Title": "真实影响",
+      "v3Body": "我们用节省的时间、创造的收入和解决的问题来衡量成功——而不是交付的幻灯片或关闭的工单。",
+      "v4Title": "真正的伙伴关系",
+      "v4Body": "您的业务目标就是我们的目标。我们作为技术副驾驶与您的团队并肩工作，对结果投入，而不是作为交付成果的供应商。",
+      "v5Title": "毫不妥协的品质",
+      "v5Body": "每一行代码、每一次集成、每一次部署都是生产级。我们不交付我们自己不会运行的东西。",
+      "v6Title": "设计即全球",
+      "v6Body": "我们的团队跨越各大洲和时区。我们构建的产品适用于每一个地区、语言和文化，因为世界就是我们的市场。"
+    },
+    "timeline": {
+      "eyebrow": "我们的旅程",
+      "title": "五年建设",
+      "description": "从西雅图的一个人咨询公司到拥有四个大洲客户的全球 AI 和软件公司。",
+      "m1Title": "IDWE 在西雅图成立",
+      "m1Body": "作为一家专注于自动化和定制 Web 应用的精品软件咨询公司起步，服务于太平洋西北地区的中小企业。",
+      "m1Tag": "起源",
+      "m2Title": "首批企业客户落地",
+      "m2Body": "交付了我们的第一个企业 CRM 自动化和 ERP 集成项目，每年为客户节省了数千小时的人工工时。",
+      "m2Tag": "里程碑",
+      "m3Title": "AI 部门启动",
+      "m3Body": "扩展到 AI 驱动的产品：智能聊天机器人、潜在客户开发代理和跨多个行业部署的数据管道。",
+      "m3Tag": "扩张",
+      "m4Title": "全球运营开启",
+      "m4Body": "在阿富汗喀布尔开设工程运营中心，将服务范围扩展到亚洲、欧洲和中东的客户。",
+      "m4Tag": "全球化",
+      "m5Title": "12 个国家/地区 50+ 客户",
+      "m5Body": "突破 50 个活跃客户。AI 代理、SaaS 平台、移动应用和自动化系统现在受到四个大洲团队的信任。",
+      "m5Tag": "规模化",
+      "m6Title": "全频谱 AI 平台",
+      "m6Body": "交付我们最雄心勃勃的套件：端到端的 AI 自动化、多渠道代理基础设施和为规模化构建的企业仪表板。",
+      "m6Tag": "现在"
+    },
+    "team": {
+      "eyebrow": "领导团队",
+      "title": "IDWE 背后的人",
+      "description": "一个精悍的资深团队，在 AI、企业软件和产品交付方面拥有深厚的专业知识。我们刻意保持精简——这让我们保持敏锐和负责。",
+      "m1Name": "Miraj Hejran",
+      "m1Role": "创始人兼 CEO",
+      "m1Bio": "工程师转型企业家。Miraj 创立 IDWE 的目的是将企业级 AI 自动化带出硅谷。他领导产品策略、客户关系以及两个办公室的技术架构。",
+      "m2Name": "Hakim Rahimi Safi",
+      "m2Role": "CTO",
+      "m2Bio": "全栈工程师转型技术高管。Hakim 负责监督技术战略、创新和工程文化。他确保 IDWE 交付的每一款产品都可靠、安全且经得起趋势考验。",
+      "m3Name": "Abdullah Stanikzai",
+      "m3Role": "首席工程师",
+      "m3Bio": "Abdullah 是一位后端和基础设施专家，拥有 7 年以上构建高吞吐量微服务和实时系统的经验。他领导工程团队实施稳健、可扩展的解决方案，并倡导代码质量和性能。",
+      "skill1": "AI / ML",
+      "skill2": "产品策略",
+      "skill3": "系统架构",
+      "skill4": "技术领导力",
+      "skill5": "DevOps 与云",
+      "skill6": "API 设计",
+      "skill7": "微服务",
+      "skill8": "性能优化",
+      "skill9": "系统设计"
+    },
+    "cta": {
+      "title": "准备好构建持久的东西了吗？",
+      "description": "告诉我们您正在做什么。无论是自动化工作流、发布产品还是转型运营，我们都会在 24 小时内回复。",
+      "primary": "开始对话",
+      "secondary": "探索我们的服务"
     }
   }
 }

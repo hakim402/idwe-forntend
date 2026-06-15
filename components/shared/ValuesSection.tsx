@@ -77,7 +77,7 @@ function ValueCard({ item, delay }: { item: ValueItem; delay: number }) {
       {/* Ambient corner glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -end-8 -top-8 size-36 rounded-full opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-30"
+        className="pointer-events-none absolute -inset-e-8 -top-8 size-36 rounded-full opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-30"
         style={{ backgroundColor: item.color }}
       />
 
@@ -91,7 +91,7 @@ function ValueCard({ item, delay }: { item: ValueItem; delay: number }) {
         </div>
         {/* Tiny accent dot */}
         <div
-          className="absolute -end-1 -top-1 size-2.5 rounded-full ring-2 ring-background"
+          className="absolute -inset-e-1 -top-1 size-2.5 rounded-full ring-2 ring-background"
           style={{ backgroundColor: item.color }}
         />
       </div>
@@ -123,8 +123,8 @@ export function ValuesSection({
     items.length % 3 === 0
       ? "sm:grid-cols-2 lg:grid-cols-3"
       : items.length % 2 === 0
-      ? "sm:grid-cols-2"
-      : "sm:grid-cols-2 lg:grid-cols-3";
+        ? "sm:grid-cols-2"
+        : "sm:grid-cols-2 lg:grid-cols-3";
 
   return (
     <section

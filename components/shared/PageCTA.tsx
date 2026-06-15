@@ -63,18 +63,23 @@ export function PageCTA({
             aria-hidden="true"
             animate={{ x: [0, 20, 0], y: [0, -15, 0] }}
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-            className="pointer-events-none absolute -end-24 -top-24 size-80 rounded-full bg-white/[0.07] blur-3xl"
+            className="pointer-events-none absolute -inset-e-24 -top-24 size-80 rounded-full bg-white/[0.07] blur-3xl"
           />
           <motion.div
             aria-hidden="true"
             animate={{ x: [0, -20, 0], y: [0, 20, 0] }}
-            transition={{ duration: 16, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-            className="pointer-events-none absolute -start-24 -bottom-24 size-96 rounded-full bg-white/[0.05] blur-3xl"
+            transition={{
+              duration: 16,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 3,
+            }}
+            className="pointer-events-none absolute -inset-s-24 -bottom-24 size-96 rounded-full bg-white/5 blur-3xl"
           />
           {/* Fine grid overlay */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.03)_1px,transparent_1px)] bg-[size:48px_48px]"
+            className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.03)_1px,transparent_1px)] bg-size-[48px_48px]"
           />
 
           {/* ── Content ── */}

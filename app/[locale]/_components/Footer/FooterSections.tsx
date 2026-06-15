@@ -93,10 +93,10 @@ const COLUMNS: FooterColumn[] = [
         href: "/services",
         badgeKey: "badges.popular",
       },
-      { labelKey: "columns.services.ai_bots",      href: "/services" },
+      { labelKey: "columns.services.ai_bots", href: "/services" },
       { labelKey: "columns.services.software_dev", href: "/services" },
-      { labelKey: "columns.services.web_dev",       href: "/services" },
-      { labelKey: "columns.services.mobile_dev",    href: "/services" },
+      { labelKey: "columns.services.web_dev", href: "/services" },
+      { labelKey: "columns.services.mobile_dev", href: "/services" },
       { labelKey: "columns.services.cybersecurity", href: "/services" },
     ],
   },
@@ -109,9 +109,9 @@ const COLUMNS: FooterColumn[] = [
         href: "/services",
         badgeKey: "badges.new",
       },
-      { labelKey: "columns.technology.api_integration",   href: "/services" },
-      { labelKey: "columns.technology.database",           href: "/services" },
-      { labelKey: "columns.technology.cloud",              href: "/services" },
+      { labelKey: "columns.technology.api_integration", href: "/services" },
+      { labelKey: "columns.technology.database", href: "/services" },
+      { labelKey: "columns.technology.cloud", href: "/services" },
       {
         labelKey: "columns.technology.security_compliance",
         href: "/services",
@@ -124,12 +124,12 @@ const COLUMNS: FooterColumn[] = [
     titleKey: "columns.company.title",
     icon: Shield,
     links: [
-      { labelKey: "columns.company.about",    href: "/about"   },
+      { labelKey: "columns.company.about", href: "/about" },
       { labelKey: "columns.company.services", href: "/services" },
-      { labelKey: "columns.company.blogs",    href: "/blogs"   },
-      { labelKey: "columns.company.contact",  href: "/contact" },
-      { labelKey: "columns.company.privacy",  href: "/privacy" },
-      { labelKey: "columns.company.terms",    href: "/terms"   },
+      { labelKey: "columns.company.blogs", href: "/blogs" },
+      { labelKey: "columns.company.contact", href: "/contact" },
+      { labelKey: "columns.company.privacy", href: "/privacy" },
+      { labelKey: "columns.company.terms", href: "/terms" },
     ],
   },
 ];
@@ -166,7 +166,12 @@ function LinkColumn({
   return (
     <div dir={isRtl ? "rtl" : "ltr"}>
       {/* Column heading */}
-      <div className={cn("flex items-center gap-2 mb-5", isRtl && "flex-row-reverse")}>
+      <div
+        className={cn(
+          "flex items-center gap-2 mb-5",
+          isRtl && "flex-row-reverse",
+        )}
+      >
         <div className="size-6 rounded-lg bg-accent flex items-center justify-center shrink-0">
           <Icon className="size-3.5 text-primary" aria-hidden="true" />
         </div>
@@ -199,11 +204,16 @@ function LinkColumn({
               <span>{t(link.labelKey as Parameters<typeof t>[0])}</span>
 
               {link.badgeKey && (
-                <BadgeChip label={t(link.badgeKey as Parameters<typeof t>[0])} />
+                <BadgeChip
+                  label={t(link.badgeKey as Parameters<typeof t>[0])}
+                />
               )}
 
               {link.external && (
-                <ExternalLink className="size-2.5 opacity-40 shrink-0" aria-hidden="true" />
+                <ExternalLink
+                  className="size-2.5 opacity-40 shrink-0"
+                  aria-hidden="true"
+                />
               )}
             </Link>
           </li>
@@ -224,12 +234,18 @@ function ContactRow({
   isRtl: boolean;
   t: ReturnType<typeof useTranslations<"footer">>;
 }) {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "+1234567890";
-  const whatsappMsg    = encodeURIComponent(t("contact.whatsapp" as Parameters<typeof t>[0]));
+  const whatsappNumber =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "+1234567890";
+  const whatsappMsg = encodeURIComponent(
+    t("contact.whatsapp" as Parameters<typeof t>[0]),
+  );
 
   return (
     <div
-      className={cn("flex flex-wrap items-center gap-3", isRtl && "flex-row-reverse")}
+      className={cn(
+        "flex flex-wrap items-center gap-3",
+        isRtl && "flex-row-reverse",
+      )}
       dir={isRtl ? "rtl" : "ltr"}
     >
       {/* WhatsApp CTA */}
@@ -409,7 +425,7 @@ function BrandMark({ isRtl }: { isRtl: boolean }) {
       {/* Logo container using card token so it adapts to light/dark */}
       <div className="relative size-10 rounded-2xl overflow-hidden border border-border/60 bg-card shadow-sm shrink-0">
         <Image
-          src="/logo/icon.png"
+          src="/logo/cable-icon.jpg"
           alt="Infinity Solutions logo"
           fill
           className="object-contain p-1"
@@ -419,7 +435,7 @@ function BrandMark({ isRtl }: { isRtl: boolean }) {
       </div>
       <div className={isRtl ? "text-right" : undefined}>
         <p className="text-sm font-bold text-foreground leading-none tracking-tight">
-          Infinity Solutions
+          IDWE
         </p>
         <p className="text-[10px] text-muted-foreground mt-0.5 font-medium">
           AI &amp; Digital Transformation
@@ -437,19 +453,18 @@ const RTL_LOCALES = new Set(["ar", "fa", "ps"]);
 
 const BOTTOM_LINKS = [
   ["bottom.privacy", "/privacy"],
-  ["bottom.terms",   "/terms"  ],
+  ["bottom.terms", "/terms"],
   ["bottom.sitemap", "/sitemap"],
 ] as const;
 
 export function FooterSection() {
   const locale = useLocale();
-  const t      = useTranslations("footer");
-  const isRtl  = RTL_LOCALES.has(locale);
-  const year   = new Date().getFullYear();
+  const t = useTranslations("footer");
+  const isRtl = RTL_LOCALES.has(locale);
+  const year = new Date().getFullYear();
 
   return (
     <footer className="relative bg-background border-t border-border/50 overflow-hidden">
-
       {/* Ambient gradient — matches hero background language */}
       <div
         aria-hidden="true"
@@ -537,7 +552,10 @@ export function FooterSection() {
           {/* Legal links */}
           <nav
             aria-label="Legal"
-            className={cn("flex items-center gap-4", isRtl && "flex-row-reverse")}
+            className={cn(
+              "flex items-center gap-4",
+              isRtl && "flex-row-reverse",
+            )}
           >
             {BOTTOM_LINKS.map(([key, href]) => (
               <Link

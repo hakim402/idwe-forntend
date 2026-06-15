@@ -1,9 +1,6 @@
 {
   "Header": {
     "home": "Startseite",
-    "products": "Produkte",
-    "service": "Dienstleistungen",
-    "blogs": "Blog",
     "about": "Über uns",
     "contact": "Kontakt",
     "profile": "Profil",
@@ -219,5 +216,212 @@
       "new": "Neu",
       "enterprise": "Enterprise"
     }
+  },
+  "Contact": {
+    "meta": {
+      "title": "Kontakt IDWE KI-Automatisierung & Enterprise-Software",
+      "description": "Kontaktieren Sie das IDWE-Team, um über KI-Agenten, Workflow-Automatisierung, maßgeschneiderte Software und digitale Transformation für Ihr Unternehmen zu sprechen. Wir antworten innerhalb von 24 Stunden.",
+      "keywords": "Kontakt IDWE, KI-Automatisierung, Enterprise-Software, digitale Transformation, individuelle Softwareentwicklung, KI-Agenten, Geschäftsautomatisierung",
+      "ogTitle": "Kontaktieren Sie IDWE Lassen Sie uns gemeinsam etwas aufbauen",
+      "ogDescription": "Sprechen Sie mit unserem Team über KI-gestützte Automatisierung, individuelle Software und digitale Transformation im Unternehmen. Schnelle Antwort, echte Lösungen.",
+      "ogImageAlt": "IDWE Kontaktseite KI & Enterprise-Software"
+    },
+    "hero": {
+      "eyebrow": "Kontakt aufnehmen",
+      "headlineLead": "Lassen Sie uns gemeinsam",
+      "headlineAccent": "etwas Außergewöhnliches schaffen",
+      "description": "Ob Sie einen Workflow automatisieren, ein Produkt auf den Markt bringen oder Ihren gesamten Betrieb transformieren möchten – das IDWE-Team ist bereit zu helfen. Sagen Sie uns, was Sie brauchen.",
+      "stats": [
+        { "value": "< 24h", "label": "Reaktionszeit" },
+        { "value": "50+", "label": "Betreute Kunden" },
+        { "value": "98%", "label": "Zufriedenheitsrate" }
+      ],
+      "ctaWhatsapp": "Über WhatsApp chatten",
+      "ctaEmail": "E-Mail senden"
+    },
+    "info": {
+      "eyebrow": "Kontaktkanäle",
+      "title": "Erreichen Sie uns, wie Sie möchten",
+      "description": "Wir arbeiten in mehreren Zeitzonen und über verschiedene Kanäle. Wählen Sie, was für Sie am besten funktioniert – wir antworten innerhalb eines Geschäftstages.",
+      "emailLabel": "E-Mail",
+      "email": "info@idwe.tech",
+      "phoneLabel": "Telefon Afghanistan",
+      "phoneAf": "+93 776 320 765",
+      "phoneAfLabel": "Telefon Afghanistan",
+      "phoneUsLabel": "Telefon USA",
+      "phoneUs": "+1 (206) 470-9284",
+      "websiteLabel": "Webseite",
+      "website": "idwe.tech",
+      "whatsappTitle": "Über WhatsApp chatten",
+      "whatsappSubtitle": "Schnelle Fragen? Schreiben Sie uns direkt.",
+      "whatsappMessage": "Hallo IDWE-Team, ich würde gerne ein Projekt besprechen.",
+      "responseTimeLabel": "Reaktionszeit",
+      "responseTime": "Innerhalb von 24 Stunden",
+      "responseNote": "Werktage, alle Zeitzonen",
+      "availabilityLabel": "Verfügbarkeit",
+      "availability": "Weltweit",
+      "availabilityNote": "Zeitzonen AF · US · EU abgedeckt",
+      "locationAf": "🇦🇫 Kabul, AF",
+      "locationUs": "🇺🇸 Seattle, WA",
+      "locationNote": "Remote-First-Team. Wir arbeiten mit Kunden weltweit von Afghanistan und den USA aus."
+    },
+    "form": {
+      "heading": "Senden Sie uns eine Nachricht",
+      "subheading": "Füllen Sie die Details aus und wir melden uns innerhalb eines Geschäftstages bei Ihnen.",
+      "nameLabel": "Vollständiger Name",
+      "namePlaceholder": "Hakim Safi",
+      "companyLabel": "Unternehmen (optional)",
+      "companyPlaceholder": "Acme Corp",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "info@unternehmen.de",
+      "subjectLabel": "Wobei können wir helfen?",
+      "subjectPlaceholder": "Thema auswählen",
+      "messageLabel": "Ihre Nachricht",
+      "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt, Ihrer Herausforderung oder Frage...",
+      "subjects": [
+        "KI-Automatisierung & Agenten",
+        "Individuelle Softwareentwicklung",
+        "Web- oder Mobile-App",
+        "API- & Drittanbieter-Integration",
+        "Digitale Transformation",
+        "Preise & Pakete",
+        "Partnerschaft oder Zusammenarbeit",
+        "Sonstiges"
+      ],
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet…",
+      "successTitle": "Nachricht erhalten!",
+      "successBody": "Vielen Dank für Ihre Kontaktaufnahme. Ein Mitglied des IDWE-Teams wird Ihnen innerhalb eines Geschäftstages per E-Mail antworten.",
+      "successReset": "Weitere Nachricht senden",
+      "errorMessage": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@idwe.tech.",
+      "privacyNote": "Mit dem Absenden dieses Formulars stimmen Sie unserer Datenschutzerklärung zu. Wir geben Ihre Daten niemals an Dritte weiter."
+    },
+    "map": {
+      "title": "Unsere globale Präsenz",
+      "description": "Remote-First-Team mit zwei Kernstandorten, das Kunden weltweit betreut.",
+      "remoteBadge": "Remote First · 24/7 Abdeckung",
+      "offices": [
+        { "city": "Kabul", "country": "Afghanistan", "flag": "🇦🇫", "tz": "UTC+4:30" },
+        { "city": "Seattle", "country": "USA", "flag": "🇺🇸", "tz": "UTC-8 (PST)" }
+      ]
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "Über IDWE KI-Automatisierung & Enterprise-Software",
+      "description": "IDWE ist ein in Seattle ansässiges Unternehmen für KI und Unternehmenssoftware. Wir entwickeln intelligente Automatisierungssysteme, maßgeschneiderte Software und KI-gestützte Produkte, die Unternehmen weltweit helfen, schneller voranzukommen.",
+      "keywords": "über IDWE, KI-Automatisierungsfirma, Enterprise-Software Seattle, KI-Agenten, digitale Transformation, maßgeschneidertes Softwareteam",
+      "ogTitle": "Über IDWE Gebaut, um die Zukunft der Arbeit zu automatisieren",
+      "ogDescription": "Von Seattle in die Welt: IDWE entwirft und liefert KI-gestützte Automatisierung, maßgeschneiderte Software und Enterprise-Produkte, denen über 50 Kunden in 12 Ländern vertrauen."
+    },
+    "hero": {
+      "eyebrow": "Unsere Geschichte",
+      "headlineLead": "Gebaut, um die",
+      "headlineAccent": "Zukunft der Arbeit zu automatisieren",
+      "headlineLine1": "Gebaut, um die",
+      "headlineLine2": "Zukunft der Arbeit zu automatisieren",
+      "headlineSuffix": "",
+      "description": "IDWE ist ein KI- und Softwareunternehmen mit Hauptsitz in Seattle, WA. Wir entwerfen und liefern intelligente Automatisierungssysteme, maßgeschneiderte Software und KI-gestützte Produkte, die Ihr Team von repetitiver Arbeit befreien.",
+      "locationUs": "Seattle, WA USA",
+      "locationAf": "Kabul, Afghanistan",
+      "founded": "Gegründet 2020",
+      "ctaStory": "Unsere Geschichte"
+    },
+    "story": {
+      "eyebrow": "Wie wir hierher kamen",
+      "title": "Gestartet in Seattle. Gebaut für die Welt.",
+      "pullQuote": "Wir haben IDWE gegründet, weil großartige KI- und Automatisierungstools kein Privileg der Fortune 500 sein sollten.",
+      "body1": "Im Jahr 2020 starteten wir in Seattle mit der Überzeugung, dass jedes Unternehmen – nicht nur die großen – Zugang zu unternehmensgerechter Automatisierung und KI verdient. Wir begannen damit, reale operative Probleme für KMU zu lösen, und stellten schnell fest, dass der Bedarf weit über den pazifischen Nordwesten hinausging.",
+      "body2": "Heute operiert IDWE von zwei Kontinenten aus und betreut Kunden in 12 Ländern. Unser Team erstreckt sich über Seattle und Kabul und vereint Ingenieurskunst auf Silicon-Valley-Niveau mit dem Hunger und der Arbeitsmoral eines Teams, das genau weiß, worum es geht.",
+      "chip": "Kunden weltweit",
+      "badge1": "Remote-first seit Tag eins",
+      "badge2": "Zwei Kontinente, ein Team",
+      "badge3": "Keine Offshore-Übergaben"
+    },
+    "mission": {
+      "eyebrow": "Zweck",
+      "missionTitle": "Unsere Mission",
+      "missionBody": "Unternehmen jeder Größe – von schnell wachsenden Startups bis zu etablierten Konzernen – Zugang zu KI-gestützter Automatisierung auf Unternehmensniveau zu verschaffen, damit ihre Teams sich voll und ganz auf die Arbeit konzentrieren können, die wirklich zählt.",
+      "visionTitle": "Unsere Vision",
+      "visionBody": "Eine Welt, in der wiederkehrende, manuelle Geschäftsprozesse vollständig automatisiert sind. In der Menschen ihre Zeit mit Denken, Gestalten und Führen verbringen – nicht mit Kopieren, Einfügen oder durch Dashboards klicken. Wir bauen die Infrastruktur, die diese Welt möglich macht."
+    },
+    "stats": {
+      "eyebrow": "In Zahlen",
+      "title": "Von Teams auf der ganzen Welt geschätzt",
+      "clients": "Betreute Kunden",
+      "years": "Jahre im Betrieb",
+      "satisfaction": "Zufriedenheitsrate",
+      "countries": "Erreichte Länder"
+    },
+    "values": {
+      "eyebrow": "Wofür wir stehen",
+      "title": "Prinzipien, die jede Entscheidung leiten",
+      "description": "Das sind keine Poster an der Wand. Es sind die Filter, die wir bei Produktentscheidungen, Kundenauswahl und dem Bau von Systemen anwenden, die auch in fünf Jahren noch funktionieren müssen.",
+      "v1Title": "Innovation zuerst",
+      "v1Body": "Wir greifen zum besten verfügbaren Werkzeug – KI, Automatisierung oder maßgeschneiderten Code – nicht zum vertrautesten. Jedes Projekt ist eine Chance, die Messlatte höher zu legen.",
+      "v2Title": "Integrität in allem",
+      "v2Body": "Wir sagen, was wir tun werden, und tun, was wir sagen. Keine Blackboxen, kein versteckter Umfang, keine Überraschungen auf der Rechnung.",
+      "v3Title": "Echte Wirkung",
+      "v3Body": "Wir messen Erfolg in eingesparten Stunden, generiertem Umsatz und beseitigten Problemen – nicht in gelieferten Folien oder geschlossenen Tickets.",
+      "v4Title": "Echte Partnerschaft",
+      "v4Body": "Ihr Geschäftsziel ist unser Ziel. Wir arbeiten als technischer Co-Pilot an der Seite Ihres Teams, am Ergebnis interessiert, nicht als Lieferant, der Arbeitspakete übergibt.",
+      "v5Title": "Kompromisslose Qualität",
+      "v5Body": "Jede Codezeile, jede Integration, jedes Deployment ist produktionsreif. Wir liefern nichts, was wir nicht selbst betreiben würden.",
+      "v6Title": "Global durch Design",
+      "v6Body": "Unser Team umspannt Kontinente und Zeitzonen. Wir bauen Produkte, die für jeden Ort, jede Sprache und jede Kultur funktionieren, denn die Welt ist unser Markt."
+    },
+    "timeline": {
+      "eyebrow": "Unser Werdegang",
+      "title": "Fünf Jahre Aufbauarbeit",
+      "description": "Von einer Ein-Personen-Beratung in Seattle zu einem globalen KI- und Softwareunternehmen mit Kunden auf vier Kontinenten.",
+      "m1Title": "IDWE in Seattle gegründet",
+      "m1Body": "Gestartet als Boutique-Softwareberatung mit Fokus auf Automatisierung und individuelle Webanwendungen für KMU im pazifischen Nordwesten.",
+      "m1Tag": "Ursprung",
+      "m2Title": "Erste Enterprise-Kunden",
+      "m2Body": "Erste CRM-Automatisierungs- und ERP-Integrationsprojekte erfolgreich abgeschlossen, die Kunden Tausende manuelle Stunden pro Jahr ersparten.",
+      "m2Tag": "Meilenstein",
+      "m3Title": "KI-Division gestartet",
+      "m3Body": "Erweiterung auf KI-gestützte Produkte: intelligente Chatbots, Lead-Generierungsagenten und Datenpipelines in verschiedenen Branchen.",
+      "m3Tag": "Erweiterung",
+      "m4Title": "Globale Operationen eröffnet",
+      "m4Body": "Eröffnung von Entwicklungsstandorten in Kabul, Afghanistan, um Kunden in Asien, Europa und dem Nahen Osten besser zu bedienen.",
+      "m4Tag": "Global",
+      "m5Title": "50+ Kunden in 12 Ländern",
+      "m5Body": "Überschreiten der 50 aktiven Kunden. KI-Agenten, SaaS-Plattformen, mobile Apps und Automatisierungssysteme werden nun von Teams auf vier Kontinenten genutzt.",
+      "m5Tag": "Skalierung",
+      "m6Title": "Vollspektrum-KI-Plattform",
+      "m6Body": "Lieferung unseres bisher ambitioniertesten Angebots: End-to-End-KI-Automatisierung, multikanalfähige Agenteninfrastruktur und skalierbare Enterprise-Dashboards.",
+      "m6Tag": "Jetzt"
+    },
+    "team": {
+      "eyebrow": "Führung",
+      "title": "Die Menschen hinter IDWE",
+      "description": "Ein kleines, erfahrenes Team mit fundiertem Fachwissen in KI, Enterprise-Software und Produktbereitstellung. Wir bleiben bewusst schlank – das hält uns wachsam und verantwortlich.",
+      "m1Name": "Miraj Hejran",
+      "m1Role": "Gründer & CEO",
+      "m1Bio": "Ingenieur und Unternehmer. Miraj gründete IDWE, um KI-Automatisierung auf Unternehmensniveau außerhalb des Silicon Valley zugänglich zu machen. Er leitet Produktstrategie, Kundenbeziehungen und technische Architektur über beide Standorte hinweg.",
+      "m2Name": "Hakim Rahimi Safi",
+      "m2Role": "CTO",
+      "m2Bio": "Full-Stack-Ingenieur und Technologievorstand. Hakim überwacht technische Strategie, Innovation und die Engineering-Kultur. Er stellt sicher, dass jedes von IDWE gelieferte Produkt zuverlässig, sicher und für die Zukunft gebaut ist.",
+      "m3Name": "Abdullah Stanikzai",
+      "m3Role": "Leitender Ingenieur",
+      "m3Bio": "Abdullah ist ein Backend- und Infrastrukturspezialist mit über 7 Jahren Erfahrung im Aufbau hochbelastbarer Microservices und Echtzeitsysteme. Er führt das Engineering-Team bei der Implementierung robuster, skalierbarer Lösungen und setzt sich für Codequalität und Performance ein.",
+      "skill1": "KI / ML",
+      "skill2": "Produktstrategie",
+      "skill3": "Systemarchitektur",
+      "skill4": "Technische Führung",
+      "skill5": "DevOps & Cloud",
+      "skill6": "API-Design",
+      "skill7": "Microservices",
+      "skill8": "Performance-Optimierung",
+      "skill9": "Systemdesign"
+    },
+    "cta": {
+      "title": "Bereit, etwas zu bauen, das Bestand hat?",
+      "description": "Erzählen Sie uns, woran Sie arbeiten. Ob Automatisierung eines Workflows, Einführung eines Produkts oder Transformation Ihres Betriebs – wir antworten innerhalb von 24 Stunden.",
+      "primary": "Gespräch beginnen",
+      "secondary": "Unsere Dienstleistungen entdecken"
+    }
   }
+
 }

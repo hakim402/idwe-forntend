@@ -22,19 +22,12 @@ export const Header = () => {
 
   const menuItems = [
     { name: t("home"), href: "/" },
-    { name: t("products"), href: "/products" },
-    { name: t("service"), href: "/services" },
-    { name: t("blogs"), href: "/blogs" },
     { name: t("about"), href: "/about" },
     { name: t("contact"), href: "/contact" },
   ] as const;
 
   const menuItemsSignedIn = [
     { name: t("home"), href: "/" },
-    { name: t("profile"), href: "/dashboard" },
-    { name: t("products"), href: "/products" },
-    { name: t("service"), href: "/services" },
-    { name: t("blogs"), href: "/blogs" },
     { name: t("about"), href: "/about" },
     { name: t("contact"), href: "/contact" },
   ] as const;

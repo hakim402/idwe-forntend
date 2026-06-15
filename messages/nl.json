@@ -1,12 +1,8 @@
 {
   "Header": {
     "home": "Home",
-    "products": "Producten",
-    "service": "Diensten",
-    "blogs": "Blog",
     "about": "Over ons",
     "contact": "Contact",
-    "profile": "Profiel",
     "login": "Inloggen",
     "signUp": "Registreren"
   },
@@ -218,6 +214,213 @@
       "popular": "Populair",
       "new": "Nieuw",
       "enterprise": "Enterprise"
+    }
+  },
+  
+  "Contact": {
+    "meta": {
+      "title": "Contact IDWE AI-automatisering & Enterprise Software",
+      "description": "Neem contact op met het IDWE-team om te praten over AI-agents, workflow-automatisering, maatwerksoftware en digitale transformatie voor uw bedrijf. Wij reageren binnen 24 uur.",
+      "keywords": "contact IDWE, AI-automatisering, enterprise software, digitale transformatie, maatwerk softwareontwikkeling, AI-agents, bedrijfsautomatisering",
+      "ogTitle": "Contact IDWE Laten we samen iets bouwen",
+      "ogDescription": "Praat met ons team over AI-gestuurde automatisering, maatwerksoftware en enterprise digitale transformatie. Snelle reactie, echte oplossingen.",
+      "ogImageAlt": "IDWE contactpagina AI & Enterprise Software"
+    },
+    "hero": {
+      "eyebrow": "Neem contact op",
+      "headlineLead": "Laten we samen",
+      "headlineAccent": "iets buitengewoons bouwen",
+      "description": "Of u nu een workflow automatiseert, een product lanceert of uw hele bedrijfsvoering transformeert, het IDWE-team staat klaar om te helpen. Vertel ons wat u nodig heeft.",
+      "stats": [
+        { "value": "< 24u", "label": "Responstijd" },
+        { "value": "50+", "label": "Klanten bediend" },
+        { "value": "98%", "label": "Tevredenheid" }
+      ],
+      "ctaWhatsapp": "Chat op WhatsApp",
+      "ctaEmail": "Stuur een e-mail"
+    },
+    "info": {
+      "eyebrow": "Contactkanalen",
+      "title": "Bereik ons op uw manier",
+      "description": "Wij opereren in meerdere tijdzones en via diverse kanalen. Kies wat het beste bij u past; wij streven ernaar binnen één werkdag te reageren.",
+      "emailLabel": "E-mail",
+      "email": "info@idwe.tech",
+      "phoneLabel": "Telefoon Afghanistan",
+      "phoneAf": "+93 776 320 765",
+      "phoneAfLabel": "Telefoon Afghanistan",
+      "phoneUsLabel": "Telefoon Verenigde Staten",
+      "phoneUs": "+1 (206) 470-9284",
+      "websiteLabel": "Website",
+      "website": "idwe.tech",
+      "whatsappTitle": "Chat op WhatsApp",
+      "whatsappSubtitle": "Snelle vragen? Stuur ons direct een bericht.",
+      "whatsappMessage": "Hallo IDWE-team, ik wil graag een project bespreken.",
+      "responseTimeLabel": "Responstijd",
+      "responseTime": "Binnen 24 uur",
+      "responseNote": "Werkdagen, alle tijdzones",
+      "availabilityLabel": "Beschikbaarheid",
+      "availability": "Wereldwijd",
+      "availabilityNote": "Tijdzones AF · US · EU gedekt",
+      "locationAf": "🇦🇫 Kabul, AF",
+      "locationUs": "🇺🇸 Seattle, WA",
+      "locationNote": "Remote-first team. Wij werken met klanten wereldwijd vanuit Afghanistan en de Verenigde Staten."
+    },
+    "form": {
+      "heading": "Stuur ons een bericht",
+      "subheading": "Vul onderstaande gegevens in en we nemen binnen één werkdag contact met u op.",
+      "nameLabel": "Volledige naam",
+      "namePlaceholder": "Hakim Safi",
+      "companyLabel": "Bedrijf (optioneel)",
+      "companyPlaceholder": "Acme Corp",
+      "emailLabel": "E-mailadres",
+      "emailPlaceholder": "info@bedrijf.nl",
+      "subjectLabel": "Waarmee kunnen we helpen?",
+      "subjectPlaceholder": "Kies een onderwerp",
+      "messageLabel": "Uw bericht",
+      "messagePlaceholder": "Vertel ons over uw project, uitdaging of vraag...",
+      "subjects": [
+        "AI-automatisering & Agents",
+        "Maatwerk softwareontwikkeling",
+        "Web- of mobiele app",
+        "API- & derde partij-integratie",
+        "Digitale transformatie",
+        "Prijzen & pakketten",
+        "Partnerschap of samenwerking",
+        "Overig"
+      ],
+      "submit": "Verstuur bericht",
+      "submitting": "Verzenden…",
+      "successTitle": "Bericht ontvangen!",
+      "successBody": "Bedankt voor uw bericht. Een lid van het IDWE-team zal binnen één werkdag per e-mail reageren.",
+      "successReset": "Nog een bericht sturen",
+      "errorMessage": "Er is iets misgegaan bij het verzenden. Probeer het opnieuw of mail ons direct op info@idwe.tech.",
+      "privacyNote": "Door dit formulier te verzenden gaat u akkoord met ons Privacybeleid. Wij delen uw gegevens nooit met derden."
+    },
+    "map": {
+      "title": "Onze wereldwijde aanwezigheid",
+      "description": "Remote-first team opererend vanuit twee kernhubs, klanten over de hele wereld bedienend.",
+      "remoteBadge": "Remote-first · 24/7 dekking",
+      "offices": [
+        { "city": "Kabul", "country": "Afghanistan", "flag": "🇦🇫", "tz": "UTC+4:30" },
+        { "city": "Seattle", "country": "VS", "flag": "🇺🇸", "tz": "UTC-8 (PST)" }
+      ]
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "Over IDWE AI-automatisering & Enterprise Software",
+      "description": "IDWE is een in Seattle gevestigd bedrijf voor AI en enterprise software. Wij bouwen intelligente automatiseringssystemen, maatwerksoftware en AI-gedreven producten die bedrijven wereldwijd helpen sneller te bewegen.",
+      "keywords": "over IDWE, AI-automatiseringsbedrijf, enterprise software Seattle, AI-agents, digitale transformatie, maatwerk softwareteam",
+      "ogTitle": "Over IDWE Gebouwd om de toekomst van werk te automatiseren",
+      "ogDescription": "Van Seattle naar de wereld: IDWE ontwerpt en levert AI-gestuurde automatisering, maatwerksoftware en enterprise producten die door 50+ klanten in 12 landen worden vertrouwd."
+    },
+    "hero": {
+      "eyebrow": "Ons verhaal",
+      "headlineLead": "Gebouwd om de",
+      "headlineAccent": "toekomst van werk te automatiseren",
+      "headlineLine1": "Gebouwd om de",
+      "headlineLine2": "toekomst van werk te automatiseren",
+      "headlineSuffix": "",
+      "description": "IDWE is een AI- en softwarebedrijf met hoofdkantoor in Seattle, WA. Wij ontwerpen en leveren intelligente automatiseringssystemen, maatwerksoftware en AI-producten die uw team bevrijden van repetitief werk.",
+      "locationUs": "Seattle, WA Verenigde Staten",
+      "locationAf": "Kabul, Afghanistan",
+      "founded": "Opgericht in 2020",
+      "ctaStory": "Ons verhaal"
+    },
+    "story": {
+      "eyebrow": "Hoe we hier kwamen",
+      "title": "Gestart in Seattle. Gebouwd voor de wereld.",
+      "pullQuote": "We startten IDWE omdat geweldige AI- en automatiseringstools geen voorrecht van de Fortune 500 mogen zijn.",
+      "body1": "In 2020 lanceerden we vanuit Seattle met één overtuiging: elk bedrijf – niet alleen de grootste – verdient toegang tot enterprise-grade automatisering en AI. We begonnen met het oplossen van echte operationele problemen voor het MKB en ontdekten al snel dat de behoefte veel breder was dan de Pacific Northwest.",
+      "body2": "Vandaag opereert IDWE vanuit twee continenten en bedient klanten in 12 landen. Ons team strekt zich uit over Seattle en Kabul en combineert Silicon Valley-niveau engineering met de honger en werkethiek van een team dat precies weet wat er op het spel staat.",
+      "chip": "Klanten wereldwijd",
+      "badge1": "Remote-first sinds dag één",
+      "badge2": "Twee continenten, één team",
+      "badge3": "Geen offshore overdrachten"
+    },
+    "mission": {
+      "eyebrow": "Doel",
+      "missionTitle": "Onze missie",
+      "missionBody": "Enterprise-grade AI-automatisering toegankelijk maken voor elk bedrijf – van snelgroeiende startups tot gevestigde ondernemingen – zodat hun teams zich volledig kunnen richten op werk dat ertoe doet en beslissingen die het verschil maken.",
+      "visionTitle": "Onze visie",
+      "visionBody": "Een wereld waarin repetitieve, handmatige bedrijfsprocessen volledig geautomatiseerd zijn. Waar mensen hun tijd besteden aan denken, creëren en leiden – niet aan kopiëren, plakken of door dashboards klikken. Wij bouwen de infrastructuur die die wereld mogelijk maakt."
+    },
+    "stats": {
+      "eyebrow": "In cijfers",
+      "title": "Vertrouwd door teams over de hele wereld",
+      "clients": "Klanten bediend",
+      "years": "Jaren actief",
+      "satisfaction": "Tevredenheidspercentage",
+      "countries": "Landen bereikt"
+    },
+    "values": {
+      "eyebrow": "Waar we voor staan",
+      "title": "Principes die elke beslissing sturen",
+      "description": "Dit zijn geen posters aan de muur. Het zijn de filters die we toepassen bij het nemen van productbeslissingen, het kiezen van klanten en het bouwen van systemen die over vijf jaar nog moeten werken.",
+      "v1Title": "Innovatie voorop",
+      "v1Body": "We grijpen naar het best beschikbare gereedschap – AI, automatisering of maatwerkcode – niet het meest vertrouwde. Elk project is een kans om de lat hoger te leggen.",
+      "v2Title": "Integriteit in alles",
+      "v2Body": "We zeggen wat we gaan doen en doen wat we zeggen. Geen black boxes, geen verborgen scope, geen verrassingen op factuurdag.",
+      "v3Title": "Echte impact",
+      "v3Body": "We meten succes in bespaarde uren, gegenereerde omzet en geëlimineerde problemen – niet in opgeleverde slides of gesloten tickets.",
+      "v4Title": "Echt partnerschap",
+      "v4Body": "Uw bedrijfsdoel is ons doel. We werken naast uw team als een technische copiloot die geïnvesteerd is in het resultaat, niet als een leverancier die deliverables aflevert.",
+      "v5Title": "Ongecompromitteerde kwaliteit",
+      "v5Body": "Elke regel code, elke integratie, elke deployment is productierijp. We leveren niets op wat we niet zelf zouden draaien.",
+      "v6Title": "Wereldwijd van ontwerp",
+      "v6Body": "Ons team strekt zich uit over continenten en tijdzones. We bouwen producten die werken voor elke locatie, taal en cultuur, want de wereld is onze markt."
+    },
+    "timeline": {
+      "eyebrow": "Onze reis",
+      "title": "Vijf jaar bouwen",
+      "description": "Van een eenmansadviesbureau in Seattle tot een wereldwijd AI- en softwarebedrijf met klanten op vier continenten.",
+      "m1Title": "IDWE opgericht in Seattle",
+      "m1Body": "Gestart als een boutique softwareadviesbureau gericht op automatisering en maatwerk webapplicaties voor het MKB in de Pacific Northwest.",
+      "m1Tag": "Oorsprong",
+      "m2Title": "Eerste enterprise-klanten",
+      "m2Body": "Onze eerste CRM-automatiserings- en ERP-integratieprojecten opgeleverd, waarmee klanten duizenden handmatige uren per jaar bespaarden.",
+      "m2Tag": "Mijlpaal",
+      "m3Title": "AI-divisie gelanceerd",
+      "m3Body": "Uitgebreid naar AI-gedreven producten: intelligente chatbots, leadgeneratie-agents en datapipelines voor meerdere sectoren.",
+      "m3Tag": "Uitbreiding",
+      "m4Title": "Wereldwijde operaties geopend",
+      "m4Body": "Engineering-activiteiten geopend in Kabul, Afghanistan, waardoor onze dienstverlening wordt uitgebreid naar klanten in Azië, Europa en het Midden-Oosten.",
+      "m4Tag": "Wereldwijd",
+      "m5Title": "50+ klanten in 12 landen",
+      "m5Body": "De grens van 50 actieve klanten overschreden. AI-agents, SaaS-platforms, mobiele apps en automatiseringssystemen worden nu vertrouwd door teams op vier continenten.",
+      "m5Tag": "Schaal",
+      "m6Title": "Full-spectrum AI-platform",
+      "m6Body": "Onze meest ambitieuze suite wordt uitgerold: end-to-end AI-automatisering, meerkanaals agent-infrastructuur en enterprise dashboards gebouwd voor schaal.",
+      "m6Tag": "Nu"
+    },
+    "team": {
+      "eyebrow": "Leiderschap",
+      "title": "De mensen achter IDWE",
+      "description": "Een klein, senior team met diepgaande expertise op het gebied van AI, enterprise software en productoplevering. We blijven bewust lean – dat houdt ons scherp en verantwoordelijk.",
+      "m1Name": "Miraj Hejran",
+      "m1Role": "Oprichter & CEO",
+      "m1Bio": "Ingenieur werd ondernemer. Miraj richtte IDWE op om enterprise-grade AI-automatisering buiten Silicon Valley te brengen. Hij leidt productstrategie, klantrelaties en technische architectuur over beide kantoren.",
+      "m2Name": "Hakim Rahimi Safi",
+      "m2Role": "CTO",
+      "m2Bio": "Full-stack engineer werd technologieleider. Hakim houdt toezicht op technische strategie, innovatie en engineeringcultuur. Hij zorgt ervoor dat elk product dat IDWE levert betrouwbaar, veilig en toekomstbestendig is.",
+      "m3Name": "Abdullah Stanikzai",
+      "m3Role": "Lead Engineer",
+      "m3Bio": "Abdullah is een backend- en infrastructuurspecialist met meer dan 7 jaar ervaring in het bouwen van high-throughput microservices en real-time systemen. Hij leidt het engineeringteam bij het implementeren van robuuste, schaalbare oplossingen en staat voor codekwaliteit en prestaties.",
+      "skill1": "AI / ML",
+      "skill2": "Productstrategie",
+      "skill3": "Systeemarchitectuur",
+      "skill4": "Technisch leiderschap",
+      "skill5": "DevOps & Cloud",
+      "skill6": "API-ontwerp",
+      "skill7": "Microservices",
+      "skill8": "Prestatie-optimalisatie",
+      "skill9": "Systeemontwerp"
+    },
+    "cta": {
+      "title": "Klaar om iets te bouwen dat blijft?",
+      "description": "Vertel ons waar u aan werkt. Of het nu gaat om het automatiseren van een workflow, het lanceren van een product of het transformeren van uw bedrijfsvoering, we reageren binnen 24 uur.",
+      "primary": "Begin een gesprek",
+      "secondary": "Ontdek onze diensten"
     }
   }
 }

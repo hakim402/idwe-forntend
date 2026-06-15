@@ -88,7 +88,12 @@ function StatCard({ item, delay }: { item: StatItem; delay: number }) {
 
       <div
         className="relative flex size-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
-        style={iconStyle ?? { backgroundColor: "rgb(10 184 251 / 0.1)", color: "var(--primary)" }}
+        style={
+          iconStyle ?? {
+            backgroundColor: "rgb(10 184 251 / 0.1)",
+            color: "var(--primary)",
+          }
+        }
       >
         <Icon className="size-5" aria-hidden="true" />
       </div>
@@ -121,10 +126,10 @@ export function StatsRow({
     items.length <= 2
       ? "grid-cols-2"
       : items.length === 3
-      ? "grid-cols-3"
-      : items.length === 5
-      ? "grid-cols-2 sm:grid-cols-5"
-      : "grid-cols-2 lg:grid-cols-4";
+        ? "grid-cols-3"
+        : items.length === 5
+          ? "grid-cols-2 sm:grid-cols-5"
+          : "grid-cols-2 lg:grid-cols-4";
 
   return (
     <section
@@ -135,7 +140,7 @@ export function StatsRow({
       {withBackground && (
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-primary/[0.04] via-transparent to-[#324b9d]/[0.04] dark:from-primary/[0.06] dark:to-[#324b9d]/[0.06]"
+          className="pointer-events-none absolute inset-0 -z-10 bg-linear-to-br from-primary/4 via-transparent to-[#324b9d]/4 dark:from-primary/6 dark:to-[#324b9d]/6"
         />
       )}
 

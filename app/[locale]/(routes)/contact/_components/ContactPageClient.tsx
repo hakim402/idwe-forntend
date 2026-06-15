@@ -735,7 +735,7 @@ export default function ContactPageClient({ isRtl }: { isRtl: boolean }) {
       {/* ── 1. Hero ── */}
       <section
         aria-labelledby="contact-heading"
-        className="px-4 pt-24 pb-16 sm:px-6 lg:px-8 lg:pt-32 lg:pb-20"
+        className="px-4 pt-32 pb-16 sm:px-6 lg:px-8 lg:pt-52 lg:pb-52"
       >
         <ContactHero isRtl={isRtl} t={t} />
       </section>

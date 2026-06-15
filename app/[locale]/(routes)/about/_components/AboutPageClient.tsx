@@ -39,10 +39,15 @@ import {
 
 // ── Shared reusable components ──────────────────────────────────────────────
 import { StatsRow, type StatItem } from "@/components/shared/StatsRow";
-import { ValuesSection, type ValueItem } from "@/components/shared/ValuesSection";
+import {
+  ValuesSection,
+  type ValueItem,
+} from "@/components/shared/ValuesSection";
 import { Timeline, type TimelineItem } from "@/components/shared/Timeline";
 import { TeamSection, type TeamMember } from "@/components/shared/TeamSection";
 import { PageCTA } from "@/components/shared/PageCTA";
+import { Header } from "@/app/[locale]/_components/Header/Header";
+import { FooterSection } from "@/app/[locale]/_components/Footer/FooterSections";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Motion helpers
@@ -64,7 +69,7 @@ const fadeUpInView = (delay = 0) => ({
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Section 1 — Hero
+// Section 1 — Hero (simplified, matches ContactHero exactly)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function AboutHero({
@@ -74,113 +79,42 @@ function AboutHero({
   isRtl: boolean;
   t: ReturnType<typeof useTranslations<"About">>;
 }) {
-  const heroRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 80]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-
   return (
-    <section
-      ref={heroRef}
-      dir={isRtl ? "rtl" : "ltr"}
-      aria-labelledby="about-hero-heading"
-      className="relative isolate min-h-[90vh] overflow-hidden px-4 pt-28 pb-24 sm:px-6 sm:pt-36 sm:pb-32 lg:px-8 lg:pt-44 lg:pb-40 flex items-center"
-    >
-      {/* ── Background: full-bleed editorial image ── */}
-      <div className="absolute inset-0 -z-20">
-        <Image
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80&auto=format&fit=crop"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        {/* Dark + brand overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/60 dark:from-background/97 dark:via-background/88 dark:to-background/70" />
-        {/* Radial brand glow */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_30%_50%,rgb(10_184_251/8%),transparent)]"
-        />
-      </div>
+    <div dir={isRtl ? "rtl" : "ltr"} className="mx-auto max-w-3xl text-center">
+      {/* Headline */}
+      <motion.h1
+        {...fadeUp(0)}
+        className="text-balance text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl"
+      >
+        {t("hero.headlineLead")}{" "}
+        <span className="text-color">{t("hero.headlineAccent")}</span>
+      </motion.h1>
 
-      {/* Fine grid */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgb(148_198_233/0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgb(148_198_233/0.05)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,black,transparent)]"
-      />
+      {/* Description */}
+      <motion.p
+        {...fadeUp(0.12)}
+        className="mx-auto mt-5 max-w-2xl text-pretty text-base leading-8 text-muted-foreground sm:text-lg"
+      >
+        {t("hero.description")}
+      </motion.p>
 
-      {/* ── Parallax content ── */}
-      <motion.div style={{ y, opacity }} className="relative mx-auto max-w-5xl w-full">
-        {/* Eyebrow */}
-        <motion.div {...fadeUp(0)}>
-          <span className="inline-flex items-center gap-2.5 rounded-full border border-primary/20 bg-primary/5 px-5 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-primary backdrop-blur-sm">
-            <span className="relative flex size-1.5">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
-              <span className="relative inline-flex size-1.5 rounded-full bg-primary" />
-            </span>
-            {t("hero.eyebrow")}
-          </span>
-        </motion.div>
-
-        {/* Headline — very large, tight tracking */}
-        < motion.h1
-  id="about-hero-heading"
-  {...fadeUp(0.08)}
-  className="mt-7 text-5xl font-bold tracking-[-0.03em] text-foreground sm:text-6xl md:text-7xl lg:text-8xl"
->
-  {t("hero.headlineLead")}
-  <br />
-  <span className="text-color">{t("hero.headlineAccent")}</span>
-</motion.h1>
-
-        {/* Description */}
-        <motion.p
-          {...fadeUp(0.18)}
-          className="mt-7 max-w-xl text-lg leading-8 text-muted-foreground sm:text-xl sm:leading-9"
+      {/* CTA — Story link */}
+      <motion.div
+        {...fadeUp(0.22)}
+        className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
+      >
+        <Link
+          href="#story"
+          className="group inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full bg-color px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-color/25 transition duration-300 hover:-translate-y-0.5 hover:bg-color/90 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          {t("hero.description")}
-        </motion.p>
-
-        {/* Meta badges */}
-        <motion.div
-          {...fadeUp(0.28)}
-          className="mt-10 flex flex-wrap items-center gap-3"
-        >
-          {[
-            { icon: MapPin, label: t("hero.locationUs") },
-            { icon: MapPin, label: t("hero.locationAf") },
-            { icon: Calendar, label: t("hero.founded") },
-          ].map(({ icon: Icon, label }) => (
-            <div
-              key={label}
-              className="flex items-center gap-2 rounded-full border border-border/50 bg-background/60 px-4 py-2 text-xs font-medium text-muted-foreground backdrop-blur-md"
-            >
-              <Icon className="size-3.5 text-primary shrink-0" aria-hidden="true" />
-              {label}
-            </div>
-          ))}
-        </motion.div>
-
-        {/* CTA row */}
-        <motion.div {...fadeUp(0.36)} className="mt-8 flex flex-wrap gap-3">
-          <Link
-            href="#story"
-            className="group inline-flex items-center gap-2 rounded-full bg-color px-7 py-3.5 text-sm font-semibold text-white shadow-brand transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-          >
-            {t("hero.ctaStory")}
-            <ArrowRight
-              className={`size-4 transition-transform ${isRtl ? "rotate-180 group-hover:-translate-x-1" : "group-hover:translate-x-1"}`}
-              aria-hidden="true"
-            />
-          </Link>
-        </motion.div>
+          {t("hero.ctaStory")}
+          <ArrowRight
+            className={`size-4 transition-transform ${isRtl ? "rotate-180 group-hover:-translate-x-1" : "group-hover:translate-x-1"}`}
+            aria-hidden="true"
+          />
+        </Link>
       </motion.div>
-    </section>
+    </div>
   );
 }
 
@@ -219,7 +153,7 @@ function StorySection({
                 className="w-full object-cover"
               />
               {/* Gradient vignette */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-background/30 to-transparent" />
             </div>
 
             {/* Floating stat chip */}
@@ -227,15 +161,22 @@ function StorySection({
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.5, type: "spring", bounce: 0.35 }}
-              className="absolute -bottom-5 -end-5 flex items-center gap-3 rounded-2xl border border-border/60 bg-card/90 p-4 shadow-xl backdrop-blur-md"
+              transition={{
+                delay: 0.3,
+                duration: 0.5,
+                type: "spring",
+                bounce: 0.35,
+              }}
+              className="absolute -bottom-5 -inset-e-5 flex items-center gap-3 rounded-2xl border border-border/60 bg-card/90 p-4 shadow-xl backdrop-blur-md"
             >
               <div className="flex size-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
                 <TrendingUp className="size-5" aria-hidden="true" />
               </div>
               <div>
                 <p className="text-xl font-bold text-foreground">50+</p>
-                <p className="text-[11px] text-muted-foreground">{t("story.chip")}</p>
+                <p className="text-[11px] text-muted-foreground">
+                  {t("story.chip")}
+                </p>
               </div>
             </motion.div>
           </motion.div>
@@ -278,16 +219,21 @@ function StorySection({
             </motion.div>
 
             {/* Inline trust badges */}
-            <motion.div {...fadeUpInView(0.32)} className="flex flex-wrap gap-2 pt-2">
-              {[t("story.badge1"), t("story.badge2"), t("story.badge3")].map((badge) => (
-                <span
-                  key={badge}
-                  className="flex items-center gap-1.5 rounded-full border border-border/60 bg-accent px-4 py-1.5 text-xs font-medium text-muted-foreground"
-                >
-                  <span className="size-1.5 rounded-full bg-primary" />
-                  {badge}
-                </span>
-              ))}
+            <motion.div
+              {...fadeUpInView(0.32)}
+              className="flex flex-wrap gap-2 pt-2"
+            >
+              {[t("story.badge1"), t("story.badge2"), t("story.badge3")].map(
+                (badge) => (
+                  <span
+                    key={badge}
+                    className="flex items-center gap-1.5 rounded-full border border-border/60 bg-accent px-4 py-1.5 text-xs font-medium text-muted-foreground"
+                  >
+                    <span className="size-1.5 rounded-full bg-primary" />
+                    {badge}
+                  </span>
+                ),
+              )}
             </motion.div>
           </motion.div>
         </div>
@@ -335,7 +281,7 @@ function MissionVision({
       {/* Narrow background stripe */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 -z-10 h-96 bg-gradient-to-b from-transparent via-primary/[0.03] to-transparent"
+        className="pointer-events-none absolute inset-x-0 -z-10 h-96 bg-linear-to-b from-transparent via-primary/3 to-transparent"
       />
 
       <div className="mx-auto max-w-6xl">
@@ -346,56 +292,65 @@ function MissionVision({
         </motion.div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {cards.map(({ gradient, accentLine, icon: Icon, titleKey, bodyKey, dark }, i) => (
-            <motion.div
-              key={titleKey}
-              {...fadeUpInView(0.06 + i * 0.1)}
-              className={[
-                "group relative overflow-hidden rounded-3xl p-8 shadow-lg transition-shadow duration-300 hover:shadow-2xl sm:p-10",
-                dark
-                  ? "bg-color text-white"
-                  : "border border-border/60 bg-card",
-              ].join(" ")}
-            >
-              {/* Decorative orb */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -end-16 -top-16 size-56 rounded-full opacity-20 blur-3xl transition-opacity duration-500 group-hover:opacity-30"
-                style={{ background: `linear-gradient(135deg, #0ab8fb, #324b9d)` }}
-              />
-              {/* Top accent line */}
-              <div className={`absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r ${accentLine}`} />
-
-              <div className="relative">
+          {cards.map(
+            (
+              { gradient, accentLine, icon: Icon, titleKey, bodyKey, dark },
+              i,
+            ) => (
+              <motion.div
+                key={titleKey}
+                {...fadeUpInView(0.06 + i * 0.1)}
+                className={[
+                  "group relative overflow-hidden rounded-3xl p-8 shadow-lg transition-shadow duration-300 hover:shadow-2xl sm:p-10",
+                  dark
+                    ? "bg-color text-white"
+                    : "border border-border/60 bg-card",
+                ].join(" ")}
+              >
+                {/* Decorative orb */}
                 <div
-                  className={[
-                    "mb-6 flex size-14 items-center justify-center rounded-2xl",
-                    dark
-                      ? "bg-white/15 text-white"
-                      : "bg-primary/10 text-primary",
-                  ].join(" ")}
-                >
-                  <Icon className="size-7" aria-hidden="true" />
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-e-16 -top-16 size-56 rounded-full opacity-20 blur-3xl transition-opacity duration-500 group-hover:opacity-30"
+                  style={{
+                    background: `linear-gradient(135deg, #0ab8fb, #324b9d)`,
+                  }}
+                />
+                {/* Top accent line */}
+                <div
+                  className={`absolute inset-x-0 top-0 h-0.5 bg-linear-to-r ${accentLine}`}
+                />
+
+                <div className="relative">
+                  <div
+                    className={[
+                      "mb-6 flex size-14 items-center justify-center rounded-2xl",
+                      dark
+                        ? "bg-white/15 text-white"
+                        : "bg-primary/10 text-primary",
+                    ].join(" ")}
+                  >
+                    <Icon className="size-7" aria-hidden="true" />
+                  </div>
+                  <h2
+                    className={[
+                      "text-xl font-bold tracking-tight sm:text-2xl",
+                      dark ? "text-white" : "text-foreground",
+                    ].join(" ")}
+                  >
+                    {t(titleKey)}
+                  </h2>
+                  <p
+                    className={[
+                      "mt-4 text-base leading-7",
+                      dark ? "text-white/80" : "text-muted-foreground",
+                    ].join(" ")}
+                  >
+                    {t(bodyKey)}
+                  </p>
                 </div>
-                <h2
-                  className={[
-                    "text-xl font-bold tracking-tight sm:text-2xl",
-                    dark ? "text-white" : "text-foreground",
-                  ].join(" ")}
-                >
-                  {t(titleKey)}
-                </h2>
-                <p
-                  className={[
-                    "mt-4 text-base leading-7",
-                    dark ? "text-white/80" : "text-muted-foreground",
-                  ].join(" ")}
-                >
-                  {t(bodyKey)}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ),
+          )}
         </div>
       </div>
     </section>
@@ -417,20 +372,50 @@ export default function AboutPageClient({
 
   // ── Stats data ────────────────────────────────────────────────────────────
   const stats: StatItem[] = [
-    { icon: Users,    to: 50,  suffix: "+", label: t("stats.clients") },
-    { icon: Calendar, to: 5,   suffix: "+", label: t("stats.years") },
-    { icon: Star,     to: 98,  suffix: "%", label: t("stats.satisfaction") },
-    { icon: Globe,    to: 12,  suffix: "+", label: t("stats.countries") },
+    { icon: Users, to: 50, suffix: "+", label: t("stats.clients") },
+    { icon: Calendar, to: 5, suffix: "+", label: t("stats.years") },
+    { icon: Star, to: 98, suffix: "%", label: t("stats.satisfaction") },
+    { icon: Globe, to: 12, suffix: "+", label: t("stats.countries") },
   ];
 
   // ── Values data ───────────────────────────────────────────────────────────
   const values: ValueItem[] = [
-    { icon: Lightbulb,    color: "#0ab8fb", title: t("values.v1Title"), body: t("values.v1Body") },
-    { icon: ShieldCheck,  color: "#324b9d", title: t("values.v2Title"), body: t("values.v2Body") },
-    { icon: TrendingUp,   color: "#13a89e", title: t("values.v3Title"), body: t("values.v3Body") },
-    { icon: HeartHandshake, color: "#f59e0b", title: t("values.v4Title"), body: t("values.v4Body") },
-    { icon: Star,         color: "#7c3aed", title: t("values.v5Title"), body: t("values.v5Body") },
-    { icon: Globe,        color: "#0ab8fb", title: t("values.v6Title"), body: t("values.v6Body") },
+    {
+      icon: Lightbulb,
+      color: "#0ab8fb",
+      title: t("values.v1Title"),
+      body: t("values.v1Body"),
+    },
+    {
+      icon: ShieldCheck,
+      color: "#324b9d",
+      title: t("values.v2Title"),
+      body: t("values.v2Body"),
+    },
+    {
+      icon: TrendingUp,
+      color: "#13a89e",
+      title: t("values.v3Title"),
+      body: t("values.v3Body"),
+    },
+    {
+      icon: HeartHandshake,
+      color: "#f59e0b",
+      title: t("values.v4Title"),
+      body: t("values.v4Body"),
+    },
+    {
+      icon: Star,
+      color: "#7c3aed",
+      title: t("values.v5Title"),
+      body: t("values.v5Body"),
+    },
+    {
+      icon: Globe,
+      color: "#0ab8fb",
+      title: t("values.v6Title"),
+      body: t("values.v6Body"),
+    },
   ];
 
   // ── Timeline data ─────────────────────────────────────────────────────────
@@ -441,7 +426,8 @@ export default function AboutPageClient({
       body: t("timeline.m1Body"),
       icon: Rocket,
       tag: t("timeline.m1Tag"),
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=700&q=75&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=700&q=75&auto=format&fit=crop",
     },
     {
       year: "2021",
@@ -449,6 +435,8 @@ export default function AboutPageClient({
       body: t("timeline.m2Body"),
       icon: Code2,
       tag: t("timeline.m2Tag"),
+      image:
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&q=75&auto=format&fit=crop",
     },
     {
       year: "2022",
@@ -456,7 +444,8 @@ export default function AboutPageClient({
       body: t("timeline.m3Body"),
       icon: Zap,
       tag: t("timeline.m3Tag"),
-      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=75&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=75&auto=format&fit=crop",
     },
     {
       year: "2023",
@@ -464,6 +453,8 @@ export default function AboutPageClient({
       body: t("timeline.m4Body"),
       icon: Globe,
       tag: t("timeline.m4Tag"),
+      image:
+        "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=700&q=75&auto=format&fit=crop",
     },
     {
       year: "2024",
@@ -471,14 +462,17 @@ export default function AboutPageClient({
       body: t("timeline.m5Body"),
       icon: TrendingUp,
       tag: t("timeline.m5Tag"),
-      image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=700&q=75&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=700&q=75&auto=format&fit=crop",
     },
     {
-      year: "2025",
+      year: "2026",
       title: t("timeline.m6Title"),
       body: t("timeline.m6Body"),
       icon: Star,
       tag: t("timeline.m6Tag"),
+      image:
+        "https://images.unsplash.com/photo-1660644808219-1f103401bc85?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D",
     },
   ];
 
@@ -488,25 +482,37 @@ export default function AboutPageClient({
       name: t("team.m1Name"),
       role: t("team.m1Role"),
       bio: t("team.m1Bio"),
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&auto=format&fit=crop&crop=face",
+      photo: "/teams/miraj-hejran.png",
       initials: "HI",
       color: "#0ab8fb",
       skills: [t("team.skill1"), t("team.skill2"), t("team.skill3")],
       social: {
-        linkedin: "https://linkedin.com",
+        linkedin: "https://linkedin.com/in/miraj-hejran",
       },
     },
     {
       name: t("team.m2Name"),
       role: t("team.m2Role"),
       bio: t("team.m2Bio"),
-      photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80&auto=format&fit=crop&crop=face",
-      initials: "SA",
+      photo: "/teams/hakim-rahimi-safi.jpg",
+      initials: "HR",
       color: "#324b9d",
       skills: [t("team.skill4"), t("team.skill5"), t("team.skill6")],
       social: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
+        linkedin: "https://linkedin.com/in/hakim-rahimi-safi",
+        twitter: "https://twitter.com/hakimrs",
+      },
+    },
+    {
+      name: t("team.m3Name"),
+      role: t("team.m3Role"),
+      bio: t("team.m3Bio"),
+      photo: "",
+      initials: "AS",
+      color: "#f59e0b",
+      skills: [t("team.skill7"), t("team.skill8"), t("team.skill9")],
+      social: {
+        linkedin: "https://linkedin.com/in/abdullah-stanikzai",
       },
     },
   ];
@@ -519,14 +525,18 @@ export default function AboutPageClient({
       {/* Global background grid */}
       <div
         aria-hidden="true"
-        className="pointer-events-none fixed inset-0 -z-50 bg-[linear-gradient(to_right,rgb(148_198_233/0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgb(148_198_233/0.03)_1px,transparent_1px)] bg-[size:64px_64px]"
+        className="pointer-events-none fixed inset-0 -z-50 bg-[linear-gradient(to_right,rgb(148_198_233/0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgb(148_198_233/0.03)_1px,transparent_1px)] bg-size-[64px_64px]"
       />
 
+      <Header />
+
       {/* ── 1. Hero ── */}
-      {/* <AboutHero isRtl={isRtl} t={t} /> */}
+      <div className="px-4 pt-32 pb-10 sm:px-6 lg:px-8 lg:pt-52 lg:pb-24">
+        <AboutHero isRtl={isRtl} t={t} />
+      </div>
 
       {/* ── 2. Story ── */}
-      {/* <StorySection isRtl={isRtl} t={t} /> */}
+      <StorySection isRtl={isRtl} t={t} />
 
       {/* ── 3. Mission / Vision ── */}
       <MissionVision isRtl={isRtl} t={t} />
@@ -550,22 +560,22 @@ export default function AboutPageClient({
       />
 
       {/* ── 6. Timeline (shared) ── */}
-      {/* <Timeline
+      <Timeline
         items={milestones}
         eyebrow={t("timeline.eyebrow")}
         title={t("timeline.title")}
         description={t("timeline.description")}
         isRtl={isRtl}
-      /> */}
+      />
 
       {/* ── 7. Team (shared) ── */}
-      {/* <TeamSection
+      <TeamSection
         members={team}
         eyebrow={t("team.eyebrow")}
         title={t("team.title")}
         description={t("team.description")}
         isRtl={isRtl}
-      /> */}
+      />
 
       {/* ── 8. CTA (shared) ── */}
       <PageCTA
@@ -577,6 +587,7 @@ export default function AboutPageClient({
         secondaryHref={`/${locale}/services`}
         isRtl={isRtl}
       />
+      <FooterSection />
     </main>
   );
 }

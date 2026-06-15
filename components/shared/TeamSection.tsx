@@ -1,10 +1,38 @@
 "use client";
 
+// components/shared/TeamSection.tsx
+//
+// Reusable leadership / team grid.
+// Supports photo (next/image), initials fallback, name, role, bio, skills,
+// and optional social links.
+//
+// Design signature: cards use a "magazine cover" layout — full-bleed photo
+// with a frosted-glass overlay at the bottom for text. Hover reveals
+// bio + skills in a smooth slide-up panel.
+//
+// Usage:
+//   const members: TeamMember[] = [
+//     {
+//       name: "Hakim Ibrahimi",
+//       role: "Founder & CEO",
+//       bio: "Engineer turned entrepreneur...",
+//       photo: "https://images.unsplash.com/...",
+//       initials: "HI",
+//       color: "#0ab8fb",
+//       skills: ["AI / ML", "Product Strategy"],
+//       social: {
+//         linkedin: "https://linkedin.com/in/...",
+//         twitter:  "https://twitter.com/...",
+//       },
+//     },
+//   ];
+//   <TeamSection members={members} eyebrow="Leadership" title="The people behind IDWE" isRtl={isRtl} />
+
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Globe } from "lucide-react";
-import { FaLinkedin, FaXTwitter } from "react-icons/fa6"; // ✅ stable icons
+import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -27,8 +55,11 @@ export interface TeamMember {
   name: string;
   role: string;
   bio: string;
+  /** Unsplash or CDN image URL */
   photo?: string;
+  /** Two-letter fallback shown when no photo */
   initials: string;
+  /** Brand accent color for this member */
   color: string;
   skills?: string[];
   social?: TeamMemberSocial;
@@ -99,12 +130,15 @@ function MemberCard({ member, delay }: { member: TeamMember; delay: number }) {
         <div className="flex items-start justify-between gap-3">
           <div>
             <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
-            <p className="mt-0.5 text-sm font-semibold" style={{ color: member.color }}>
+            <p
+              className="mt-0.5 text-sm font-semibold"
+              style={{ color: member.color }}
+            >
               {member.role}
             </p>
           </div>
 
-          {/* Social links — using FaLinkedin & FaXTwitter */}
+          {/* Social links */}
           {member.social && (
             <div className="flex shrink-0 items-center gap-1.5 pt-0.5">
               {member.social.linkedin && (
@@ -144,7 +178,7 @@ function MemberCard({ member, delay }: { member: TeamMember; delay: number }) {
           )}
         </div>
 
-        {/* Hover reveal */}
+        {/* ── Hover reveal: bio + skills ── */}
         <AnimatePresence>
           {hovered && (
             <motion.div
@@ -158,6 +192,7 @@ function MemberCard({ member, delay }: { member: TeamMember; delay: number }) {
               <p className="mt-3 text-sm leading-6 text-muted-foreground">
                 {member.bio}
               </p>
+
               {member.skills && member.skills.length > 0 && (
                 <div className="mt-4 flex flex-wrap gap-2">
                   {member.skills.map((skill) => (
@@ -192,10 +227,10 @@ export function TeamSection({
     members.length === 1
       ? "max-w-sm"
       : members.length === 2
-      ? "sm:grid-cols-2 max-w-2xl"
-      : members.length === 3
-      ? "sm:grid-cols-2 lg:grid-cols-3"
-      : "sm:grid-cols-2 lg:grid-cols-4";
+        ? "sm:grid-cols-2 max-w-2xl"
+        : members.length === 3
+          ? "sm:grid-cols-2 lg:grid-cols-3"
+          : "sm:grid-cols-2 lg:grid-cols-4";
 
   return (
     <section
@@ -204,6 +239,7 @@ export function TeamSection({
       className={`px-4 py-20 sm:px-6 lg:px-8 lg:py-28 ${className}`}
     >
       <div className="mx-auto max-w-6xl">
+        {/* Header */}
         {(eyebrow || title || description) && (
           <div className="mb-14">
             {eyebrow && (
@@ -243,9 +279,14 @@ export function TeamSection({
           </div>
         )}
 
+        {/* Grid */}
         <div className={`grid gap-6 ${colClass}`}>
           {members.map((member, i) => (
-            <MemberCard key={member.name} member={member} delay={0.06 + i * 0.1} />
+            <MemberCard
+              key={member.name}
+              member={member}
+              delay={0.06 + i * 0.1}
+            />
           ))}
         </div>
       </div>
