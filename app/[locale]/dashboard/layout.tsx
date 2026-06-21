@@ -1,11 +1,18 @@
 // app/[locale]/dashboard/layout.tsx
+//
+// Shell layout for all /dashboard/* pages.
+//
+// Width sync: Sidebar.tsx and DashboardMain.tsx both read sidebarWidth
+// from the same useSidebar() context — there is exactly one place that
+// owns the offset (DashboardMain's margin), so there's no risk of the
+// content being pushed twice.
 
 import { SidebarProvider } from "@/contexts/sidebar-context";
-import { Sidebar } from "./_components/Sidebar/Sidebar";
-import { DashboardMain } from "./_components/DashboardMain";  // new file
-import { getLocale } from "next-intl/server";
+import { Sidebar }         from "./_components/Sidebar/Sidebar";
+import { DashboardMain }   from "./_components/DashboardMain";
+import { getLocale }       from "next-intl/server";
 
-const RTL_LOCALES = ["ar", "fa", "ps"];
+const RTL_LOCALES = new Set(["ar", "fa", "ps"]);
 
 export default async function DashboardLayout({
   children,
@@ -13,15 +20,15 @@ export default async function DashboardLayout({
   children: React.ReactNode;
 }) {
   const locale = await getLocale();
-  const isRtl = RTL_LOCALES.includes(locale);
+  const isRtl  = RTL_LOCALES.has(locale);
 
   return (
     <SidebarProvider>
       <div
         dir={isRtl ? "rtl" : "ltr"}
-        className="min-h-screen bg-background flex"
+        className="flex min-h-screen bg-background"
       >
-        <Sidebar />
+        <Sidebar isRtl={isRtl} />
         <DashboardMain>{children}</DashboardMain>
       </div>
     </SidebarProvider>

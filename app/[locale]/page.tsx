@@ -8,7 +8,8 @@ import { FooterSection } from "./_components/Footer/FooterSections";
 import HomeHero from "./_components/HomeHero/HomeHero";
 import { AiShowcase } from "./_components/AiShowcase/AiShowcase";
 import Script from "next/script";
-import { HowItWorksWrapper } from "./_components/HowItWorksWrapper";
+import { HowItWorksWrapper } from "./_components/Wrappers/HowItWorksWrapper";
+import { TechStackSection } from "./_components/Wrappers/TechStackSection";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -250,6 +251,7 @@ export default async function HomePage({ params }: Props) {
         <HomeHero />
         <AiShowcase />
         <HowItWorksWrapper />
+        <TechStackSection isRtl={isRtl} />
         <FooterSection />
       </div>
     </>

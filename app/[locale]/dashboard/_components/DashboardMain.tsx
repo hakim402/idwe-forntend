@@ -1,6 +1,14 @@
 "use client";
 
 // app/[locale]/dashboard/_components/DashboardMain.tsx
+//
+// Owns the margin that pushes content away from the fixed Sidebar.
+// This is now the ONLY place that applies a width-based offset —
+// Sidebar.tsx no longer renders its own spacer, so the two can't
+// double up anymore (that was the bug: spacer + margin = 2x width).
+//
+// Width comes from useSidebar().sidebarWidth — the single source of
+// truth defined in sidebar-context.tsx. Never hardcode 256/72 here.
 
 import { useState, useEffect } from "react";
 import { useSidebar } from "@/contexts/sidebar-context";
@@ -10,6 +18,7 @@ import { cn } from "@/lib/utils";
 
 function useMediaQuery(query: string): boolean {
   const [matches, setMatches] = useState(false);
+
   useEffect(() => {
     const media = window.matchMedia(query);
     setMatches(media.matches);
@@ -17,36 +26,36 @@ function useMediaQuery(query: string): boolean {
     media.addEventListener("change", listener);
     return () => media.removeEventListener("change", listener);
   }, [query]);
+
   return matches;
 }
 
 export function DashboardMain({ children }: { children: React.ReactNode }) {
-  const { collapsed } = useSidebar();
+  const { sidebarWidth } = useSidebar();
   const pathname = usePathname();
   const isRtl = pathname.startsWith("/ar") || pathname.startsWith("/fa") || pathname.startsWith("/ps");
-  const isLarge = useMediaQuery("(min-width: 1024px)"); // matches `lg:` breakpoint
+  const isLarge = useMediaQuery("(min-width: 1024px)"); // matches Tailwind `lg:`
 
-  const expandedWidth = 256;   // w-64
-  const collapsedWidth = 72;   // w-18
-  const currentWidth = collapsed ? collapsedWidth : expandedWidth;
-
-  // Only apply margin on desktop; on mobile, sidebar is overlay → margin=0
-  const marginStyle = isLarge
+  // Only apply margin on desktop; on mobile the sidebar is a drawer overlay,
+  // so the main column stays full-width (margin = 0).
+  const marginStyle: React.CSSProperties = isLarge
     ? isRtl
-      ? { marginRight: `${currentWidth}px`, marginLeft: "0px" }
-      : { marginLeft: `${currentWidth}px`, marginRight: "0px" }
-    : {};
+      ? { marginRight: sidebarWidth, marginLeft: 0 }
+      : { marginLeft: sidebarWidth, marginRight: 0 }
+    : { marginLeft: 0, marginRight: 0 };
 
   return (
     <div
       className={cn(
-        "flex flex-col flex-1 min-h-screen min-w-0",
+        "flex min-h-screen min-w-0 flex-1 flex-col",
         "transition-[margin] duration-300 ease-in-out",
       )}
       style={marginStyle}
     >
       <DashboardHeader />
-      <main className="flex-1 overflow-auto">{children}</main>
+      <main className="flex-1 overflow-x-hidden overflow-y-auto">
+        {children}
+      </main>
     </div>
   );
 }

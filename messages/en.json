@@ -130,6 +130,14 @@
     "metricResolution": "Resolution confidence",
     "metricRows": "Rows processed"
   },
+  "TechStack": {
+    "eyebrow": "Integrations",
+    "title": "Built on tools your team already uses",
+    "accentWord": "tools your team",
+    "description": "IDWE integrates natively with the platforms that power modern businesses — from AI models and CRM systems to cloud infrastructure and team communication.",
+    "allLabel": "All tools"
+  },
+  
   "Auth": {
     "common": {
       "brand": "IDWE",
@@ -211,6 +219,7 @@
       "backToLogin": "Back to sign in"
     }
   },
+
   "footer": {
     "tagline": "Enterprise grade AI, cybersecurity, software engineering, cloud infrastructure, and digital transformation all under one roof.",
     "location": "Remote-first team operating globally across the world.",
@@ -270,6 +279,7 @@
       "enterprise": "Enterprise"
     }
   },
+
   "Contact": {
     "meta": {
       "title": "Contact IDWE AI Automation & Enterprise Software",
@@ -495,12 +505,15 @@
       "secondary": "Explore our services"
     }
   },
+
   "Sidebar": {
+    "menuLabel": "Menu",
     "dashboard": "Dashboard",
-    "myRequests": "My Requests",
-    "videoBookings": "Video Bookings",
+    "projects": "My Projects",
+    "services": "Services",
     "consulting": "Consulting",
     "support": "Support",
+    "accountLabel": "Account",
     "notifications": "Notifications",
     "profile": "Profile",
     "security": "Security"
