@@ -32,7 +32,9 @@ const SUPPORTED_LOCALES: Locale[] = ["en", "zh", "ar", "fa", "ps"];
 const RTL_LOCALES = new Set<Locale>(["ar", "fa", "ps"]);
 
 function getSupportedLocale(locale: string): Locale {
-  return SUPPORTED_LOCALES.includes(locale as Locale) ? (locale as Locale) : "en";
+  return SUPPORTED_LOCALES.includes(locale as Locale)
+    ? (locale as Locale)
+    : "en";
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -89,7 +91,10 @@ function StatCard({
       <div className="flex size-9 items-center justify-center rounded-xl bg-accent text-primary">
         <Icon className="size-4" aria-hidden="true" />
       </div>
-      <div ref={ref} className="text-2xl font-bold tabular-nums text-foreground">
+      <div
+        ref={ref}
+        className="text-2xl font-bold tabular-nums text-foreground"
+      >
         {display}
       </div>
       <p className="text-center text-[11px] leading-tight text-muted-foreground">
@@ -187,7 +192,12 @@ function ServiceOrbit() {
             strokeWidth="1.5"
             initial={{ r: 46, opacity: 0.5 } as never}
             animate={{ r: 108, opacity: 0 } as never}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeOut", delay }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeOut",
+              delay,
+            }}
             style={{ willChange: "r, opacity" }}
           />
         ))}
@@ -236,7 +246,12 @@ function ServiceOrbit() {
             key={label}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5 + i * 0.1, duration: 0.4, type: "spring", bounce: 0.4 }}
+            transition={{
+              delay: 0.5 + i * 0.1,
+              duration: 0.4,
+              type: "spring",
+              bounce: 0.4,
+            }}
             className="absolute flex flex-col items-center gap-1 group"
             style={{ left: nx, top: ny, transform: "translate(-50%, -50%)" }}
           >
@@ -246,9 +261,7 @@ function ServiceOrbit() {
             >
               <Icon className="size-4" aria-hidden="true" />
             </div>
-            <span
-              className="whitespace-nowrap rounded-full border border-border/40 bg-background/80 px-2 py-0.5 text-[9px] font-semibold text-muted-foreground backdrop-blur-sm"
-            >
+            <span className="whitespace-nowrap rounded-full border border-border/40 bg-background/80 px-2 py-0.5 text-[9px] font-semibold text-muted-foreground backdrop-blur-sm">
               {label}
             </span>
           </motion.div>
@@ -355,15 +368,24 @@ function ActivityFeedCard({ isRtl }: { isRtl: boolean }) {
             >
               <div
                 className="flex size-8 shrink-0 items-center justify-center rounded-xl"
-                style={{ backgroundColor: `${item.color}18`, color: item.color }}
+                style={{
+                  backgroundColor: `${item.color}18`,
+                  color: item.color,
+                }}
               >
                 <Icon className="size-4" aria-hidden="true" />
               </div>
               <div className="min-w-0 flex-1">
-                <p className="truncate text-xs font-semibold text-foreground">{item.title}</p>
-                <p className="truncate text-[10px] text-muted-foreground">{item.subtitle}</p>
+                <p className="truncate text-xs font-semibold text-foreground">
+                  {item.title}
+                </p>
+                <p className="truncate text-[10px] text-muted-foreground">
+                  {item.subtitle}
+                </p>
               </div>
-              <span className={`shrink-0 rounded-full px-2 py-0.5 text-[9px] font-bold ${item.badgeColor}`}>
+              <span
+                className={`shrink-0 rounded-full px-2 py-0.5 text-[9px] font-bold ${item.badgeColor}`}
+              >
                 {item.badge}
               </span>
             </div>
@@ -378,7 +400,13 @@ function ActivityFeedCard({ isRtl }: { isRtl: boolean }) {
 // Trust badge row
 // ─────────────────────────────────────────────────────────────────────────────
 
-function TrustBadge({ icon: Icon, label }: { icon: React.ElementType; label: string }) {
+function TrustBadge({
+  icon: Icon,
+  label,
+}: {
+  icon: React.ElementType;
+  label: string;
+}) {
   return (
     <div className="flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3.5 py-2 text-xs font-medium text-muted-foreground backdrop-blur shadow-sm">
       <Icon className="size-3.5 text-primary shrink-0" aria-hidden="true" />
@@ -416,7 +444,7 @@ export function AiShowcase() {
         body: t("prop3Body"),
       },
     ],
-    [t]
+    [t],
   );
 
   return (
@@ -470,8 +498,12 @@ export function AiShowcase() {
                     <Icon className="size-5" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">{title}</p>
-                    <p className="mt-1 text-sm leading-6 text-muted-foreground">{body}</p>
+                    <p className="text-sm font-semibold text-foreground">
+                      {title}
+                    </p>
+                    <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                      {body}
+                    </p>
                   </div>
                 </div>
               ))}
